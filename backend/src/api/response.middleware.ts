@@ -1,7 +1,7 @@
 import { APIError } from '@common/error/api.error';
+import { NODE_ENV } from '@config/environment';
 import { NextFunction, Response, Request } from 'express';
 import httpStatus from 'http-status';
-import { NODE_ENV } from '@common/config/config.environment';
 
 export class ResponseMiddleware {
     public static handler(err: APIError, req: Request, res: Response, next: NextFunction): void {

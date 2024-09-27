@@ -1,5 +1,9 @@
 import mongoose, {Schema} from "mongoose";
 
+export interface IUserDataToken  {
+    id: string;
+}
+
 export interface IUser {
     name: string,
     sex: string,

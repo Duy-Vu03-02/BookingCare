@@ -1,5 +1,5 @@
-import { MONGODB_URL } from './../config/config.environment';
 import mongoose, { mongo } from "mongoose";
+import { MONGODB_URL } from "@config/environment";
 
 export class DatabaseAdapter{
     public static async connection(): Promise<void> {

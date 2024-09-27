@@ -1,4 +1,4 @@
-import { PORT } from "@common/config/config.environment"
+import { PORT } from "@config/environment";
 import { DatabaseAdapter } from "@common/infrastructure/database.adapter"
 import { ExpressServer } from "./server";
 
