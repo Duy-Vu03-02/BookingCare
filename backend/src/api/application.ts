@@ -1,10 +1,10 @@
-import { PORT } from "@config/environment";
-import { DatabaseAdapter } from "@common/infrastructure/database.adapter"
-import { ExpressServer } from "./server";
+import { PORT } from '@config/environment';
+import { DatabaseAdapter } from '@common/infrastructure/database.adapter';
+import { ExpressServer } from './server';
 
 export class Application {
-    public static createApplication = async(): Promise<ExpressServer> => {
-        await DatabaseAdapter.connection();
+    public static createApplication = async (): Promise<ExpressServer> => {
+        // await DatabaseAdapter.connection();
 
         Application.registerEvent();
         Application.registerCron();
@@ -13,13 +13,9 @@ export class Application {
         expressServer.setUp(PORT);
 
         return expressServer;
-    }
+    };
 
-    public static registerEvent = () => {
+    public static registerEvent = () => {};
 
-    }
-
-    public static registerCron = () => {
-
-    }
+    public static registerCron = () => {};
 }
