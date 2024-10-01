@@ -1,0 +1,105 @@
+.section-Informaion {
+    width: 100%;
+    height: 350px;
+    background-color: #efefef;
+    padding-top: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    .inf1 {
+        width: 600px;
+
+        label {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .inf-content {
+            margin: 10px 0;
+
+            i {
+                margin-right: 10px;
+            }
+
+            span {
+                a {
+                    color: black;
+                }
+            }
+        }
+
+        .check {
+            display: flex;
+
+            .check1 {
+                width: 130px;
+                height: 40px;
+                background-image: url("../../../assets/Information/bo-cong-thuong.svg");
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    .inf2 {
+        .icon {
+            background-image: url("../../../assets/logo.svg");
+            width: 140px;
+            height: 50px;
+            background-repeat: no-repeat;
+
+        }
+
+        .inf-content2 {
+            margin: 10px 0;
+
+            a {
+                text-decoration: none;
+                color: #45c3d2;
+            }
+        }
+    }
+
+    .inf3 {
+        width: 30%;
+        margin-left: 50px;
+
+        label {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .content3 {
+            display: flex;
+            margin: 10px 0;
+
+            .content3-img0 {
+                width: 70px;
+                height: 70px;
+                background-image: url("../../../assets/Information/093706-hellodoctorlogo.png");
+                margin-right: 10px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            .content3-img1 {
+                width: 70px;
+                height: 70px;
+                background-image: url("../../../assets/Information/082316-logo-bernard.png");
+                margin-right: 10px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            .content3-img2 {
+                width: 70px;
+                height: 70px;
+                background-image: url("../../../assets/Information/064252-doctor-check-2.png");
+                margin-right: 10px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

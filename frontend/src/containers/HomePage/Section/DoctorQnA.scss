@@ -1,0 +1,114 @@
+.section-DoctorQnA {
+    height: 380px;
+    background-color: white;
+    margin-bottom: 40px;
+
+    .DoctorQnA-container {
+        height: 100%;
+        margin: 0 100px;
+        padding: 30px 0;
+
+        .DoctorQnA-header {
+            height: 60px;
+            padding: 10px 10px 10px 30px;
+
+            .title1 {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+
+        }
+
+        .DoctorQnA-body {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+
+            .img-custom {
+                display: flex;
+                flex-direction: column;
+                padding: 10px 10px 10px 10px;
+                margin-top: 40px;
+                border-radius: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                margin-right: 15px;
+                justify-content: left;
+                align-items: center;
+                width: 420px;
+                height: 250px;
+
+                .bg-img1 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("../../../assets/DoctorQnA/141028-hoidapcongdong.jpeg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                    margin-bottom: 30px;
+                }
+
+                .bg-img2 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("../../../assets/DoctorQnA/150322-z5375466237591689132201a679526eaab9274b8cd39a9.jpg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                    margin-bottom: 30px;
+                }
+
+
+            }
+        }
+
+
+    }
+}
+
+
+//reset slick slider
+
+.slick-prev {
+    border: 2px solid #eaeaea !important;
+    z-index: 10000 !important;
+    height: 48px !important;
+    width: 44px !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    left: -20px !important;
+    border-radius: 12px;
+
+    &:hover {
+        background: #eaeaea !important;
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: FontAwesome !important;
+    color: red !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+}
+
+.slick-next {
+    border: 2px solid #eaeaea !important;
+    height: 48px !important;
+    width: 46px !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    right: -20px !important;
+    border-radius: 12px;
+    color: green;
+
+    &:hover {
+        background: #eaeaea !important;
+    }
+}
+
+.slick-slide {
+    padding: 0 10px; // kc anh slider
+}

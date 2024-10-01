@@ -1,0 +1,157 @@
+.section-Healthy {
+    height: 330px;
+    background-color: white;
+    margin-bottom: 40px;
+
+    .Healthy-container {
+        height: 100%;
+        margin: 0 100px;
+        padding: 30px 0;
+
+        .Healthy-header {
+            height: 60px;
+            padding: 10px 10px 10px 30px;
+
+            .title1 {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            .btn-xemthem {
+                float: right;
+                height: 50px;
+                width: 120px;
+                border: none;
+                outline: none;
+                display: block;
+                cursor: pointer;
+                background-color: #daf3f6;
+                font-size: 20px;
+                color: #34929e;
+                border-radius: 10px;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: #f7d800;
+                    color: #fff;
+                }
+            }
+
+        }
+
+        .Healthy-body {
+            padding-bottom: 40px;
+
+            .img-custom {
+                display: flex !important;
+                flex-direction: column;
+                padding: 10px 10px 10px 10px;
+                gap: 10px;
+
+                .bg-img1 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("../../../assets/Healthy/083305-dieu-tri-benh-tang-huyet-ap.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img2 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("../../../assets/Healthy/114328-tre-sot-tren-38-do-co-nen-uong-ha-sot.jpg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img3 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("../../../assets/Healthy/094906-benh-mua-mua.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img4 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("../../../assets/Healthy/145406-rang--khon-dang-moc-4.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img5 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("../../../assets/Healthy/204258-dieu-can-biet-ve-rang-khon.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .title2 {
+                    padding-top: 15px;
+                    font-size: 19px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: rgb(35, 204, 147);
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+//reset slick slider
+
+.slick-prev {
+    border: 2px solid #eaeaea !important;
+    z-index: 10000 !important;
+    height: 48px !important;
+    width: 44px !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    left: -20px !important;
+
+    &:hover {
+        background: #eaeaea !important;
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: FontAwesome !important;
+    color: red !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    color: red !important;
+}
+
+.slick-next {
+    border: 2px solid #eaeaea !important;
+    height: 48px !important;
+    width: 46px !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    right: -20px !important;
+
+    &:hover {
+        background: #eaeaea !important;
+    }
+}
