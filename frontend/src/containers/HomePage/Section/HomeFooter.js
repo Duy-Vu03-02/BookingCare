@@ -13,18 +13,20 @@ class HomeFooter extends Component {
     render() {
 
         return (
-            <div className='section-HomeFooter' >
-                <div className='HomeFooter-container'>
-                    <div className='HomeFooter-header'>
-                        <div className='titles'>
-                            <p>© 2024 BookingCare.</p>
-                        </div>
-                        <div className='footer'>
-                            <div className='fb'>
-                                <i className="fab fa-facebook-f"></i>
+            <div className='cover'>
+                <div className='section-HomeFooter' >
+                    <div className='HomeFooter-container'>
+                        <div className='HomeFooter-header'>
+                            <div className='titles'>
+                                <p>© 2024 BookingCare.</p>
                             </div>
-                            <div className='ytb'>
-                                <i className="fab fa-youtube"></i>
+                            <div className='footer'>
+                                <div className='fb'>
+                                    <i className="fab fa-facebook-f"></i>
+                                </div>
+                                <div className='ytb'>
+                                    <i className="fab fa-youtube"></i>
+                                </div>
                             </div>
                         </div>
                     </div>

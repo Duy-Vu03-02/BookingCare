@@ -24,39 +24,41 @@ class HandBook extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='section-HandBook' >
-                <div className='HandBook-container'>
-                    <div className='HandBook-header'>
-                        <span className='title1'>Cẩm nang</span>
-                        <button className='btn-xemthem'>Xem thêm</button>
-                    </div>
-                    <div className='HandBook-body'>
-                        <Slider {...setting}>
-                            <div className='img-custom'>
-                                <div className='bg-img1'></div>
-                                <div className='text-center fs-4 '>Top 6 bệnh viện mổ mắt cận tốt, uy tín tại TPHCM</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img2'></div>
-                                <div className='text-center fs-4 '>Kinh nghiệm đi khám tại Bệnh viện Nam Học và Hiếm Muộn H...</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img3'></div>
-                                <div className='text-center fs-4 '>8 bác sĩ Sản Phụ Khoa giỏi và uy tín tại TPHCM (Phần 1)</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img4'></div>
-                                <div className='text-center fs-4 '>Kinh nghiệm làm IVF Bệnh viện Nam học Hiếm muộn Hà Nội v...</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img5'></div>
-                                <div className='text-center fs-4 '>9 địa chỉ thụ tinh ống nghiệm IVF uy tín tại Hà Nội</div>
-                            </div>
-                        </Slider>
-                    </div>
+            <div className='cover'>
+                <div className='section-HandBook' >
+                    <div className='HandBook-container'>
+                        <div className='HandBook-header'>
+                            <span className='title1'>Cẩm nang</span>
+                            <button className='btn-xemthem'>Xem thêm</button>
+                        </div>
+                        <div className='HandBook-body'>
+                            <Slider {...setting}>
+                                <div className='img-custom'>
+                                    <div className='bg-img1'></div>
+                                    <div className='text-center fs-4 '>Top 6 bệnh viện mổ mắt cận tốt, uy tín tại TPHCM</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img2'></div>
+                                    <div className='text-center fs-4 '>Kinh nghiệm đi khám tại Bệnh viện Nam Học và Hiếm Muộn H...</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img3'></div>
+                                    <div className='text-center fs-4 '>8 bác sĩ Sản Phụ Khoa giỏi và uy tín tại TPHCM (Phần 1)</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img4'></div>
+                                    <div className='text-center fs-4 '>Kinh nghiệm làm IVF Bệnh viện Nam học Hiếm muộn Hà Nội v...</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img5'></div>
+                                    <div className='text-center fs-4 '>9 địa chỉ thụ tinh ống nghiệm IVF uy tín tại Hà Nội</div>
+                                </div>
+                            </Slider>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
+            </div >
         );
     }
 

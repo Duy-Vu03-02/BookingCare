@@ -24,41 +24,43 @@ class Specialty extends Component {
             slidesToScroll: 3,
         }
         return (
-            <div className='section-specialty' >
-                <div className='specialty-container'>
-                    <div className='specialty-header'>
-                        <span className='title1'>Chuyên khoa</span>
-                        <button className='btn-xemthem'>Xem thêm</button>
-                    </div>
-                    <div className='specialty-body'>
-                        <Slider {...setting}>
-                            <div className='img-custom'>
-                                <div className='bg-img1'></div>
-                                <div className='text-center fs-4 fw-bold'>Cơ xương khớp</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img2'></div>
-                                <div className='text-center fs-4 fw-bold'>Thần kinh</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img3'></div>
-                                <div className='text-center fs-4 fw-bold'>Tiêu hóa</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img4'></div>
-                                <div className='text-center fs-4 fw-bold'> Tim mạch</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img5'></div>
-                                <div className='text-center fs-4 fw-bold'>Tai mũi họng</div>
-                            </div>
-                            <div className='img-custom'>
-                                <div className='bg-img6'></div>
-                                <div className='text-center fs-4 fw-bold'>Cột sống</div>
-                            </div>
-                        </Slider>
-                    </div>
+            <div className='cover'>
+                <div className='section-specialty' >
+                    <div className='specialty-container'>
+                        <div className='specialty-header'>
+                            <span className='title1'>Chuyên khoa</span>
+                            <button className='btn-xemthem'>Xem thêm</button>
+                        </div>
+                        <div className='specialty-body'>
+                            <Slider {...setting}>
+                                <div className='img-custom'>
+                                    <div className='bg-img1'></div>
+                                    <div className='text-center fs-4 fw-bold'>Cơ xương khớp</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img2'></div>
+                                    <div className='text-center fs-4 fw-bold'>Thần kinh</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img3'></div>
+                                    <div className='text-center fs-4 fw-bold'>Tiêu hóa</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img4'></div>
+                                    <div className='text-center fs-4 fw-bold'> Tim mạch</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img5'></div>
+                                    <div className='text-center fs-4 fw-bold'>Tai mũi họng</div>
+                                </div>
+                                <div className='img-custom'>
+                                    <div className='bg-img6'></div>
+                                    <div className='text-center fs-4 fw-bold'>Cột sống</div>
+                                </div>
+                            </Slider>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         );

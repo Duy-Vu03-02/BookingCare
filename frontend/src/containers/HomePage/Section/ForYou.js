@@ -13,17 +13,19 @@ class ForYou extends Component {
     render() {
 
         return (
-            <div className='section-ForYou'>
-                <div className='ForYou-container'>
-                    <div className='ForYou-header'>
-                        <span className='title1'>Dành cho bạn</span>
-                    </div>
-                    <div className='ForYou-body'>
-                        <div className='img-custom'>
-                            <div className='bg-img'>
-                            </div>
-                            <div className='title2'>
-                                <span>Chuyên khoa</span>
+            <div className='cover'>
+                <div className='section-ForYou'>
+                    <div className='ForYou-container'>
+                        <div className='ForYou-header'>
+                            <span className='title1'>Dành cho bạn</span>
+                        </div>
+                        <div className='ForYou-body'>
+                            <div className='img-custom'>
+                                <div className='bg-img'>
+                                </div>
+                                <div className='title2'>
+                                    <span>Chuyên khoa</span>
+                                </div>
                             </div>
                         </div>
                     </div>
