@@ -28,7 +28,7 @@ const MedicalDetailSchema = new Schema<IMedicalDetail>({
 });
 
 MedicalDetailSchema.method({
-    tranform(): IReponseMedicalDetial {
+    transform(): IReponseMedicalDetial {
         return {
             id: this._id.toHexString(),
             name: this.name,

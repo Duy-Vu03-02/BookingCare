@@ -1,15 +1,31 @@
-import { isTemplateExpression } from 'typescript';
-import { DoctorModel, IIdDoctor, IResponceDocter, IResponseBasicDoctor } from './doctor.interface';
+import { DoctorModel, IDocter, IIdDoctor, IResponceDocter, IResponseBasicDoctor } from './doctor.interface';
 import { APIError } from '@common/error/api.error';
 import { statusCode } from '@config/errors';
 
 export class DoctorService {
+    public static createDoctor = async (data: IDocter): Promise<IResponceDocter> => {
+        try {
+            const doctor = await DoctorModel.create(data);
+            if (doctor) {
+                return doctor.transform();
+            }
+
+            throw new APIError({
+                message: 'Tạo mới bác sĩ không thành công',
+                status: statusCode.REQUEST_FORBIDDEN,
+                errorCode: statusCode.REQUEST_FORBIDDEN,
+            });
+        } catch (err) {
+            throw err;
+        }
+    };
+
     public static getFeaturedDoctor = async (): Promise<IResponseBasicDoctor[]> => {
         try {
             const doctors = await DoctorModel.find();
 
             if (doctors) {
-                return doctors.map((item) => item.tranformBasic());
+                return doctors.map((item) => item.transformBasic());
             }
 
             return [];
@@ -23,7 +39,7 @@ export class DoctorService {
             const doctor = await DoctorModel.findById(data.id);
 
             if (doctor) {
-                return doctor.tranform();
+                return doctor.transform();
             }
 
             throw new APIError({

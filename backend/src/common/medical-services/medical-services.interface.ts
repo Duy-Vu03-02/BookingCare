@@ -8,7 +8,7 @@ export interface IMedicalServices {
     name: string;
     img: string;
 
-    tranform(): IReponseMedicalServices;
+    transform(): IReponseMedicalServices;
 }
 
 export interface IReponseMedicalServices {
@@ -22,7 +22,7 @@ export interface IMedicalDetail {
     img: string;
     medical_service_id: string;
 
-    tranform(): IReponseMedicalDetial;
+    transform(): IReponseMedicalDetial;
 }
 
 export interface IReponseMedicalDetial {

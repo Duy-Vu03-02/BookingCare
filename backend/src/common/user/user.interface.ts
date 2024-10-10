@@ -1,19 +1,19 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, { Schema } from 'mongoose';
 
-export interface IUserDataToken  {
+export interface IUserDataToken {
     id: string;
 }
 
 export interface IUser {
-    name: string,
-    sex: string,
-    phone: string,
-    email: string,
-    yob: string,
-    city: string,
-    district: string,
-    address: string,
-    reasonExamination: string,
+    name: string;
+    sex: string;
+    phone: string;
+    email: string;
+    yob: string;
+    city: string;
+    district: string;
+    address: string;
+    booking: [string];
 }
 
 const UserSchema = new Schema<IUser>({
@@ -25,7 +25,7 @@ const UserSchema = new Schema<IUser>({
     city: { type: String, required: true },
     district: { type: String, required: true },
     address: { type: String, required: true },
-    reasonExamination: { type: String, required: true },
-})
+    booking: [{ type: String }],
+});
 
-export const UserModel = mongoose.model<IUser>("User", UserSchema);
+export const UserModel = mongoose.model<IUser>('User', UserSchema);

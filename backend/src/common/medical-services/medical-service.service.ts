@@ -8,7 +8,7 @@ export class MedicalServices {
         try {
             const listMedicalService = await MedicalServicesModel.find({});
             if (listMedicalService) {
-                return listMedicalService.map((item) => item.tranform());
+                return listMedicalService.map((item) => item.transform());
             }
             return [];
         } catch (err) {
@@ -26,7 +26,7 @@ export class MedicalServices {
             if (id) {
                 const medicalDetial = await MedicalDetailModel.find({ medical_service_id: id });
                 if (medicalDetial) {
-                    return medicalDetial.map((item) => item.tranform());
+                    return medicalDetial.map((item) => item.transform());
                 }
             }
 

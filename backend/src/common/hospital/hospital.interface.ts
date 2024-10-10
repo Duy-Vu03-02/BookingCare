@@ -26,8 +26,8 @@ export interface IHospital extends Document {
     medicalEquipment?: string;
     medicalEaminationProcess?: string;
 
-    tranform(): IResponseHospital;
-    tranformBasic(): IResponseBasicHospital;
+    transform(): IResponseHospital;
+    transformBasic(): IResponseBasicHospital;
 }
 
 export interface IResponseHospital {
