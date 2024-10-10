@@ -23,20 +23,20 @@ class HomePage extends Component {
         return (
             <div>
                 <HomeHeader />
-                <ForYou />
+                {/* <ForYou /> */}
                 <FullService />
-                <Specialty />
-                <MedicalFacility />
-                <FamousDoctor />
-                <RemoteExamination />
-                <MetalHealth />
-                <DoctorQnA />
-                <HandBook />
-                <Healthy />
-                <About />
-                <ForDoctor />
-                <Information />
-                <HomeFooter />
+                {/* <Specialty /> */}
+                {/* <MedicalFacility /> */}
+                {/* <FamousDoctor /> */}
+                {/* <RemoteExamination /> */}
+                {/* <MetalHealth /> */}
+                {/* <DoctorQnA /> */}
+                {/* <HandBook /> */}
+                {/* <Healthy /> */}
+                {/* <About /> */}
+                {/* <ForDoctor /> */}
+                {/* <Information /> */}
+                {/* <HomeFooter /> */}
             </div>
         );
     }

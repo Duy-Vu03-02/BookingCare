@@ -84,7 +84,7 @@ class HomeHeader extends Component {
                     </div>
 
                     <div className="banner">
-                        <div className="text-center mb-4">
+                        <div className="text-center mb-4 check">
                             <span className="h1">Nơi khởi nguồn sức khỏe</span>
                         </div>
                         <div className='search-banner '>
@@ -92,7 +92,7 @@ class HomeHeader extends Component {
                                 <div className="row justify-content-center">
                                     <div className="col-12">
                                         <div className='input'>
-                                            <div><input type="text" className="" placeholder="Đặt câu hỏi với trợ lý AI" /></div>
+                                            <div><input type="text" className="ai" placeholder="Đặt câu hỏi với trợ lý AI" /></div>
                                             <div><i className="fas fa-paper-plane"></i></div>
                                         </div>
                                         <div className='upfile'>
