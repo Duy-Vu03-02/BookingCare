@@ -8,6 +8,7 @@ export class ResponseMiddleware {
         const { status = httpStatus.INTERNAL_SERVER_ERROR, errorCode = 1 } = err;
         const response = {
             error_code: errorCode,
+            status: status,
             message: err.message ? err.message : httpStatus[status],
             stack: err.stack,
             errors: err.errors,

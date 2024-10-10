@@ -1,4 +1,5 @@
 import { DoctorRank } from '@common/constant/constant.rank';
+import { MedicalSpecialty } from '@common/constant/constant.specialty';
 import { transform, values } from 'lodash';
 import mongoose, { Schema } from 'mongoose';
 
@@ -16,19 +17,20 @@ export interface IDocter extends Document {
     password: string;
 
     rank: string;
-    hospital_id: Schema.Types.ObjectId;
-    medical_schedule_id: Schema.Types.ObjectId;
+    examination_price: number;
+    hospital_id?: Schema.Types.ObjectId;
+    medical_schedule_id?: Schema.Types.ObjectId;
     examinationAddress: string;
-    hospital: string;
-    specialty: string;
+    hospital?: string;
+    specialty: MedicalSpecialty;
     description: [string];
-    educationProcess?: [string];
-    workProcess?: [string];
+    education_process?: [string];
+    work_process?: [string];
     prize?: [string];
-    scientificReport?: [string];
+    scientific_report?: [string];
 
-    tranform(): IResponceDocter;
-    tranformBasic(): IResponseBasicDoctor;
+    transform(): IResponceDocter;
+    transformBasic(): IResponseBasicDoctor;
 }
 
 export interface IResponceDocter {
@@ -41,16 +43,17 @@ export interface IResponceDocter {
     password: string;
 
     rank: string;
-    hospital_id: string;
-    medical_schedule_id: string;
-    examinationAddress: string;
-    hospital: string;
-    specialty: string;
+    examination_price: number;
+    hospital_id?: string;
+    medical_schedule_id?: string;
+    examination_address: string;
+    hospital?: string;
+    specialty: MedicalSpecialty;
     description: [string];
-    educationProcess?: [string];
-    workProcess?: [string];
+    education_process?: [string];
+    work_process?: [string];
     prize?: [string];
-    scientificReport?: [string];
+    scientific_report?: [string];
 }
 
 export interface IResponseBasicDoctor {
@@ -59,8 +62,8 @@ export interface IResponseBasicDoctor {
     name: string;
     rank: string;
     specialty: string;
-    hospital_id: string;
-    medical_schedule_id: string;
+    hospital_id?: string;
+    medical_schedule_id?: string;
 }
 
 const DoctorSchema = new Schema<IDocter>({
@@ -72,16 +75,17 @@ const DoctorSchema = new Schema<IDocter>({
     password: { type: String },
 
     rank: { type: String, enum: values(DoctorRank) },
+    examination_price: { type: Number, default: 0 },
     hospital_id: { type: String, ref: 'Hospital' },
     medical_schedule_id: { type: String, ref: 'MedicalAppointment' },
     examinationAddress: { type: String },
     hospital: { type: String },
-    specialty: { type: String, required: true },
+    specialty: { type: String, required: true, enum: values(MedicalSpecialty) },
     description: { type: [String], default: [] },
-    educationProcess: { type: [String], default: [] },
-    workProcess: { type: [String], default: [] },
+    education_process: { type: [String], default: [] },
+    work_process: { type: [String], default: [] },
     prize: { type: [String], default: [] },
-    scientificReport: { type: [String], default: [] },
+    scientific_report: { type: [String], default: [] },
 });
 
 DoctorSchema.method({
@@ -96,30 +100,31 @@ DoctorSchema.method({
             password: this.password,
 
             rank: this.rank,
+            examination_price: this.examination_price,
             hospital_id: this.hospital_id,
-            medical_schedule_id: this.medical_schedule_id.toHexString(),
-            examinationAddress: this.examinationAddress.toHexString(),
-            hospital: this.hospital,
+            medical_schedule_id: this.medical_schedule_id ? this.medical_schedule_id.toHexString() : undefined,
+            examination_address: this.examinationAddress ? this.examinationAddress.toHexString() : undefined,
+            hospital: this.hospital ? this.hospital : undefined,
             specialty: this.specialty,
             description: this.description,
-            educationProcess: this.educationProcess,
-            workProcess: this.workProcess,
+            education_process: this.educationProcess,
+            work_process: this.workProcess,
             prize: this.prize,
-            scientificReport: this.scientificReport,
+            scientific_report: this.scientificReport,
         };
     },
 });
 
 DoctorSchema.method({
-    tranformBasic(): IResponseBasicDoctor {
+    transformBasic(): IResponseBasicDoctor {
         return {
             id: this._id.toHexString(),
             img: this.img,
             name: this.name,
             rank: this.rank,
             specialty: this.specialty,
-            hospital_id: this.hospital_id.toHexString(),
-            medical_schedule_id: this.medical_schedule_id.toHexString(),
+            hospital_id: this.hospital_id ? this.hospital_id.toHexString() : undefined,
+            medical_schedule_id: this.medical_schedule_id ? this.medical_schedule_id.toHexString() : undefined,
         };
     },
 });

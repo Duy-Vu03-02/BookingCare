@@ -4,7 +4,7 @@ import { ExpressServer } from './server';
 
 export class Application {
     public static createApplication = async (): Promise<ExpressServer> => {
-        // await DatabaseAdapter.connection();
+        await DatabaseAdapter.connection();
 
         Application.registerEvent();
         Application.registerCron();
