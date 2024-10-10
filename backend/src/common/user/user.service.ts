@@ -1,4 +1,4 @@
-import { IReponseMedicalServices, MedicalServicesModel } from '@common/medicalServices/medicalServices.interface';
+import { IReponseMedicalServices, MedicalServicesModel } from '@common/medical-services/medical-services.interface';
 
 export class UserService {
     public static getAllService = async (): Promise<IReponseMedicalServices[]> => {

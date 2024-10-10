@@ -16,16 +16,17 @@ export interface IDocter extends Document {
     password: string;
 
     rank: string;
+    examination_price: number;
     hospital_id: Schema.Types.ObjectId;
     medical_schedule_id: Schema.Types.ObjectId;
     examinationAddress: string;
     hospital: string;
     specialty: string;
     description: [string];
-    educationProcess?: [string];
-    workProcess?: [string];
+    education_process?: [string];
+    work_process?: [string];
     prize?: [string];
-    scientificReport?: [string];
+    scientific_report?: [string];
 
     tranform(): IResponceDocter;
     tranformBasic(): IResponseBasicDoctor;
@@ -41,16 +42,17 @@ export interface IResponceDocter {
     password: string;
 
     rank: string;
+    examination_price: number;
     hospital_id: string;
     medical_schedule_id: string;
-    examinationAddress: string;
+    examination_address: string;
     hospital: string;
     specialty: string;
     description: [string];
-    educationProcess?: [string];
-    workProcess?: [string];
+    education_process?: [string];
+    work_process?: [string];
     prize?: [string];
-    scientificReport?: [string];
+    scientific_report?: [string];
 }
 
 export interface IResponseBasicDoctor {
@@ -72,16 +74,17 @@ const DoctorSchema = new Schema<IDocter>({
     password: { type: String },
 
     rank: { type: String, enum: values(DoctorRank) },
+    examination_price: { type: Number, default: 0 },
     hospital_id: { type: String, ref: 'Hospital' },
     medical_schedule_id: { type: String, ref: 'MedicalAppointment' },
     examinationAddress: { type: String },
     hospital: { type: String },
     specialty: { type: String, required: true },
     description: { type: [String], default: [] },
-    educationProcess: { type: [String], default: [] },
-    workProcess: { type: [String], default: [] },
+    education_process: { type: [String], default: [] },
+    work_process: { type: [String], default: [] },
     prize: { type: [String], default: [] },
-    scientificReport: { type: [String], default: [] },
+    scientific_report: { type: [String], default: [] },
 });
 
 DoctorSchema.method({
@@ -96,16 +99,17 @@ DoctorSchema.method({
             password: this.password,
 
             rank: this.rank,
+            examination_price: this.examination_price,
             hospital_id: this.hospital_id,
             medical_schedule_id: this.medical_schedule_id.toHexString(),
-            examinationAddress: this.examinationAddress.toHexString(),
+            examination_address: this.examinationAddress.toHexString(),
             hospital: this.hospital,
             specialty: this.specialty,
             description: this.description,
-            educationProcess: this.educationProcess,
-            workProcess: this.workProcess,
+            education_process: this.educationProcess,
+            work_process: this.workProcess,
             prize: this.prize,
-            scientificReport: this.scientificReport,
+            scientific_report: this.scientificReport,
         };
     },
 });
