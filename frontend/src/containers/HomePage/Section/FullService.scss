@@ -1,0 +1,141 @@
+.section-FullService {
+    height: 1100px;
+    background-color: white;
+
+    .FullService-container {
+        height: 100%;
+        margin: 0 100px;
+        padding: 30px 0;
+
+
+        .FullService-header {
+            height: 60px;
+            padding: 10px 10px 10px 30px;
+
+            .title1 {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+        }
+
+        .FullService-body {
+
+            .service {
+                display: flex;
+                gap: 100px;
+                justify-content: center;
+                align-items: center;
+                padding-top: 50px;
+
+
+                .service-child {
+                    display: flex;
+                    width: 800px;
+                    height: 140px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    padding: 20px 20px;
+                    border-radius: 40px;
+                    background-image: url(../../../assets/Fullservice/fs-bg.png);
+                    background-size: cover;
+
+                    .child-content {
+                        margin-left: 100px;
+                        padding-top: 25px;
+                        font-weight: bold;
+                        font-size: 34px;
+                    }
+
+                    .child-img1 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/kham-chuyen-khoa.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img2 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/kham-tu-xa.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img3 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/kham-tong-quan.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img4 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/xet-nghiem-y-hoc.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img5 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/suc-khoe-tinh-than.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img6 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/kham-nha-khoa.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img7 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/goi-phau-thuat.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img8 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/song-khoe-tieu-duong.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img9 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/bai-test-suc-khoe2.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    .child-img10 {
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../../../assets/Fullservice/near-home-01.webp);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.cover {
+    width: 100%;
+    max-width: 2600px;
+    height: auto;
+    margin: 80px auto 0 auto;
+}
