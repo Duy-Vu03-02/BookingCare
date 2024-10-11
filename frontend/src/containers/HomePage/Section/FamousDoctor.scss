@@ -157,3 +157,267 @@
     height: auto;
     margin: 80px auto 0 auto;
 }
+
+@media only screen and (max-width: 1000px) {
+
+    //150%
+    .section-FamousDoctor {
+        .FamousDoctor-container {
+            .FamousDoctor-header {}
+
+            .FamousDoctor-body {
+                width: 900px;
+                margin-left: -50px;
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 0px;
+    }
+
+    .slick-prev {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    //175%
+    .section-FamousDoctor {
+
+        .FamousDoctor-container {
+            .FamousDoctor-header {}
+
+            .FamousDoctor-body {
+                width: 760px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    //200%
+    .section-FamousDoctor {
+        .FamousDoctor-container {
+            .FamousDoctor-header {}
+
+            .FamousDoctor-body {
+                width: 660px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: auto;
+
+                    .text-center {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    //250%
+    .section-FamousDoctor {
+        .FamousDoctor-container {
+            height: auto;
+
+            .FamousDoctor-header {
+
+                .title1 {
+                    margin-left: -70px;
+                }
+
+                .btn-xemthem {
+                    margin-right: -60px;
+                }
+            }
+
+            .FamousDoctor-body {
+                width: 500px;
+
+                margin-left: -50px;
+
+                .img-custom {
+                    height: auto;
+
+                    .text-center {
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    //300%
+    .section-FamousDoctor {
+        .FamousDoctor-container {
+            .FamousDoctor-header {
+                display: flex;
+                height: auto;
+                gap: 50px;
+            }
+
+            .FamousDoctor-body {
+                width: 400px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    //400%
+    .section-FamousDoctor {
+        height: auto;
+
+        .FamousDoctor-container {
+            .FamousDoctor-header {
+                display: flex;
+                height: auto;
+                gap: 10px;
+                flex-direction: column;
+
+                .title1 {
+                    white-space: nowrap;
+                    margin-left: -40px;
+                }
+
+                .btn-xemthem {
+                    width: 200px;
+                    margin-left: -40px;
+                }
+            }
+
+            .FamousDoctor-body {
+                width: 300px;
+                margin-left: -65px;
+
+                .img-custom {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    //500%
+    .section-FamousDoctor {
+        .FamousDoctor-container {
+            .FamousDoctor-header {
+                display: flex;
+                height: auto;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .title1 {
+                    margin-left: -20px;
+                    white-space: nowrap;
+                }
+
+                .btn-xemthem {
+                    width: 200px;
+                    margin-left: -80px;
+                }
+            }
+
+            .FamousDoctor-body {
+                width: 240px;
+                margin-left: -70px;
+
+                .img-custom {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}

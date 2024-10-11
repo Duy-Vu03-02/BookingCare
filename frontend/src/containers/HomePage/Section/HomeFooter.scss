@@ -7,7 +7,6 @@
 
         .HomeFooter-header {
             height: 60px;
-            padding: 10px 10px 10px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -56,4 +55,21 @@
     max-width: 2600px;
     height: auto;
     margin: 0px auto 10px auto;
+}
+
+@media only screen and (max-width: 700px) {
+
+    //250%
+    .section-HomeFooter {
+        .HomeFooter-container {
+            .HomeFooter-header {
+                justify-content: space-between;
+                padding: 0 10px;
+
+                .titles {}
+
+                .footer {}
+            }
+        }
+    }
 }

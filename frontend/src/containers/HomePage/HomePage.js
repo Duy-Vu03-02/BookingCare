@@ -25,18 +25,18 @@ class HomePage extends Component {
                 <HomeHeader />
                 {/* <ForYou /> */}
                 <FullService />
-                {/* <Specialty /> */}
-                {/* <MedicalFacility /> */}
-                {/* <FamousDoctor /> */}
-                {/* <RemoteExamination /> */}
-                {/* <MetalHealth /> */}
-                {/* <DoctorQnA /> */}
-                {/* <HandBook /> */}
-                {/* <Healthy /> */}
-                {/* <About /> */}
-                {/* <ForDoctor /> */}
-                {/* <Information /> */}
-                {/* <HomeFooter /> */}
+                <Specialty />
+                <MedicalFacility />
+                <FamousDoctor />
+                <RemoteExamination />
+                <MetalHealth />
+                <DoctorQnA />
+                <HandBook />
+                <Healthy />
+                <About />
+                <ForDoctor />
+                <Information />
+                <HomeFooter />
             </div>
         );
     }

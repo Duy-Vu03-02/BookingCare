@@ -49,6 +49,7 @@
                 border-radius: 20px;
                 border: 1px solid rgba(0, 0, 0, 0.1);
                 margin-right: 15px;
+                height: 250px;
 
                 .bg-img1 {
                     height: 150px;
@@ -160,4 +161,271 @@
     max-width: 2600px;
     height: auto;
     margin: 80px auto 0 auto;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    //150%
+    .section-MetalHealth {
+        .MetalHealth-container {
+            .MetalHealth-header {}
+
+            .MetalHealth-body {
+                width: 900px;
+                margin-left: -50px;
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 0px;
+    }
+
+    .slick-prev {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    //175%
+    .section-MetalHealth {
+
+        .MetalHealth-container {
+            .MetalHealth-header {}
+
+            .MetalHealth-body {
+                width: 760px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    //200%
+    .section-MetalHealth {
+        .MetalHealth-container {
+            .MetalHealth-header {}
+
+            .MetalHealth-body {
+                width: 660px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: auto;
+
+                    .text-center {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    //250%
+    .section-MetalHealth {
+        .MetalHealth-container {
+            height: auto;
+
+            .MetalHealth-header {
+
+                .title1 {
+                    margin-left: -70px;
+                }
+
+                .btn-xemthem {
+                    margin-right: -60px;
+                }
+            }
+
+            .MetalHealth-body {
+                width: 500px;
+
+                margin-left: -50px;
+
+                .img-custom {
+                    height: 250px;
+
+                    .text-center {
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    //300%
+    .section-MetalHealth {
+        height: auto;
+
+        .MetalHealth-container {
+            .MetalHealth-header {
+                display: flex;
+                height: auto;
+                gap: 5px;
+            }
+
+            .MetalHealth-body {
+                width: 400px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    //400%
+    .section-MetalHealth {
+        height: auto;
+
+        .MetalHealth-container {
+            .MetalHealth-header {
+                display: flex;
+                height: auto;
+                gap: 10px;
+                flex-direction: column;
+
+                .title1 {
+                    white-space: nowrap;
+                    margin-left: -90px;
+                }
+
+                .btn-xemthem {
+                    width: 200px;
+                    margin-left: -40px;
+                }
+            }
+
+            .MetalHealth-body {
+                width: 300px;
+                margin-left: -65px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    //500%
+    .section-MetalHealth {
+        .MetalHealth-container {
+            .MetalHealth-header {
+                display: flex;
+                height: auto;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .title1 {
+                    margin-left: -20px;
+                    white-space: nowrap;
+                }
+
+                .btn-xemthem {
+                    width: 200px;
+                    margin-left: -80px;
+                }
+            }
+
+            .MetalHealth-body {
+                width: 240px;
+                margin-left: -70px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
 }

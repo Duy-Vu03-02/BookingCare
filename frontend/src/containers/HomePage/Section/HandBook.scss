@@ -128,6 +128,7 @@
     width: 44px !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
     left: -20px !important;
+    margin-top: -40px;
 
     &:hover {
         background: #eaeaea !important;
@@ -149,8 +150,276 @@
     width: 46px !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
     right: -20px !important;
+    margin-top: -40px;
 
     &:hover {
         background: #eaeaea !important;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    //150%
+    .section-HandBook {
+        .HandBook-container {
+            .HandBook-header {}
+
+            .HandBook-body {
+                width: 900px;
+                margin-left: -50px;
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: -50px;
+    }
+
+    .slick-prev {
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    //175%
+    .section-HandBook {
+
+        .HandBook-container {
+            .HandBook-header {}
+
+            .HandBook-body {
+                width: 760px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: -50px;
+    }
+
+    .slick-prev {
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    //200%
+    .section-HandBook {
+        .HandBook-container {
+            .HandBook-header {}
+
+            .HandBook-body {
+                width: 660px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: auto;
+
+                    .text-center {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: -50px;
+    }
+
+    .slick-prev {
+        margin-top: -50px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    //250%
+    .section-HandBook {
+        .HandBook-container {
+            height: auto;
+
+            .HandBook-header {
+
+                .title1 {
+                    margin-left: -70px;
+                }
+
+                .btn-xemthem {
+                    margin-right: -60px;
+                }
+            }
+
+            .HandBook-body {
+                width: 500px;
+
+                margin-left: -50px;
+
+                .img-custom {
+                    height: 250px;
+
+                    .text-center {
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: -50px;
+    }
+
+    .slick-prev {
+        margin-top: -50px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    //300%
+    .section-HandBook {
+        height: auto;
+
+        .HandBook-container {
+            .HandBook-header {
+                display: flex;
+                height: auto;
+                gap: 100px;
+            }
+
+            .HandBook-body {
+                width: 400px;
+                margin-left: -50px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: -50px;
+    }
+
+    .slick-prev {
+        margin-top: -50px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    //400%
+    .section-HandBook {
+        height: auto;
+
+        .HandBook-container {
+            .HandBook-header {
+                display: flex;
+                height: auto;
+                gap: 10px;
+                flex-direction: column;
+
+                .title1 {
+                    white-space: nowrap;
+                    margin-left: -20px;
+                }
+
+                .btn-xemthem {
+                    width: 200px;
+                    margin-left: -40px;
+                }
+            }
+
+            .HandBook-body {
+                width: 300px;
+                margin-left: -65px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: -50px;
+    }
+
+    .slick-prev {
+        margin-top: -50px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    //500%
+    .section-HandBook {
+        .HandBook-container {
+            .HandBook-header {
+                display: flex;
+                height: auto;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .title1 {
+                    margin-left: -20px;
+                    white-space: nowrap;
+                }
+
+                .btn-xemthem {
+                    width: 200px;
+                    margin-left: -80px;
+                }
+            }
+
+            .HandBook-body {
+                width: 240px;
+                margin-left: -70px;
+
+                .img-custom {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .slick-next {
+        margin-top: -50px;
+    }
+
+    .slick-prev {
+        margin-top: -50px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
     }
 }
