@@ -49,7 +49,7 @@ class FamousDoctor extends Component {
     render() {
         let setting = {
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: this.state.slidesToShow,
             slidesToScroll: 1,
@@ -91,6 +91,33 @@ class FamousDoctor extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                <div className='img-custom'>
+                                    <div className='img-custom2'>
+                                        <div className='bg-img4'></div>
+                                        <div className='position text-center'>
+                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
+                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className='img-custom'>
+                                    <div className='img-custom2'>
+                                        <div className='bg-img4'></div>
+                                        <div className='position text-center'>
+                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
+                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className='img-custom'>
+                                    <div className='img-custom2'>
+                                        <div className='bg-img4'></div>
+                                        <div className='position text-center'>
+                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
+                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
+                                        </div>
+                                    </div>
+                                </div >
                                 <div className='img-custom'>
                                     <div className='img-custom2'>
                                         <div className='bg-img4'></div>

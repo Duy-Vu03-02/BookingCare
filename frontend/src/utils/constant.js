@@ -3,9 +3,10 @@ export const path = {
     HOMEPAGE: '/home',
     LOGIN: '/login',
     LOG_OUT: '/logout',
-    SYSTEM: '/system'
+    SYSTEM: '/system',
+    INHOME: '/dich-vu/tai-nha'
 };
- 
+
 export const LANGUAGES = {
     VI: 'vi',
     EN: 'en'

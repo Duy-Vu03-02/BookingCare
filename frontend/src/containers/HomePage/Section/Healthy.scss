@@ -43,6 +43,44 @@
         .Healthy-body {
             padding-bottom: 40px;
 
+            //reset slick slider
+
+            .slick-prev {
+                border: 2px solid #eaeaea !important;
+                z-index: 10000 !important;
+                height: 48px !important;
+                width: 44px !important;
+                background-color: rgba(255, 255, 255, 0.8) !important;
+                left: -20px !important;
+                margin-top: -30px;
+
+                &:hover {
+                    background: #eaeaea !important;
+                }
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                font-family: FontAwesome !important;
+                color: red !important;
+                font-size: 20px !important;
+                line-height: 1 !important;
+                color: red !important;
+            }
+
+            .slick-next {
+                border: 2px solid #eaeaea !important;
+                height: 48px !important;
+                width: 46px !important;
+                background-color: rgba(255, 255, 255, 0.8) !important;
+                right: -20px !important;
+                margin-top: -30px;
+
+                &:hover {
+                    background: #eaeaea !important;
+                }
+            }
+
             .img-custom {
                 display: flex !important;
                 flex-direction: column;
@@ -104,10 +142,23 @@
                     border-radius: 20px;
                 }
 
-                .title2 {
-                    padding-top: 15px;
+                .text-center {
                     font-size: 19px;
                     cursor: pointer;
+
+                    display: -webkit-box;
+                    /* Hiển thị dạng hộp linh hoạt */
+                    -webkit-box-orient: vertical;
+                    /* Xếp phần tử theo chiều dọc */
+                    -webkit-line-clamp: 2;
+                    /* Giới hạn số dòng tối đa là 2 */
+                    overflow: hidden;
+                    /* Ẩn phần văn bản vượt quá */
+                    text-overflow: ellipsis;
+                    /* Thêm dấu "..." ở cuối văn bản */
+                    line-height: 1.5;
+                    /* Đặt chiều cao dòng (line-height) */
+                    max-height: 3em;
 
                     &:hover {
                         color: rgb(35, 204, 147);
@@ -120,41 +171,8 @@
     }
 }
 
-
-//reset slick slider
-
-.slick-prev {
-    border: 2px solid #eaeaea !important;
-    z-index: 10000 !important;
-    height: 48px !important;
-    width: 44px !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    left: -20px !important;
-
-    &:hover {
-        background: #eaeaea !important;
-    }
-}
-
-.slick-prev:before,
-.slick-next:before {
-    font-family: FontAwesome !important;
-    color: red !important;
-    font-size: 20px !important;
-    line-height: 1 !important;
-    color: red !important;
-}
-
-.slick-next {
-    border: 2px solid #eaeaea !important;
-    height: 48px !important;
-    width: 46px !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    right: -20px !important;
-
-    &:hover {
-        background: #eaeaea !important;
-    }
+.slick-disabled {
+    display: none !important;
 }
 
 .cover {
@@ -175,17 +193,19 @@
             .Healthy-body {
                 width: 900px;
                 margin-left: -50px;
+
+                .slick-next {
+                    margin-top: -20px;
+                }
+
+                .slick-prev {
+                    margin-top: -20px;
+                }
             }
         }
     }
 
-    .slick-next {
-        margin-top: 0px;
-    }
 
-    .slick-prev {
-        margin-top: 0px;
-    }
 }
 
 @media only screen and (max-width: 900px) {

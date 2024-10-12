@@ -30,7 +30,7 @@ body {
             align-items: center;
             cursor: pointer;
             gap: 10px;
-
+            margin-right: 30px;
 
             .header-logo {
                 background-image: url('../../assets/logo.svg');
@@ -185,7 +185,11 @@ body {
     padding: 0 20px;
     background-color: #edfffa;
     gap: 80px;
-
+    padding: 10px 20px;
+    // position: sticky;
+    // position: fixed;
+    // top: 0;
+    // z-index: 100000;
 
     .cover-child-content2 {
         display: flex;
@@ -268,7 +272,7 @@ body {
 
                     }
 
-                    input {
+                    .select1 {
                         border: none;
                         outline: none;
                         width: 1000px;
@@ -387,6 +391,7 @@ body {
 @media only screen and (max-width: 1500px) {
 
     //100%
+
     .homeheader-container {
 
         .homeheader-content {
@@ -690,7 +695,6 @@ body {
         }
     }
 }
-
 
 @media only screen and (max-width: 800px) {
 
@@ -1164,4 +1168,196 @@ body {
 html,
 body {
     overflow-x: hidden;
+}
+
+.css-1xc3v61-indicatorContainer {
+    display: none !important;
+}
+
+.css-1wy0on6 {
+    display: none !important;
+}
+
+.css-13cymwt-control {
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+}
+
+
+.css-t3ipsp-control {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.css-1nmdiq5-menu {
+    width: 2300px !important;
+    margin-left: -30px !important;
+}
+
+
+@media only screen and (max-width: 2300px) {
+
+    // 67%
+    .css-1nmdiq5-menu {
+        width: 1915px !important;
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 2000px) {
+
+    // 75%
+    .css-1nmdiq5-menu {
+        width: 1670px !important;
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 1900px) {
+
+    // 80%
+    .css-1nmdiq5-menu {
+        width: 1545px !important;
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+
+    // 90%
+    .css-1nmdiq5-menu {
+        width: 1340px !important;
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+
+    // 100%
+    .css-1nmdiq5-menu {
+        width: 1320px !important;
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    // 110%
+    .css-1nmdiq5-menu {
+        width: 1282px !important;
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    // 125%
+    .css-1nmdiq5-menu {
+        width: 1160px !important;
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    // 150%
+    .css-1nmdiq5-menu {
+        width: 960px !important;
+        margin-left: -30px !important;
+    }
+
+    .css-13cymwt-control {
+        width: 860px;
+    }
+
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    // 175%
+    .css-1nmdiq5-menu {
+        width: 820px !important;
+        margin-left: -30px !important;
+    }
+
+    .css-13cymwt-control {
+        width: 660px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    // 200%
+    .css-1nmdiq5-menu {
+        width: 720px !important;
+        margin-left: -30px !important;
+    }
+
+    .css-13cymwt-control {
+        width: 560px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    // 250%
+    .css-1nmdiq5-menu {
+        width: 570px !important;
+        margin-left: -30px !important;
+    }
+
+    .css-13cymwt-control {
+        width: 460px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    // 300%
+    .css-1nmdiq5-menu {
+        width: 475px !important;
+        margin-left: -30px !important;
+    }
+
+    .css-13cymwt-control {
+        width: 360px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    // 400%
+    .css-1nmdiq5-menu {
+        width: 350px !important;
+        margin-left: -30px !important;
+    }
+
+    .css-13cymwt-control {
+        width: 260px;
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+
+    // 500%
+    .css-1nmdiq5-menu {
+        width: 280px !important;
+        margin-left: -30px !important;
+    }
+
+    .css-13cymwt-control {
+        width: 260px;
+        margin-left: -35px;
+        padding-left: -35px;
+    }
+
 }

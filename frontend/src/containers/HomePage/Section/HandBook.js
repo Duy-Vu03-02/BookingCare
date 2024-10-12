@@ -70,7 +70,7 @@ class HandBook extends Component {
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img2'></div>
-                                    <div className='text-center fs-4 '>Kinh nghiệm đi khám tại Bệnh viện Nam Học và Hiếm Muộn H...</div>
+                                    <div className='text-center fs-4 '>Kinh nghiệm đi khám tại Bệnh viện Nam Học và Hiếm Muộn Hà Nội</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img3'></div>
@@ -78,7 +78,7 @@ class HandBook extends Component {
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img4'></div>
-                                    <div className='text-center fs-4 '>Kinh nghiệm làm IVF Bệnh viện Nam học Hiếm muộn Hà Nội v...</div>
+                                    <div className='text-center fs-4 '>Kinh nghiệm làm IVF Bệnh viện Nam học Hiếm muộn Hà Nội và thông tin chi phí</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img5'></div>

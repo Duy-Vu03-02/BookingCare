@@ -49,7 +49,7 @@ class MedicalFacility extends Component {
     render() {
         let setting = {
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: this.state.slidesToShow,
             slidesToScroll: 1,

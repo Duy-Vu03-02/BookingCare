@@ -4,13 +4,29 @@ import './HomeHeader.scss'
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions/appActions';
+import Select from 'react-select';
+const options = [
+    { value: '1', label: 'Thuờng xuyên bị bóng đè cần khắc phục thế nào?' },
+    { value: '2', label: 'Cách điều trị mụn ẩn, mụn cám tuổi dậy thì hiệu quả' },
+    { value: '3', label: 'Rối loạn tiền đình uống thuốc không hiệu quả phải làm sao' },
+];
 
 class HomeHeader extends Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedDoctor: '',
+        }
+    }
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language);
         //fire redux event: actions
     }
+    handleChange = selectedDoctor => {
+        this.setState({ selectedDoctor }, () =>
+            console.log(`Option selected:`, this.state.selectedDoctor)
+        );
+    };
 
     render() {
         let language = this.props.language;
@@ -92,7 +108,24 @@ class HomeHeader extends Component {
                                 <div className="row justify-content-center">
                                     <div className="col-12">
                                         <div className='input'>
-                                            <div><input type="text" className="ai" placeholder="Đặt câu hỏi với trợ lý AI" /></div>
+                                            <Select
+                                                value={this.state.selectedDoctor}
+                                                onChange={this.handleChange}
+                                                options={options}
+                                                className='select1 col-12'
+                                                placeholder="Đặt câu hỏi với trợ lý AI"
+                                                noOptionsMessage={() => null}
+                                                styles={{
+                                                    option: (provided, state) => ({
+                                                        ...provided,
+                                                        backgroundColor: state.isSelected ? 'white' : state.isFocused ? '#f0f0f0' : null,
+                                                        color: state.isSelected ? 'black' : 'black',
+                                                        padding: 20,
+                                                        transition: 'all 0.2s ease',
+                                                        borderRadius: 'none'
+                                                    }),
+                                                }}
+                                            />
                                             <div><i className="fas fa-paper-plane"></i></div>
                                         </div>
                                         <div className='upfile'>

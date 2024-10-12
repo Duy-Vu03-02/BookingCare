@@ -50,26 +50,26 @@ export class HospitalController {
     };
 
     public static getDetailHospital = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const { id } = req.params;
-            const hospital = await HospitalService.getDetailHospital(req.params as );
+        // try {
+        //     const { id } = req.params;
+        //     const hospital = await HospitalService.getDetailHospital(req.params as );
 
-            if (hospital) {
-                res.sendJson({
-                    data: hospital,
-                });
-                return;
-            }
+        //     if (hospital) {
+        //         res.sendJson({
+        //             data: hospital,
+        //         });
+        //         return;
+        //     }
 
-            next(
-                new APIError({
-                    message: 'Không tồn tại bệnh viện',
-                    status: statusCode.REQUEST_NOT_FOUND,
-                    errorCode: statusCode.REQUEST_NOT_FOUND,
-                }),
-            );
-        } catch (err) {
-            next(err);
-        }
+        //     next(
+        //         new APIError({
+        //             message: 'Không tồn tại bệnh viện',
+        //             status: statusCode.REQUEST_NOT_FOUND,
+        //             errorCode: statusCode.REQUEST_NOT_FOUND,
+        //         }),
+        //     );
+        // } catch (err) {
+        //     next(err);
+        // }
     };
 }

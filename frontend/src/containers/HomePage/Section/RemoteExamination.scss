@@ -40,6 +40,49 @@
         }
 
         .RemoteExamination-body {
+
+            //reset slick slider
+
+            .slick-prev {
+                border: 2px solid #eaeaea !important;
+                z-index: 10000 !important;
+                height: 48px !important;
+                width: 44px !important;
+                background-color: rgba(255, 255, 255, 0.8) !important;
+                left: -20px !important;
+                border-radius: 12px;
+
+                &:hover {
+                    background: #eaeaea !important;
+                }
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                font-family: FontAwesome !important;
+                color: red !important;
+                font-size: 20px !important;
+                line-height: 1 !important;
+            }
+
+            .slick-next {
+                border: 2px solid #eaeaea !important;
+                height: 48px !important;
+                width: 46px !important;
+                background-color: rgba(255, 255, 255, 0.8) !important;
+                right: -20px !important;
+                border-radius: 12px;
+                color: green;
+
+                &:hover {
+                    background: #eaeaea !important;
+                }
+            }
+
+            .slick-slide {
+                padding: 0 10px; // kc anh slider
+            }
+
             .img-custom {
                 display: flex;
                 padding: 10px 10px 10px 10px;
@@ -122,47 +165,7 @@
 }
 
 
-//reset slick slider
 
-.slick-prev {
-    border: 2px solid #eaeaea !important;
-    z-index: 10000 !important;
-    height: 48px !important;
-    width: 44px !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    left: -20px !important;
-    border-radius: 12px;
-
-    &:hover {
-        background: #eaeaea !important;
-    }
-}
-
-.slick-prev:before,
-.slick-next:before {
-    font-family: FontAwesome !important;
-    color: red !important;
-    font-size: 20px !important;
-    line-height: 1 !important;
-}
-
-.slick-next {
-    border: 2px solid #eaeaea !important;
-    height: 48px !important;
-    width: 46px !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    right: -20px !important;
-    border-radius: 12px;
-    color: green;
-
-    &:hover {
-        background: #eaeaea !important;
-    }
-}
-
-.slick-slide {
-    padding: 0 10px; // kc anh slider
-}
 
 .cover {
     width: 100%;
@@ -184,14 +187,6 @@
             }
         }
     }
-
-    .slick-next {
-        margin-top: 0px;
-    }
-
-    .slick-prev {
-        margin-top: 0px;
-    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -206,6 +201,14 @@
                 width: 760px;
                 margin-left: -50px;
 
+                .slick-next {
+                    margin-top: 20px;
+                }
+
+                .slick-prev {
+                    margin-top: 20px;
+                }
+
                 .img-custom {
                     height: 250px;
                 }
@@ -213,13 +216,7 @@
         }
     }
 
-    .slick-next {
-        margin-top: 20px;
-    }
 
-    .slick-prev {
-        margin-top: 20px;
-    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -244,17 +241,6 @@
         }
     }
 
-    .slick-next {
-        margin-top: 20px;
-    }
-
-    .slick-prev {
-        margin-top: 20px;
-    }
-
-    .slick-slide {
-        padding: 0 3px; // kc anh slider
-    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -290,18 +276,6 @@
             }
         }
     }
-
-    .slick-next {
-        margin-top: 20px;
-    }
-
-    .slick-prev {
-        margin-top: 20px;
-    }
-
-    .slick-slide {
-        padding: 0 3px; // kc anh slider
-    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -324,18 +298,6 @@
                 }
             }
         }
-    }
-
-    .slick-next {
-        margin-top: 20px;
-    }
-
-    .slick-prev {
-        margin-top: 20px;
-    }
-
-    .slick-slide {
-        padding: 0 3px; // kc anh slider
     }
 }
 
@@ -372,18 +334,6 @@
                 }
             }
         }
-    }
-
-    .slick-next {
-        margin-top: 20px;
-    }
-
-    .slick-prev {
-        margin-top: 20px;
-    }
-
-    .slick-slide {
-        padding: 0 3px; // kc anh slider
     }
 }
 
@@ -422,15 +372,4 @@
         }
     }
 
-    .slick-next {
-        margin-top: 20px;
-    }
-
-    .slick-prev {
-        margin-top: 20px;
-    }
-
-    .slick-slide {
-        padding: 0 3px; // kc anh slider
-    }
 }

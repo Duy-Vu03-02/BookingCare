@@ -40,6 +40,44 @@
         }
 
         .FamousDoctor-body {
+            //reset slick slider
+
+            .slick-prev {
+                border: 2px solid #eaeaea !important;
+                z-index: 10000 !important;
+                height: 48px !important;
+                width: 44px !important;
+                background-color: rgba(255, 255, 255, 0.8) !important;
+                left: -20px !important;
+                margin-top: 0px;
+
+                &:hover {
+                    background: #eaeaea !important;
+                }
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                font-family: FontAwesome !important;
+                color: red !important;
+                font-size: 20px !important;
+                line-height: 1 !important;
+                color: red !important;
+            }
+
+            .slick-next {
+                border: 2px solid #eaeaea !important;
+                height: 48px !important;
+                width: 46px !important;
+                background-color: rgba(255, 255, 255, 0.8) !important;
+                right: -20px !important;
+                margin-top: 0px;
+
+                &:hover {
+                    background: #eaeaea !important;
+                }
+            }
+
             .img-custom {
 
                 padding: 5px;
@@ -115,41 +153,7 @@
 }
 
 
-//reset slick slider
 
-.slick-prev {
-    border: 2px solid #eaeaea !important;
-    z-index: 10000 !important;
-    height: 48px !important;
-    width: 44px !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    left: -20px !important;
-
-    &:hover {
-        background: #eaeaea !important;
-    }
-}
-
-.slick-prev:before,
-.slick-next:before {
-    font-family: FontAwesome !important;
-    color: red !important;
-    font-size: 20px !important;
-    line-height: 1 !important;
-    color: red !important;
-}
-
-.slick-next {
-    border: 2px solid #eaeaea !important;
-    height: 48px !important;
-    width: 46px !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    right: -20px !important;
-
-    &:hover {
-        background: #eaeaea !important;
-    }
-}
 
 .cover {
     width: 100%;
