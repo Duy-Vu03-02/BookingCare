@@ -34,10 +34,10 @@ export class UserService {
         if (email) {
             // const queue = await QueueService.getQueue(JobContant.SEND_MAIL_LOGIN);
 
-            const opt = Array.from({ length: 4 })
-                .map((_, index) => Math.floor(Math.random() * (index + 9)))
-                .join('');
-            console.log(opt);
+            // const opt = Array.from({ length: 4 })
+            //     .map((_, index) => Math.floor(Math.random() * (index + 9)))
+            //     .join('');
+            // console.log(opt);
 
             // await queue.add({ email, opt } as IUserJobEmail);
             return true;

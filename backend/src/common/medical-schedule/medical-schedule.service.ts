@@ -1,4 +1,5 @@
-import { IUser, UserModel } from '@common/user/user.interface';
+import { IUser } from '@common/user/user';
+import { UserModel } from '@common/user/user';
 import { IRegisterBooking, MedicalScheduleModel } from './medical-schedule.interface';
 import { eventBus } from '@common/eventbus';
 import { EventConstant } from '@common/constant/constant.event';
