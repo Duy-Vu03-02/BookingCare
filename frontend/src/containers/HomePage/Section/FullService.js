@@ -17,20 +17,20 @@ class FullService extends Component {
                 <div className='section-FullService'>
                     <div className='FullService-container'>
                         <div className='FullService-header'>
-                            <span className='title1'>Dịch vụ toàn diện</span>
+                            Dịch vụ toàn diện
                         </div>
                         <div className='FullService-body'>
                             <div className='service'>
                                 <div className='service-child'>
                                     <div className='child-img1'></div>
                                     <div className='child-content'>
-                                        <span>Khám chuyên khoa</span>
+                                        Khám chuyên khoa
                                     </div>
                                 </div>
                                 <div className='service-child'>
                                     <div className='child-img2'></div>
                                     <div className='child-content'>
-                                        <span>Khám từ xa</span>
+                                        Khám từ xa
                                     </div>
                                 </div>
                             </div>
@@ -38,13 +38,13 @@ class FullService extends Component {
                                 <div className='service-child'>
                                     <div className='child-img3'></div>
                                     <div className='child-content'>
-                                        <span>Khám tổng quát</span>
+                                        Khám tổng quát
                                     </div>
                                 </div>
                                 <div className='service-child'>
                                     <div className='child-img4'></div>
                                     <div className='child-content'>
-                                        <span>Xét nghiệm y học</span>
+                                        Xét nghiệm y học
                                     </div>
                                 </div>
                             </div>
@@ -52,13 +52,13 @@ class FullService extends Component {
                                 <div className='service-child'>
                                     <div className='child-img5'></div>
                                     <div className='child-content'>
-                                        <span>Sức khỏe tinh thần</span>
+                                        Sức khỏe tinh thần
                                     </div>
                                 </div>
                                 <div className='service-child'>
                                     <div className='child-img6'></div>
                                     <div className='child-content'>
-                                        <span>Khám nha khoa</span>
+                                        Khám nha khoa
                                     </div>
                                 </div>
                             </div>
@@ -66,13 +66,13 @@ class FullService extends Component {
                                 <div className='service-child'>
                                     <div className='child-img7'></div>
                                     <div className='child-content'>
-                                        <span>Gói phẫu thuật</span>
+                                        Gói phẫu thuật
                                     </div>
                                 </div>
                                 <div className='service-child'>
                                     <div className='child-img8'></div>
                                     <div className='child-content'>
-                                        <span>Sống khỏe tiểu đường</span>
+                                        Sống khỏe tiểu đường
                                     </div>
                                 </div>
                             </div>
@@ -80,13 +80,13 @@ class FullService extends Component {
                                 <div className='service-child'>
                                     <div className='child-img9'></div>
                                     <div className='child-content'>
-                                        <span>Bài Test sức khỏe</span>
+                                        Bài Test sức khỏe
                                     </div>
                                 </div>
                                 <div className='service-child'>
                                     <div className='child-img10'></div>
                                     <div className='child-content'>
-                                        <span>Y tế gần bạn</span>
+                                        Y tế gần bạn
                                     </div>
                                 </div>
                             </div>

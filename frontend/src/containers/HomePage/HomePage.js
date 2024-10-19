@@ -23,7 +23,7 @@ class HomePage extends Component {
         return (
             <div>
                 <HomeHeader />
-                <ForYou />
+                {/* <ForYou /> */}
                 <FullService />
                 <Specialty />
                 <MedicalFacility />

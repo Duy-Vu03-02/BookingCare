@@ -9,18 +9,49 @@ import 'slick-carousel/slick/slick-theme.css';
 
 class FamousDoctor extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            slidesToShow: 4,
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
+    }
+
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language);
         //fire redux event: actions
+    }
+
+    handleResize = () => {
+        // Detect zoom level using window.devicePixelRatio or window.innerWidth
+        const zoomLevel = Math.round(window.devicePixelRatio * 100);
+
+        if (zoomLevel >= 200 && zoomLevel < 300) {
+            this.setState({ slidesToShow: 3 });
+        } else if (zoomLevel >= 300 && zoomLevel < 350) {
+            this.setState({ slidesToShow: 2 });
+        } else if (zoomLevel >= 350) {
+            this.setState({ slidesToShow: 1 });
+        } else {
+            this.setState({ slidesToShow: 4 });
+        }
     }
 
 
     render() {
         let setting = {
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 500,
-            slidesToShow: 4,
+            slidesToShow: this.state.slidesToShow,
             slidesToScroll: 1,
         }
         return (
@@ -60,6 +91,33 @@ class FamousDoctor extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                <div className='img-custom'>
+                                    <div className='img-custom2'>
+                                        <div className='bg-img4'></div>
+                                        <div className='position text-center'>
+                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
+                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className='img-custom'>
+                                    <div className='img-custom2'>
+                                        <div className='bg-img4'></div>
+                                        <div className='position text-center'>
+                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
+                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className='img-custom'>
+                                    <div className='img-custom2'>
+                                        <div className='bg-img4'></div>
+                                        <div className='position text-center'>
+                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
+                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
+                                        </div>
+                                    </div>
+                                </div >
                                 <div className='img-custom'>
                                     <div className='img-custom2'>
                                         <div className='bg-img4'></div>

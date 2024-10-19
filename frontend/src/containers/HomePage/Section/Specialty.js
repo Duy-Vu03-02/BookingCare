@@ -9,19 +9,49 @@ import 'slick-carousel/slick/slick-theme.css';
 
 class Specialty extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            slidesToShow: 4,
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
+    }
+
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language);
         //fire redux event: actions
     }
 
+    handleResize = () => {
+        // Detect zoom level using window.devicePixelRatio or window.innerWidth
+        const zoomLevel = Math.round(window.devicePixelRatio * 100);
+
+        if (zoomLevel >= 250 && zoomLevel < 400) {
+            this.setState({ slidesToShow: 3 });
+        } else if (zoomLevel >= 400 && zoomLevel < 550) {
+            this.setState({ slidesToShow: 2 });
+        } else if (zoomLevel >= 550) {
+            this.setState({ slidesToShow: 1 });
+        } else {
+            this.setState({ slidesToShow: 4 });
+        }
+    }
 
     render() {
         let setting = {
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: this.state.slidesToShow,
+            slidesToScroll: 1,
         }
         return (
             <div className='cover'>

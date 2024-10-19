@@ -9,9 +9,40 @@ import 'slick-carousel/slick/slick-theme.css';
 
 class ForDoctor extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            slidesToShow: 4,
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
+    }
+
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language);
         //fire redux event: actions
+    }
+
+    handleResize = () => {
+        // Detect zoom level using window.devicePixelRatio or window.innerWidth
+        const zoomLevel = Math.round(window.devicePixelRatio * 100);
+
+        if (zoomLevel >= 200 && zoomLevel < 300) {
+            this.setState({ slidesToShow: 3 });
+        } else if (zoomLevel >= 300 && zoomLevel < 400) {
+            this.setState({ slidesToShow: 2 });
+        } else if (zoomLevel >= 400) {
+            this.setState({ slidesToShow: 1 });
+        } else {
+            this.setState({ slidesToShow: 4 });
+        }
     }
 
 
@@ -20,7 +51,7 @@ class ForDoctor extends Component {
             dots: false,
             infinite: true,
             speed: 500,
-            slidesToShow: 4,
+            slidesToShow: this.state.slidesToShow,
             slidesToScroll: 1,
         }
         return (
@@ -35,23 +66,23 @@ class ForDoctor extends Component {
                             <Slider {...setting}>
                                 <div className='img-custom'>
                                     <div className='bg-img1'></div>
-                                    <div className='text-center fs-4 '>7 sáng kiến giúp giảm thời gian chờ trong bệnh viện, phòng...</div>
+                                    <div className='text-center fs-4 '>7 sáng kiến giúp giảm thời gian chờ trong bệnh viện, phòng khám </div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img2'></div>
-                                    <div className='text-center fs-4 '>Dùng thử BookingCare_DX miễn phí, có nhưng tính năng...</div>
+                                    <div className='text-center fs-4 '>Dùng thử BookingCare_DX bản miễn phí, có những tính năng gì?</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img3'></div>
-                                    <div className='text-center fs-4 '>4 lợi ích Chuyển đổi số Phòng Khám</div>
+                                    <div className='text-center fs-4 '>4 Lợi ích Giải pháp Chuyển đổi số Phòng khám BookingCare_DX</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img4'></div>
-                                    <div className='text-center fs-4 '>Learn Start Up là gì? Ứng dụng trong Marketing phòng khám</div>
+                                    <div className='text-center fs-4 '>Lean Startup là gì? Ứng dụng trong Marketing phòng khám</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img5'></div>
-                                    <div className='text-center fs-4 '>Marketing phòng khám trên facebook: Cách viết Content</div>
+                                    <div className='text-center fs-4 '>Marketing phòng khám trên Facebook: Cách viết Content Facebook thu hút</div>
                                 </div>
                             </Slider>
                         </div>
