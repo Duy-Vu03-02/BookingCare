@@ -1,7 +1,14 @@
 import { APIError } from '@common/error/api.error';
 import { MedicalDetailModel, MedicalServicesModel } from './medical-service';
-import { IMedicalDetailId, IReponseMedicalDetial, IReponseMedicalServices } from './medical-services.interface';
+import {
+    IMedicalDetailId,
+    IMedicalMajorId,
+    IReponseMedicalDetial,
+    IReponseMedicalServices,
+} from './medical-services.interface';
 import { statusCode } from '@config/errors';
+import { IIdDoctor } from '@common/doctor/doctor.interface';
+import { IResponceDocter, DoctorModel } from '@common/doctor/doctor';
 
 export class MedicalServices {
     public static getAllMedicalService = async (): Promise<IReponseMedicalServices[]> => {
@@ -20,7 +27,7 @@ export class MedicalServices {
         }
     };
 
-    public static getMedicalService = async (req: IMedicalDetailId): Promise<IReponseMedicalDetial[]> => {
+    public static getDetailMedicalService = async (req: IMedicalDetailId): Promise<IReponseMedicalDetial[]> => {
         try {
             const { id } = req;
             if (id) {
@@ -38,5 +45,30 @@ export class MedicalServices {
                 errorCode: statusCode.REQUEST_NOT_FOUND,
             });
         }
+    };
+
+    public static getMedicalMajor = async (req: IMedicalMajorId): Promise<IResponceDocter[]> => {
+        const { id } = req;
+        if (id) {
+            const major = await MedicalDetailModel.findById(id);
+
+            if (major) {
+                const doctor = await DoctorModel.find({
+                    specialty: major.name,
+                });
+
+                if (doctor?.length > 0) {
+                    return doctor.map((doc) => doc.transform());
+                }
+
+                return [];
+            }
+        }
+
+        throw new APIError({
+            message: 'Không tồn tại chuyên khoa này',
+            status: statusCode.REQUEST_NOT_FOUND,
+            errorCode: statusCode.REQUEST_NOT_FOUND,
+        });
     };
 }

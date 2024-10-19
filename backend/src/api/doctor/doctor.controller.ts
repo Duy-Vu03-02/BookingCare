@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { DoctorService } from '@common/doctor/doctor.service';
-import { IDocter, IIdDoctor } from '@common/doctor/doctor.interface';
+import { IIdDoctor } from '@common/doctor/doctor.interface';
+import { IDocter } from '@common/doctor/doctor';
 import { APIError } from '@common/error/api.error';
 import { statusCode } from '@config/errors';
 

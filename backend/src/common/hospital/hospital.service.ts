@@ -37,7 +37,7 @@ export class HospitalService {
     public static getDetailHospital = async (data: IIDHospital): Promise<IResponseHospital> => {
         try {
             const hospital = await HospitalModel.findById(data.id);
-            console.log(data);
+
             if (hospital) {
                 return hospital.transform();
             }

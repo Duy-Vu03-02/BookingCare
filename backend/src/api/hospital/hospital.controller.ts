@@ -51,8 +51,7 @@ export class HospitalController {
 
     public static getDetailHospital = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const { id } = req.params;
-            const hospital = await HospitalService.getDetailHospital(req.params as );
+            const hospital = await HospitalService.getDetailHospital(req.query as unknown as IIDHospital);
 
             if (hospital) {
                 res.sendJson({

@@ -1,10 +1,10 @@
 import { APIError } from '@common/error/api.error';
 import { MedicalServices } from '@common/medical-services/medical-service.service';
-import { IMedicalDetailId } from '@common/medical-services/medical-services.interface';
+import { IMedicalDetailId, IMedicalMajorId } from '@common/medical-services/medical-services.interface';
 import { statusCode } from '@config/errors';
 import { NextFunction, Response, Request } from 'express';
 
-export class MedicalScheduleController {
+export class MedicalServiceController {
     public static getAllMedicalService = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
             const data = await MedicalServices.getAllMedicalService();
@@ -27,9 +27,9 @@ export class MedicalScheduleController {
         }
     };
 
-    public static getMedicalService = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    public static getDetailMedicalService = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
-            const data = await MedicalServices.getMedicalService(req.body as IMedicalDetailId);
+            const data = await MedicalServices.getDetailMedicalService(req.query as unknown as IMedicalDetailId);
             if (data) {
                 res.sendJson({
                     data: data,
@@ -44,6 +44,27 @@ export class MedicalScheduleController {
                     errorCode: statusCode.REQUEST_NOT_FOUND,
                 }),
             );
+        } catch (err) {
+            next(err);
+        }
+    };
+
+    public static getMedicalMajor = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const doctors = await MedicalServices.getMedicalMajor(req.query as unknown as IMedicalMajorId);
+
+            if (doctors?.length > 0) {
+                res.sendJson({
+                    data: doctors,
+                });
+                return;
+            }
+
+            throw new APIError({
+                message: 'Không tồn tại chuyên ngành này',
+                status: statusCode.REQUEST_FORBIDDEN,
+                errorCode: statusCode.REQUEST_FORBIDDEN,
+            });
         } catch (err) {
             next(err);
         }
