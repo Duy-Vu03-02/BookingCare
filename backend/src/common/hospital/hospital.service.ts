@@ -1,5 +1,6 @@
 import { APIError } from '@common/error/api.error';
-import { HospitalModel, IHospital, IIDHospital, IResponseBasicHospital, IResponseHospital } from './hospital.interface';
+import { IIDHospital } from './hospital.interface';
+import { HospitalModel, IHospital, IResponseBasicHospital, IResponseHospital } from './hospital';
 import { statusCode } from '@config/errors';
 
 export class HospitalService {

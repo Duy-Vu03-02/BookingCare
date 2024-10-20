@@ -26,7 +26,7 @@ export class MedicalScheduleCronJob {
             const records = [];
             doctorsId.map((item) => {
                 return {
-                    doctors_id: item,
+                    doctor_id: item,
                     schedule: {
                         '07:00': [],
                         '07:30': [],

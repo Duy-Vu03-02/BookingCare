@@ -13,12 +13,12 @@ export const userSignup: schema = {
 };
 
 export const getAllBooking: schema = {
-    body: {
+    body: Joi.object({
         medical_schedule_id: Joi.string().trim().required(),
         time_booking: Joi.string()
             .trim()
             .required()
             .valid(...values(TimeConstant)),
         token: Joi.string().trim().required(),
-    },
+    }),
 };

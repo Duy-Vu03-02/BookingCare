@@ -8,8 +8,8 @@ export interface IResponseMedicalSchedule {
 }
 
 export interface IMedicalSchedule extends Document {
-    _id: { type: Schema.Types.ObjectId; ref: 'User' };
-    doctor_id: { type: Schema.Types.ObjectId; ref: 'User' };
+    _id: Schema.Types.ObjectId;
+    doctor_id: Schema.Types.ObjectId;
     schedule: ISchedule;
 
     transform(): IResponseMedicalSchedule;
@@ -19,146 +19,34 @@ const MedicalScheduleSchema: Schema<IMedicalSchedule> = new Schema(
     {
         doctor_id: { type: Schema.Types.ObjectId, ref: 'Doctor' },
         schedule: {
-            '07:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '07:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '08:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '08:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '09:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '09:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '10:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '10:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '11:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '11:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '12:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '13:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '14:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '14:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '15:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '15:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '16:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '16:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '17:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '17:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '18:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '18:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '19:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '19:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '20:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '20:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '21:00': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
-            '21:30': [
-                {
-                    user_id: { type: Schema.Types.ObjectId, ref: 'User' },
-                },
-            ],
+            '07:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '07:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '08:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '08:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '09:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '09:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '10:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '10:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '11:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '11:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '12:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '13:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '14:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '14:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '15:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '15:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '16:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '16:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '17:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '17:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '18:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '18:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '19:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '19:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '20:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '20:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '21:00': [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            '21:30': [{ type: Schema.Types.ObjectId, ref: 'User' }],
         },
     },
     {
@@ -172,146 +60,34 @@ MedicalScheduleSchema.method({
             id: this._id.toHexString(),
             doctor_id: this.doctor_id.toHexString(),
             schedule: {
-                '07:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '07:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '08:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '08:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '09:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '09:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '10:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '10:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '11:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '11:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '12:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '13:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '14:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '14:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '15:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '15:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '16:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '16:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '17:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '17:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '18:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '18:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '19:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '19:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '20:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '20:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '21:00': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
-                '21:30': [
-                    {
-                        user_id: this.user_id.toHexString(),
-                    },
-                ],
+                '07:00': this['07:00'].map((item) => item.toHexString()),
+                '07:30': this['07:30'].map((item) => item.toHexString()),
+                '08:00': this['08:00'].map((item) => item.toHexString()),
+                '08:30': this['08:30'].map((item) => item.toHexString()),
+                '09:00': this['09:00'].map((item) => item.toHexString()),
+                '09:30': this['09:30'].map((item) => item.toHexString()),
+                '10:00': this['10:00'].map((item) => item.toHexString()),
+                '10:30': this['10:30'].map((item) => item.toHexString()),
+                '11:00': this['11:00'].map((item) => item.toHexString()),
+                '11:30': this['11:30'].map((item) => item.toHexString()),
+                '12:00': this['12:00'].map((item) => item.toHexString()),
+                '13:30': this['13:30'].map((item) => item.toHexString()),
+                '14:00': this['14:00'].map((item) => item.toHexString()),
+                '14:30': this['14:30'].map((item) => item.toHexString()),
+                '15:00': this['15:00'].map((item) => item.toHexString()),
+                '15:30': this['15:30'].map((item) => item.toHexString()),
+                '16:00': this['16:00'].map((item) => item.toHexString()),
+                '16:30': this['16:30'].map((item) => item.toHexString()),
+                '17:00': this['17:00'].map((item) => item.toHexString()),
+                '17:30': this['17:30'].map((item) => item.toHexString()),
+                '18:00': this['18:00'].map((item) => item.toHexString()),
+                '18:30': this['18:30'].map((item) => item.toHexString()),
+                '19:00': this['19:00'].map((item) => item.toHexString()),
+                '19:30': this['19:30'].map((item) => item.toHexString()),
+                '20:00': this['20:00'].map((item) => item.toHexString()),
+                '20:30': this['20:30'].map((item) => item.toHexString()),
+                '21:00': this['21:00'].map((item) => item.toHexString()),
+                '21:30': this['21:30'].map((item) => item.toHexString()),
             },
         };
     },

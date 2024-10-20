@@ -5,7 +5,7 @@ import { MedicalScheduleEvent } from '@common/medical-schedule/medical-schedule.
 
 export class Application {
     public static createApplication = async (): Promise<ExpressServer> => {
-        await DatabaseAdapter.connection();
+        await DatabaseAdapter.connect();
 
         Application.registerEvent();
         Application.registerCron();
