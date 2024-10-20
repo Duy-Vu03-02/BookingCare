@@ -1,7 +1,9 @@
 import { APIError } from '@common/error/api.error';
-import { IUserLogin } from '@common/user/user.interface';
+import { IUser } from '@common/user/user';
+import { IUserAuth, IUserDataToken, IUserLogin, IUserOTP } from '@common/user/user.interface';
 import { UserService } from '@common/user/user.service';
 import { statusCode } from '@config/errors';
+import { Token } from '@config/token';
 import { Request, Response, NextFunction } from 'express';
 
 export class UserController {
@@ -49,6 +51,49 @@ export class UserController {
             );
         } catch (err) {
             next(err);
+        }
+    };
+
+    public static verifyOTP = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const verify = await UserService.verifyOTP(req.body as IUserOTP);
+
+            if (verify && verify !== null) {
+                res.sendJson({
+                    data: verify,
+                });
+                return;
+            }
+
+            next(
+                new APIError({
+                    message: 'Mã OTP của bạn sai',
+                    errorCode: statusCode.REQUEST_FORBIDDEN,
+                    status: statusCode.REQUEST_FORBIDDEN,
+                }),
+            );
+        } catch (err) {
+            next(err);
+        }
+    };
+
+    public static getAllBooking = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const bookings = await UserService.getAllBooking(req.user as IUserAuth);
+
+            if (bookings?.length) {
+                res.sendJson({
+                    data: bookings,
+                });
+                return;
+            }
+
+            res.sendJson({
+                data: [],
+            });
+            return;
+        } catch (err) {
+            throw err;
         }
     };
 }

@@ -1,5 +1,6 @@
 import { APIError } from '@common/error/api.error';
-import { IHospital, IIDHospital } from '@common/hospital/hospital.interface';
+import { IIDHospital } from '@common/hospital/hospital.interface';
+import { IHospital } from '@common/hospital/hospital';
 import { HospitalService } from '@common/hospital/hospital.service';
 import { statusCode } from '@config/errors';
 import express, { NextFunction, Request, Response } from 'express';

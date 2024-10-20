@@ -3,6 +3,9 @@ declare global {
         interface Response {
             sendJson(data: unknown): this;
         }
+        interface Request {
+            user?: any;
+        }
     }
 }
 

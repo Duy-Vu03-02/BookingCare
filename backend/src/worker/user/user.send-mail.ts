@@ -6,8 +6,10 @@ import { EMAIL_ACCOUNT, EMAIL_PASSWORD } from '@config/environment';
 import { IUserJobEmail } from '@common/user/user.interface';
 
 export class UserSendMailJob {
+    private static JOB_NAME = JobContant.SEND_MAIL_LOGIN;
+
     public static register = async (): Promise<Queue<unknown>> => {
-        const queue = await QueueService.getQueue(JobContant.SEND_MAIL_LOGIN);
+        const queue = await QueueService.getQueue(UserSendMailJob.JOB_NAME);
         queue.process(UserSendMailJob.handler);
         return queue;
     };
@@ -34,7 +36,7 @@ export class UserSendMailJob {
                 text: 'OPT - Mã xác nhận',
                 html: `
                     <h2>Cam on ban da su dung Booking Care</h2>
-                    <p>Mã OPT của ban: <b>${data.opt}</b> </p>
+                    <p>Mã OPT của ban: <b>${data.otp}</b> </p>
                 `,
             });
 

@@ -62,27 +62,32 @@ export interface IResponseBasicDoctor {
     medical_schedule_id?: string;
 }
 
-const DoctorSchema = new Schema<IDocter>({
-    name: { type: String },
-    dob: { type: Date },
-    address: { type: String },
-    phone: { type: String },
-    email: { type: String },
-    password: { type: String },
+const DoctorSchema = new Schema<IDocter>(
+    {
+        name: { type: String },
+        dob: { type: Date },
+        address: { type: String },
+        phone: { type: String },
+        email: { type: String },
+        password: { type: String },
 
-    rank: { type: String, enum: values(DoctorRank) },
-    examination_price: { type: Number, default: 0 },
-    hospital_id: { type: String, ref: 'Hospital' },
-    medical_schedule_id: { type: String, ref: 'MedicalAppointment' },
-    examinationAddress: { type: String },
-    hospital: { type: String },
-    specialty: { type: String, required: true, enum: values(MedicalSpecialty) },
-    description: { type: [String], default: [] },
-    education_process: { type: [String], default: [] },
-    work_process: { type: [String], default: [] },
-    prize: { type: [String], default: [] },
-    scientific_report: { type: [String], default: [] },
-});
+        rank: { type: String, enum: values(DoctorRank) },
+        examination_price: { type: Number, default: 0 },
+        hospital_id: { type: String, ref: 'Hospital' },
+        medical_schedule_id: { type: String, ref: 'MedicalAppointment' },
+        examinationAddress: { type: String },
+        hospital: { type: String },
+        specialty: { type: String, required: true, enum: values(MedicalSpecialty) },
+        description: { type: [String], default: [] },
+        education_process: { type: [String], default: [] },
+        work_process: { type: [String], default: [] },
+        prize: { type: [String], default: [] },
+        scientific_report: { type: [String], default: [] },
+    },
+    {
+        timestamps: true,
+    },
+);
 
 DoctorSchema.method({
     transform(): IResponceDocter {

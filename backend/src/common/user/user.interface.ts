@@ -1,5 +1,14 @@
 export interface IUserDataToken {
+    phone: string;
+    email?: string;
     id: string;
+    hash: string;
+}
+
+export interface IUserAuth {
+    id: string;
+    phone: string;
+    email: string;
 }
 
 export interface IUserLogin {
@@ -9,5 +18,9 @@ export interface IUserLogin {
 
 export interface IUserJobEmail {
     email: string;
-    opt: string;
+    otp: string;
+}
+
+export interface IUserOTP {
+    otp: string;
 }
