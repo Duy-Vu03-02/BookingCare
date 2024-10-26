@@ -25,6 +25,7 @@ export class HospitalService {
     public static getAllHosptital = async (): Promise<IResponseBasicHospital[]> => {
         try {
             const hospitals = await HospitalModel.find();
+
             if (hospitals) {
                 return hospitals.map((item) => item.transformBasic());
             }

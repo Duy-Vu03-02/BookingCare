@@ -27,6 +27,27 @@ export class MedicalServiceController {
         }
     };
 
+    public static getAllSpecialty = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const data = await MedicalServices.getAllSpecialty();
+
+            if (data) {
+                res.sendJson({
+                    data: data,
+                });
+                return;
+            }
+
+            throw new APIError({
+                message: 'Không có chuyên ngành nào',
+                errorCode: statusCode.REQUEST_NOT_FOUND,
+                status: statusCode.REQUEST_NOT_FOUND,
+            });
+        } catch (err) {
+            next(err);
+        }
+    };
+
     public static getDetailMedicalService = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
             const data = await MedicalServices.getDetailMedicalService(req.query as unknown as IMedicalDetailId);

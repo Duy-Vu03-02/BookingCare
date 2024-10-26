@@ -8,8 +8,8 @@ import {
 
 const MedicalServicesSchema = new Schema<IMedicalServices>(
     {
-        name: { type: String },
         img: { type: String },
+        name: { type: String },
     },
     {
         timestamps: true,

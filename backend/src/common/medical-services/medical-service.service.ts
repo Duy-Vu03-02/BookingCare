@@ -27,6 +27,16 @@ export class MedicalServices {
         }
     };
 
+    public static getAllSpecialty = async (): Promise<IReponseMedicalDetial[]> => {
+        const medicalSpecialty = await MedicalDetailModel.find();
+
+        if (medicalSpecialty?.length > 0) {
+            return medicalSpecialty.map((item) => item.transform());
+        }
+
+        return [];
+    };
+
     public static getDetailMedicalService = async (req: IMedicalDetailId): Promise<IReponseMedicalDetial[]> => {
         try {
             const { id } = req;
