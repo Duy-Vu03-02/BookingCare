@@ -6,10 +6,15 @@ import {
     IReponseMedicalDetial,
 } from './medical-services.interface';
 
-const MedicalServicesSchema = new Schema<IMedicalServices>({
-    name: { type: String },
-    img: { type: String },
-});
+const MedicalServicesSchema = new Schema<IMedicalServices>(
+    {
+        name: { type: String },
+        img: { type: String },
+    },
+    {
+        timestamps: true,
+    },
+);
 
 MedicalServicesSchema.method({
     transform(): IReponseMedicalServices {

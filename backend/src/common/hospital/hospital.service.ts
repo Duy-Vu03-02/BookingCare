@@ -1,5 +1,6 @@
 import { APIError } from '@common/error/api.error';
-import { HospitalModel, IHospital, IIDHospital, IResponseBasicHospital, IResponseHospital } from './hospital.interface';
+import { IIDHospital } from './hospital.interface';
+import { HospitalModel, IHospital, IResponseBasicHospital, IResponseHospital } from './hospital';
 import { statusCode } from '@config/errors';
 
 export class HospitalService {
@@ -37,7 +38,7 @@ export class HospitalService {
     public static getDetailHospital = async (data: IIDHospital): Promise<IResponseHospital> => {
         try {
             const hospital = await HospitalModel.findById(data.id);
-            console.log(data);
+
             if (hospital) {
                 return hospital.transform();
             }

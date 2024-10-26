@@ -1,28 +1,28 @@
-import ioredis , {Redis} from "ioredis";
-import { REDIS_URL } from "@config/environment";
-import { isTemplateLiteralTypeNode } from "typescript";
+import ioredis, { Redis } from 'ioredis';
+import { REDIS_URL } from '@config/environment';
+import { isTemplateLiteralTypeNode } from 'typescript';
 
-export class RedisAdapter{
+export class RedisAdapter {
     private static client: Redis;
 
     private static subscriber: Redis;
     private static allClients: Redis[] = [];
 
     public static async getClient(): Promise<Redis> {
-        if(!RedisAdapter.client){
+        if (!RedisAdapter.client) {
             return await RedisAdapter.connect();
         }
         return RedisAdapter.client;
     }
 
-    public static async connect() : Promise<Redis> {
+    public static async connect(): Promise<Redis> {
         const tmp = new ioredis(REDIS_URL, {
             lazyConnect: true,
             maxRetriesPerRequest: 10,
         });
 
         tmp.on('ready', () => {
-            console.log('Connect to redis successfully!');
+            ('Connect to redis successfully!');
         });
         tmp.on('end', () => {
             console.log('Connect to redis ended!');
@@ -32,22 +32,20 @@ export class RedisAdapter{
             console.log('Connect to redis error!', error);
         });
 
-        try{
+        try {
             await tmp.connect();
             RedisAdapter.allClients.push(tmp);
             return tmp;
-        }
-        catch(err){
+        } catch (err) {
             console.error(err);
             process.exit(1);
         }
     }
 
     public static async disconnect(): Promise<void> {
-        try{
-            await Promise.all(RedisAdapter.allClients.map((client) => client.quit()))
-        }
-        catch(err){
+        try {
+            await Promise.all(RedisAdapter.allClients.map((client) => client.quit()));
+        } catch (err) {
             console.error(err);
         }
     }

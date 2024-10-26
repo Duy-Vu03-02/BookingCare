@@ -4,6 +4,10 @@ export interface IMedicalDetailId {
     id: string;
 }
 
+export interface IMedicalMajorId {
+    id: string;
+}
+
 export interface IMedicalServices {
     name: string;
     img: string;

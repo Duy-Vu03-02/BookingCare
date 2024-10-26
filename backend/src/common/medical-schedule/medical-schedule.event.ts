@@ -1,6 +1,7 @@
 import { EventConstant } from '@common/constant/constant.event';
 import { eventBus } from '@common/eventbus';
-import { IRegisterBooking, MedicalScheduleModel } from './medical-schedule.interface';
+import { IRegisterBooking } from './medical-schedule.interface';
+import { UserModel } from '@common/user/user';
 
 export class MedicalScheduleEvent {
     public static register = () => {
@@ -9,18 +10,11 @@ export class MedicalScheduleEvent {
 
     public static handleBooking = async (data: IRegisterBooking) => {
         try {
-            const booking = await MedicalScheduleModel.findByIdAndUpdate(
-                data.schedule_booking_id,
-                {
-                    $push: {
-                        schedule: {
-                            user_id: data.user_id,
-                            time: data.time,
-                        },
-                    },
+            const user = await UserModel.findByIdAndUpdate(data.user_id, {
+                $push: {
+                    booking: data.booking_id,
                 },
-                { new: true },
-            );
+            });
         } catch (err) {
             console.error(err);
         }

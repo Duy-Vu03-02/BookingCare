@@ -1,6 +1,7 @@
-import { DoctorModel, IDocter, IIdDoctor, IResponceDocter, IResponseBasicDoctor } from './doctor.interface';
 import { APIError } from '@common/error/api.error';
 import { statusCode } from '@config/errors';
+import { IDocter, DoctorModel, IResponceDocter, IResponseBasicDoctor } from './doctor';
+import { IIdDoctor } from './doctor.interface';
 
 export class DoctorService {
     public static createDoctor = async (data: IDocter): Promise<IResponceDocter> => {

@@ -1,5 +1,6 @@
 import { APIError } from '@common/error/api.error';
-import { IHospital, IIDHospital } from '@common/hospital/hospital.interface';
+import { IIDHospital } from '@common/hospital/hospital.interface';
+import { IHospital } from '@common/hospital/hospital';
 import { HospitalService } from '@common/hospital/hospital.service';
 import { statusCode } from '@config/errors';
 import express, { NextFunction, Request, Response } from 'express';
@@ -50,26 +51,25 @@ export class HospitalController {
     };
 
     public static getDetailHospital = async (req: Request, res: Response, next: NextFunction) => {
-        // try {
-        //     const { id } = req.params;
-        //     const hospital = await HospitalService.getDetailHospital(req.params as );
+        try {
+            const hospital = await HospitalService.getDetailHospital(req.query as unknown as IIDHospital);
 
-        //     if (hospital) {
-        //         res.sendJson({
-        //             data: hospital,
-        //         });
-        //         return;
-        //     }
+            if (hospital) {
+                res.sendJson({
+                    data: hospital,
+                });
+                return;
+            }
 
-        //     next(
-        //         new APIError({
-        //             message: 'Không tồn tại bệnh viện',
-        //             status: statusCode.REQUEST_NOT_FOUND,
-        //             errorCode: statusCode.REQUEST_NOT_FOUND,
-        //         }),
-        //     );
-        // } catch (err) {
-        //     next(err);
-        // }
+            next(
+                new APIError({
+                    message: 'Không tồn tại bệnh viện',
+                    status: statusCode.REQUEST_NOT_FOUND,
+                    errorCode: statusCode.REQUEST_NOT_FOUND,
+                }),
+            );
+        } catch (err) {
+            next(err);
+        }
     };
 }
