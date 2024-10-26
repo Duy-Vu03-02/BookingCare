@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './FamousDoctor.scss'
 import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
+import { useHistory, withRouter, Redirect } from 'react-router-dom';
 //import css file 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -45,7 +46,12 @@ class FamousDoctor extends Component {
         }
     }
 
+    handleViewDetailDoctor = () => {
 
+        // console.log("view info: ", doctor);
+        // this.props.history.push(`/users/${doctor.id}`);
+        this.props.history.push(`/detail-doctor/${1}`);
+    }
     render() {
         let setting = {
             dots: false,
@@ -64,7 +70,7 @@ class FamousDoctor extends Component {
                         </div>
                         <div className='FamousDoctor-body'>
                             <Slider {...setting}>
-                                <div className='img-custom'>
+                                <div className='img-custom' onClick={() => this.handleViewDetailDoctor()}>
                                     <div className='img-custom2'>
                                         <div className='bg-img1'></div>
                                         <div className='position text-center '>
@@ -73,7 +79,7 @@ class FamousDoctor extends Component {
                                         </div >
                                     </div>
                                 </div>
-                                <div className='img-custom'>
+                                <div className='img-custom' onClick={() => this.handleViewDetailDoctor()}>
                                     <div className='img-custom2'>
                                         <div className='bg-img2'></div>
                                         <div className='position text-center'>
@@ -82,7 +88,7 @@ class FamousDoctor extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='img-custom'>
+                                <div className='img-custom' onClick={() => this.handleViewDetailDoctor()}>
                                     <div className='img-custom2'>
                                         <div className='bg-img3'></div>
                                         <div className='position text-center'>
@@ -92,6 +98,15 @@ class FamousDoctor extends Component {
                                     </div>
                                 </div>
                                 <div className='img-custom'>
+                                    <div className='img-custom2' onClick={() => this.handleViewDetailDoctor()}>
+                                        <div className='bg-img4'></div>
+                                        <div className='position text-center'>
+                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
+                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
+                                        </div>
+                                    </div>
+                                </div >
+                                <div className='img-custom' onClick={() => this.handleViewDetailDoctor()}>
                                     <div className='img-custom2'>
                                         <div className='bg-img4'></div>
                                         <div className='position text-center'>
@@ -100,7 +115,7 @@ class FamousDoctor extends Component {
                                         </div>
                                     </div>
                                 </div >
-                                <div className='img-custom'>
+                                <div className='img-custom' onClick={() => this.handleViewDetailDoctor()}>
                                     <div className='img-custom2'>
                                         <div className='bg-img4'></div>
                                         <div className='position text-center'>
@@ -109,16 +124,7 @@ class FamousDoctor extends Component {
                                         </div>
                                     </div>
                                 </div >
-                                <div className='img-custom'>
-                                    <div className='img-custom2'>
-                                        <div className='bg-img4'></div>
-                                        <div className='position text-center'>
-                                            <div className='ten-hocvi'>Tiến sĩ, Bác sĩ chuyên khoa II Lê Quốc Việt</div>
-                                            <div className='chuyenkhoa'>Cơ xương khớp, Nội khoa</div>
-                                        </div>
-                                    </div>
-                                </div >
-                                <div className='img-custom'>
+                                <div className='img-custom' onClick={() => this.handleViewDetailDoctor()}>
                                     <div className='img-custom2'>
                                         <div className='bg-img4'></div>
                                         <div className='position text-center'>
@@ -150,4 +156,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FamousDoctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FamousDoctor));

@@ -22,8 +22,8 @@ class HomePage extends Component {
 
         return (
             <div>
-                <HomeHeader />
-                {/* <ForYou /> */}
+                <HomeHeader isShowBanner={true} />
+                <ForYou />
                 <FullService />
                 <Specialty />
                 <MedicalFacility />

@@ -18,7 +18,7 @@ const createNewUserService = (data) => {
 
 const deleteUserService = (uid) => {
     // return axios.delete('api/delete-user',{id: data.id})
-    return axios.delete('api/delete-user', {
+    return axios.delete('/api/delete-user', {
         data: {
             id: uid
         }
@@ -26,12 +26,38 @@ const deleteUserService = (uid) => {
 }
 
 const editUserService = (data) => {
-    return axios.put('api/edit-user', data)
+    return axios.put('/api/edit-user', data)
 }
 
 const getAllCodeService = (inputType) => {
     return axios.get(`/api/allcode?type=${inputType}`)
 }
 
+const getTopDoctor = (limit) => {
+    return axios.get(`/api/top-doctor?limit=${limit}`);
+}
 
-export { handleLoginApi, handleGetAllUser, createNewUserService, deleteUserService, editUserService, getAllCodeService }
+const getAllDoctor = () => {
+    return axios.get('/api/get-all-doctor')
+}
+
+const saveInfoDoctor = (data) => {
+    return axios.post(`/api/save-infor-doctor`, data)
+}
+
+const getDetalDoctor = (id) => {
+    return axios.get(`/api/get-detal-doctor-by-id?id=${id}`)
+}
+
+export {
+    handleLoginApi,
+    handleGetAllUser,
+    createNewUserService,
+    deleteUserService,
+    editUserService,
+    getAllCodeService,
+    getTopDoctor,
+    getAllDoctor,
+    saveInfoDoctor,
+    getDetalDoctor,
+}
