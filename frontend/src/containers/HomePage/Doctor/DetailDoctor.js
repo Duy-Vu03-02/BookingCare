@@ -7,6 +7,7 @@ import Information from '../../HomePage/Section/Information'
 import './DetailDoctor.scss'
 import { getDetalDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
+import ScrollToTop from '../../ScrollToTop';
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);

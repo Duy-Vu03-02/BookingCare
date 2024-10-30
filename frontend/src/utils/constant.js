@@ -5,7 +5,9 @@ export const path = {
     LOG_OUT: '/logout',
     SYSTEM: '/system',
     INHOME: '/dich-vu/tai-nha',
-    DETAIL_DOCTOR: '/detail-doctor/:id'
+    DETAIL_DOCTOR: '/detail-doctor/:id',
+    COOPERATE: "/cooperate",
+    APPOINTMENT: "/appointment"
 };
 
 export const LANGUAGES = {

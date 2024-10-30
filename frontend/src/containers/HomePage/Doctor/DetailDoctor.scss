@@ -276,3 +276,277 @@
         }
     }
 }
+
+@media only screen and (max-width: 1400px) {
+
+    //110%
+    .doctor-detail-container {
+        .info-doctor {
+            .content-left {}
+
+            .content-right {}
+        }
+
+        .schedule-doctor {
+            .schedule {}
+
+            .doctor-clinic {
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 500px;
+                }
+            }
+        }
+
+        .detail-info-doctor {}
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    //150%
+    .doctor-detail-container {
+        .info-doctor {
+            .content-left {}
+
+            .content-right {}
+        }
+
+        .schedule-doctor {
+            .schedule {}
+
+            .doctor-clinic {
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 400px;
+                }
+            }
+        }
+
+        .detail-info-doctor {}
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    //175%
+    .doctor-detail-container {
+        .info-doctor {
+            .content-left {}
+
+            .content-right {}
+        }
+
+        .schedule-doctor {
+            .schedule {}
+
+            .doctor-clinic {
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 370px;
+                }
+            }
+        }
+
+        .detail-info-doctor {}
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    //200%
+    .doctor-detail-container {
+        .info-doctor {
+            padding-top: 30px;
+
+            .content-left {}
+
+            .content-right {}
+        }
+
+        .schedule-doctor {
+            flex-direction: column;
+
+            .schedule {
+                width: 100%;
+            }
+
+            .doctor-clinic {
+                padding-left: 100px;
+                padding-bottom: 50px;
+                padding-top: 0px;
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 500px;
+                }
+            }
+        }
+
+        .detail-info-doctor {}
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    //250%
+    .doctor-detail-container {
+        .info-doctor {
+            padding-top: 30px;
+            padding-left: 0px;
+
+            .content-left {}
+
+            .content-right {}
+        }
+
+        .schedule-doctor {
+            flex-direction: column;
+
+            .schedule {}
+
+            .doctor-clinic {
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 450px;
+                }
+            }
+        }
+
+        .detail-info-doctor {
+            padding-left: 10px;
+            padding-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    //300%
+    .doctor-detail-container {
+        .info-doctor {
+
+            .content-left {}
+
+            .content-right {}
+        }
+
+        .schedule-doctor {
+
+            .schedule {
+                padding-left: 30px;
+
+                .time {}
+            }
+
+            .doctor-clinic {
+                padding-left: 30px;
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 420px;
+                }
+            }
+        }
+
+        .detail-info-doctor {}
+
+        .commnent-doctor {
+            padding-left: 5px;
+        }
+
+        .more-ques {
+            padding-left: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    //400%
+    .doctor-detail-container {
+        .info-doctor {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .content-left {}
+
+            .content-right {
+                width: 100%;
+            }
+        }
+
+        .schedule-doctor {
+
+            .schedule {
+                padding-left: 60px;
+
+                .time {}
+            }
+
+            .doctor-clinic {
+                padding-left: 30px;
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 320px;
+                }
+            }
+        }
+
+        .detail-info-doctor {}
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    //300%
+    .doctor-detail-container {
+        .info-doctor {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .content-left {}
+
+            .content-right {
+                width: 100%;
+            }
+        }
+
+        .schedule-doctor {
+
+            .schedule {
+                padding-left: 15px;
+
+                .time {}
+            }
+
+            .doctor-clinic {
+                padding-left: 30px;
+
+                .address,
+                .cost,
+                .insurance {
+                    width: 250px;
+                }
+            }
+        }
+
+        .detail-info-doctor {}
+
+
+    }
+}

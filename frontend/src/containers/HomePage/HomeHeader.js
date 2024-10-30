@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss'
 import { FormattedMessage } from 'react-intl';
@@ -6,6 +6,7 @@ import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions/appActions';
 import Select from 'react-select';
 import { useHistory, withRouter, Redirect } from 'react-router-dom';
+import CustomScrollbars from '../../components/CustomScrollbars';
 const options = [
     { value: '1', label: 'Thuờng xuyên bị bóng đè cần khắc phục thế nào?' },
     { value: '2', label: 'Cách điều trị mụn ẩn, mụn cám tuổi dậy thì hiệu quả' },
@@ -17,8 +18,18 @@ class HomeHeader extends Component {
         super(props);
         this.state = {
             selectedDoctor: '',
+            isOpenMenu: false,
         }
+        this.menuRef = createRef(); // Create a ref for the menu
     }
+    componentDidMount() {
+        document.addEventListener("mousedown", this.handleOutsideClick); // Listen for clicks
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleOutsideClick); // Clean up event listener
+    }
+
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language);
         //fire redux event: actions
@@ -32,6 +43,13 @@ class HomeHeader extends Component {
         this.props.history.push(`/home`);
     }
 
+    goToCooperate = () => {
+        this.props.history.push(`/cooperate`);
+    }
+    goToAppointment = () => {
+        this.props.history.push(`/appointment`);
+    }
+
     // handleDivClick = () => {
     //     // Kích hoạt sự kiện click trên input file khi nhấn vào div
     //     this.fileInputRef.current.click();
@@ -41,18 +59,75 @@ class HomeHeader extends Component {
     // //     const fileName = event.target.files[0] ? event.target.files[0].name : 'Không có tệp nào được chọn';
     // //     console.log(fileName); // Xử lý tên tệp tại đây
     // // };
+    handleOutsideClick = (event) => {
+        if (this.menuRef.current && !this.menuRef.current.contains(event.target)) {
+            this.setState({ isOpenMenu: false }); // Close menu if clicked outside
+        }
+    };
+    toggleMenu = () => {
+        this.setState(prevState => {
+            const newOpenMenuState = !prevState.isOpenMenu;
 
+            // Thay đổi lớp body dựa trên trạng thái của menu
+            if (newOpenMenuState) {
+                document.body.classList.add('no-scroll'); // Ngăn cuộn trang
+            } else {
+                document.body.classList.remove('no-scroll'); // Cho phép cuộn trang
+            }
+
+            return { isOpenMenu: newOpenMenuState };
+        });
+    }
+
+    closeMenu = () => {
+        this.setState({ isOpenMenu: false }, () => {
+            document.body.classList.remove('no-scroll'); // Cho phép cuộn trang khi đóng menu
+        });
+    }
     render() {
         let language = this.props.language;
         // console.log("check user inf", this, this.props.userInfo);
         console.log("check: ", this.props.locations)
         return (
             <React.Fragment>
+                {this.state.isOpenMenu && (
+
+                    <div className="home-menu" ref={this.menuRef}> {/* Attach ref here */}
+                        <div className='menu-item' onClick={() => this.returnToHome()}>Trang chủ</div>
+                        <div className='menu-item' >Cẩm nang</div>
+                        <div className='menu-item' onClick={this.goToCooperate}>Liên hệ hợp tác</div>
+                        <div className='menu-item' >Sức khỏe doanh nghiệp</div>
+                        <div className='menu-item' >Chuyển đổi số Phòng khám</div>
+                        <div className='menu-item' >Tuyển dụng</div>
+                        <div className='menu-label'>VỀ BOOKINGCARE</div>
+                        <div className='menu-item' >Dành cho bệnh nhân</div>
+                        <div className='menu-item' >Dành cho bác sĩ</div>
+                        <div className='menu-item' >Vai trò của BookingCare</div>
+                        <div className='menu-item' >Liên hệ</div>
+                        <div className='menu-item' >Câu hỏi thường gặp</div>
+                        <div className='menu-item' >Điều khoản sử dụng</div>
+                        <div className='menu-item' >Quy trình hỗ trợ giải quyết khiếu nại</div>
+                        <div className='menu-item' >Quy chế hoạt động</div>
+                        <div className='menu-footer'>
+                            <div className='fb'>
+                                <i className="fab fa-facebook-f"></i>
+                            </div>
+                            <div className='ytb'>
+                                <i className="fab fa-youtube"></i>
+                            </div>
+                        </div>
+                        {/* Add more items here */}
+                    </div>
+
+                )
+                }
+                <div className={`overlay ${this.state.isOpenMenu ? 'active' : ''}`} onClick={this.closeMenu}></div>
+
                 <div className='cover'>
                     <div className='homeheader-container'>
                         <div className='homeheader-content'>
                             <div className='left-content'>
-                                <i className="fas fa-bars"></i>
+                                <i className="fas fa-bars" onClick={this.toggleMenu}></i>
                                 <div className='header-logo' onClick={() => this.returnToHome()}>
                                 </div>
                             </div>
@@ -60,10 +135,11 @@ class HomeHeader extends Component {
                                 <div className='child-content1'
                                     style={{
                                         backgroundColor: this.props.locations === "all" ? "#ffc419" : "",
-                                        color: "white",
-                                        fontWeight: "bold",
-                                    }}>
-                                    <div className='sub-title'>Tất cả</div>
+                                        color: this.props.locations === "all" ? "white" : "black",
+                                        fontWeight: this.props.locations === "all" ? "bold" : "300",
+                                    }}
+                                    onClick={() => this.returnToHome()}>
+                                    <div className='sub-title' >Tất cả</div>
                                 </div>
                                 <div className='child-content1'>
                                     <div className='sub-title'>Tại nhà</div>
@@ -82,13 +158,13 @@ class HomeHeader extends Component {
                                 </div>
                             </div>
                             <dvi className="right-content">
-                                <div className='child-content-right'>
+                                <div className='child-content-right' onClick={() => this.goToCooperate()}>
                                     <div><i class="fas fa-handshake"></i></div>
-                                    <div className='sub-titles'>Hợp tác</div>
+                                    <div className='sub-titles' >Hợp tác</div>
                                 </div>
-                                <div className='child-content-right'>
+                                <div className='child-content-right' onClick={() => this.goToAppointment()}>
                                     <div><i class="fas fa-history"></i></div>
-                                    <div className='sub-titles'>Lịch hẹn</div>
+                                    <div className='sub-titles' >Lịch hẹn</div>
                                 </div>
                                 <div className='child-content-right-s'>
                                     <div><i className='fas fa-search '></i></div>
@@ -103,9 +179,9 @@ class HomeHeader extends Component {
                     <div className='center-content2'>
                         <div className='cover-child-content2'>
                             <div className='child-content2' style={{
-                                backgroundColor: this.props.locations === "all" ? "#ffc419" : "",
-                                color: "white",
-                                fontWeight: "bold",
+                                backgroundColor: this.props.locations === "all" ? "#ffc419" : "transparent",
+                                color: this.props.locations === "all" ? "white" : "black",
+                                fontWeight: this.props.locations === "all" ? "bold" : "300",
                             }}>
                                 <div className='sub-title'>Tất cả</div>
                             </div>

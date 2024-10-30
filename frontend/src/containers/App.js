@@ -14,6 +14,9 @@ import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from './HomePage/HomePage'
 import DetailDoctor from './HomePage/Doctor/DetailDoctor';
 import Doctor from '../routes/Doctor';
+import Cooperate from './HomePage/Other/Cooperate';
+import Appointment from './HomePage/Other/Appointment';
+import ScrollToTop from './ScrollToTop';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -38,17 +41,20 @@ class App extends Component {
         return (
             <Fragment>
                 <Router history={history}>
+                    <ScrollToTop />
                     <div className="main-container">
                         <div className="content-container">
-                            <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
-                                <Switch>
-                                    <Route path={path.HOME} exact component={(Home)} />
-                                    <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                    <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                                    <Route path={path.HOMEPAGE} component={HomePage} />
-                                    <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
-                                </Switch>
-                            </CustomScrollbars>
+                            {/* <CustomScrollbars style={{ height: '100vh', width: '100%' }}> */}
+                            <Switch>
+                                <Route path={path.HOME} exact component={(Home)} />
+                                <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
+                                <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                <Route path={path.HOMEPAGE} component={HomePage} />
+                                <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
+                                <Route path={path.COOPERATE} component={Cooperate} />
+                                <Route path={path.APPOINTMENT} component={Appointment} />
+                            </Switch>
+                            {/* </CustomScrollbars> */}
                         </div>
 
                         <ToastContainer

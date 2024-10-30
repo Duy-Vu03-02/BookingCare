@@ -2,9 +2,93 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow-y: auto;
-    overflow-x: scroll;
+    overflow: auto;
 }
+
+.home-menu {
+    position: absolute;
+    height: 100%;
+    border: 1px solid black;
+    width: 300px;
+    overflow: hidden;
+    z-index: 1000;
+    background-color: rgba(241, 241, 239, 1);
+    overflow: auto;
+    font-size: 17px;
+    font-weight: lighter !important;
+    cursor: pointer;
+
+    .menu-item {
+        height: 60px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        color: rgba(69, 195, 212, 1);
+        border-bottom: 1px solid #c6c1c1;
+        padding-left: 20px;
+    }
+
+    .menu-label {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+}
+
+.menu-footer {
+    display: flex;
+    gap: 10px;
+    margin: 20px 20px;
+
+    .fb {
+        width: 50px;
+        height: 50px;
+        background-color: #3c579e;
+        font-size: 30px;
+        color: white;
+        padding-left: 15px;
+        padding-top: 4px;
+        border-radius: 5px;
+    }
+
+
+    .ytb {
+        width: 50px;
+        height: 50px;
+        background-color: #cc191e;
+        color: white;
+        padding-left: 8px;
+        padding-top: 4px;
+        border-radius: 5px;
+        font-size: 30px;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Màu đen với độ trong suốt 50% */
+    z-index: 999;
+    /* Đảm bảo lớp phủ nằm trên các phần tử khác */
+    opacity: 0;
+    /* Ẩn lớp phủ ban đầu */
+    visibility: hidden;
+    /* Không cho phép tương tác */
+    transition: opacity 0.3s ease;
+    /* Hiệu ứng chuyển tiếp */
+}
+
+.overlay.active {
+    opacity: 1;
+    /* Hiện lớp phủ khi active */
+    visibility: visible;
+    /* Cho phép tương tác */
+}
+
+
 
 .homeheader-container {
     height: 80px;
@@ -336,8 +420,8 @@ body {
                 overflow: hidden;
                 white-space: nowrap;
 
-
                 span {
+                    width: 330px;
                     display: inline-block;
                     animation: marquee 40s linear infinite;
 
@@ -476,7 +560,11 @@ body {
             .center-content {
 
                 .search {
-                    width: 215px;
+                    width: 185px;
+
+                    i {
+                        margin-left: 40px;
+                    }
                 }
             }
 
@@ -587,6 +675,13 @@ body {
 
                 .content-span {
                     width: 820px;
+
+                    span {
+                        // animation: none;
+                        // text-align: left;
+                        // transform: translateX(-142%);
+                        // border: 1px solid red;
+                    }
 
                 }
 
@@ -926,7 +1021,9 @@ body {
             flex-direction: column;
             justify-content: center;
 
-            .left-content {}
+            .left-content {
+                padding-left: 50px;
+            }
 
             .right-content {
                 margin-top: 0;
@@ -1010,6 +1107,14 @@ body {
 @media only screen and (max-width: 400px) {
 
     // 400%
+    .homeheader-container {
+        .homeheader-content {
+            .left-content {
+                padding-left: 50px;
+            }
+        }
+    }
+
     .center-content2 {
         gap: 0px;
         padding: 0 0;
@@ -1086,6 +1191,14 @@ body {
 @media only screen and (max-width: 300px) {
 
     // 500%
+    .homeheader-container {
+        .homeheader-content {
+            .left-content {
+                padding-left: 50px;
+            }
+        }
+    }
+
     .banner {
         height: 550px;
 

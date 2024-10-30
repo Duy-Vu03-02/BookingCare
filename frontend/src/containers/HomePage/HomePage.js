@@ -23,8 +23,8 @@ class HomePage extends Component {
         return (
             <div>
                 <HomeHeader isShowBanner={true} locations={"all"} />
-                <ForYou />
-                <FullService />
+                {/* <ForYou /> */}
+                {/* <FullService /> */}
                 <Specialty />
                 <MedicalFacility />
                 <FamousDoctor />
