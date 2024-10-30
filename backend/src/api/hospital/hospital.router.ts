@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/create-hospital', validate(createHospital, { context: true }), HospitalController.createHospital);
 
-router.get('/all-hospital', HospitalController.getAllHosptital);
+router.get('/get-all-hospital', HospitalController.getAllHosptital);
 
 router.get('/detail-hospital', validate(getHospital, { context: true }), HospitalController.getDetailHospital);
 

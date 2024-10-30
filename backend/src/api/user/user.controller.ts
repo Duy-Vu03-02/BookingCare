@@ -1,4 +1,6 @@
 import { APIError } from '@common/error/api.error';
+import { MedicalScheduleModel } from '@common/medical-schedule/medical-schedule';
+import { IScheduleBoookingId } from '@common/medical-schedule/medical-schedule.interface';
 import { IUser } from '@common/user/user';
 import { IUserAuth, IUserDataToken, IUserLogin, IUserOTP } from '@common/user/user.interface';
 import { UserService } from '@common/user/user.service';
@@ -81,19 +83,41 @@ export class UserController {
         try {
             const bookings = await UserService.getAllBooking(req.user as IUserAuth);
 
-            if (bookings?.length) {
+            if (bookings) {
                 res.sendJson({
                     data: bookings,
                 });
                 return;
             }
 
-            res.sendJson({
-                data: [],
+            throw new APIError({
+                message: 'Bạn chưa đặt lịch khám nào',
+                errorCode: statusCode.REQUEST_NOT_FOUND,
+                status: statusCode.REQUEST_NOT_FOUND,
             });
-            return;
         } catch (err) {
-            throw err;
+            next(err);
+        }
+    };
+
+    public static getDetailBooking = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const booking = await UserService.getDetailBooking(req.body as IScheduleBoookingId);
+
+            if (booking) {
+                res.sendJson({
+                    data: booking,
+                });
+                return;
+            }
+
+            throw new APIError({
+                message: 'Lịch khám không tồn tại',
+                errorCode: statusCode.REQUEST_NOT_FOUND,
+                status: statusCode.REQUEST_NOT_FOUND,
+            });
+        } catch (err) {
+            next(err);
         }
     };
 }

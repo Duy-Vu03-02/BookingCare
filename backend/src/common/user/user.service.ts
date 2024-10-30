@@ -10,6 +10,9 @@ import { v4 as uuid } from 'uuid';
 import { Token } from '@config/token';
 import { IUser, UserModel } from './user';
 import { DoctorModel } from '@common/doctor/doctor';
+import { IScheduleBoookingId } from '@common/medical-schedule/medical-schedule.interface';
+import { MedicalScheduleModel } from '@common/medical-schedule/medical-schedule';
+import { Schema } from 'mongoose';
 
 export class UserService {
     public static getAllService = async (): Promise<IReponseMedicalServices[]> => {
@@ -120,6 +123,20 @@ export class UserService {
             message: 'Không thể lấy danh sách đặt lich',
             errorCode: statusCode.REQUEST_FORBIDDEN,
             status: statusCode.REQUEST_FORBIDDEN,
+        });
+    };
+
+    public static getDetailBooking = async (req: IScheduleBoookingId): Promise<unknown> => {
+        const booking = await MedicalScheduleModel.findById(req.medical_schedule_id);
+
+        if (booking) {
+            return booking;
+        }
+
+        throw new APIError({
+            message: 'Lịch khám không tồn tại',
+            errorCode: statusCode.REQUEST_NOT_FOUND,
+            status: statusCode.REQUEST_NOT_FOUND,
         });
     };
 }

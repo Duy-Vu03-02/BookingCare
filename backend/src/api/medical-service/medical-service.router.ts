@@ -7,6 +7,8 @@ const router = express.Router();
 
 router.get('/get-all-medical-service', MedicalServiceController.getAllMedicalService);
 
+router.get('/get-all-specialty', MedicalServiceController.getAllSpecialty);
+
 router.get(
     '/get-detail-medical-service',
     validate(getMedicalService, { context: true }),

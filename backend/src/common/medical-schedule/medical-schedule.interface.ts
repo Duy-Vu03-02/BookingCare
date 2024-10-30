@@ -1,6 +1,10 @@
 import { TimeConstant } from '@common/constant/constant.time';
 import { Schema } from 'mongoose';
 
+export interface IScheduleBoookingId {
+    medical_schedule_id: string;
+}
+
 export interface IUserBooking {
     medical_schedule_id: string;
     time_booking: TimeConstant;

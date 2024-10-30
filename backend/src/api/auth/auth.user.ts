@@ -22,3 +22,10 @@ export const getAllBooking: schema = {
         token: Joi.string().trim().required(),
     }),
 };
+
+export const getDetailBooking: schema = {
+    body: Joi.object({
+        medical_schedule_id: Joi.string().trim().required(),
+        token: Joi.string().trim().required(),
+    }),
+};
