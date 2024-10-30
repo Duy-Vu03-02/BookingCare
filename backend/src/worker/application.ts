@@ -15,5 +15,5 @@ export class Application {
         return server;
     }
 
-    public static registerEvents() {}
+    public static registerEvents() { }
 }

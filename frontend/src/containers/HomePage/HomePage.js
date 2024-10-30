@@ -22,7 +22,7 @@ class HomePage extends Component {
 
         return (
             <div>
-                <HomeHeader isShowBanner={true} />
+                <HomeHeader isShowBanner={true} locations={"all"} />
                 <ForYou />
                 <FullService />
                 <Specialty />

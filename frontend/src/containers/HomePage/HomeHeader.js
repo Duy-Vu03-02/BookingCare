@@ -31,9 +31,21 @@ class HomeHeader extends Component {
     returnToHome = () => {
         this.props.history.push(`/home`);
     }
+
+    // handleDivClick = () => {
+    //     // Kích hoạt sự kiện click trên input file khi nhấn vào div
+    //     this.fileInputRef.current.click();
+    // };
+
+    // // handleFileChange = (event) => {
+    // //     const fileName = event.target.files[0] ? event.target.files[0].name : 'Không có tệp nào được chọn';
+    // //     console.log(fileName); // Xử lý tên tệp tại đây
+    // // };
+
     render() {
         let language = this.props.language;
-        console.log("check user inf", this, this.props.userInfo);
+        // console.log("check user inf", this, this.props.userInfo);
+        console.log("check: ", this.props.locations)
         return (
             <React.Fragment>
                 <div className='cover'>
@@ -45,7 +57,12 @@ class HomeHeader extends Component {
                                 </div>
                             </div>
                             <div className='center-content'>
-                                <div className='child-content1'>
+                                <div className='child-content1'
+                                    style={{
+                                        backgroundColor: this.props.locations === "all" ? "#ffc419" : "",
+                                        color: "white",
+                                        fontWeight: "bold",
+                                    }}>
                                     <div className='sub-title'>Tất cả</div>
                                 </div>
                                 <div className='child-content1'>
@@ -85,7 +102,11 @@ class HomeHeader extends Component {
 
                     <div className='center-content2'>
                         <div className='cover-child-content2'>
-                            <div className='child-content2'>
+                            <div className='child-content2' style={{
+                                backgroundColor: this.props.locations === "all" ? "#ffc419" : "",
+                                color: "white",
+                                fontWeight: "bold",
+                            }}>
                                 <div className='sub-title'>Tất cả</div>
                             </div>
                             <div className='child-content2'>
@@ -132,10 +153,17 @@ class HomeHeader extends Component {
                                                 />
                                                 <div><i className="fas fa-paper-plane"></i></div>
                                             </div>
-                                            <div className='upfile'>
-                                                <div><i class="fas fa-file"></i></div>
-                                                <div><input type="text" className="" placeholder="Đọc đơn thuốc/ xét nghiệm" /></div>
-
+                                            <input
+                                                type='file'
+                                                ref={this.fileInputRef}
+                                                style={{ display: 'none' }}
+                                            // onChange={this.handleFileChange}
+                                            />
+                                            <div className='upfile' onClick={this.handleDivClick}>
+                                                <div><i className="fas fa-file"></i></div>
+                                                <div>
+                                                    <input type="text" className="" placeholder="Đọc đơn thuốc/ xét nghiệm" disabled />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
