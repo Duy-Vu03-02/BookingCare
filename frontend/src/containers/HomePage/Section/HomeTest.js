@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Specialty.scss'
+import './HomeTest.scss'
 import { FormattedMessage } from 'react-intl';
-import { useHistory, withRouter, Redirect } from 'react-router-dom';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-class Specialty extends Component {
+class HomeTest extends Component {
 
     constructor(props) {
         super(props);
@@ -35,22 +34,17 @@ class Specialty extends Component {
         // Detect zoom level using window.devicePixelRatio or window.innerWidth
         const zoomLevel = Math.round(window.devicePixelRatio * 100);
 
-        if (zoomLevel >= 250 && zoomLevel < 400) {
+        if (zoomLevel >= 250 && zoomLevel < 300) {
             this.setState({ slidesToShow: 3 });
-        } else if (zoomLevel >= 400 && zoomLevel < 550) {
+        } else if (zoomLevel >= 300 && zoomLevel < 400) {
             this.setState({ slidesToShow: 2 });
-        } else if (zoomLevel >= 550) {
+        } else if (zoomLevel >= 400) {
             this.setState({ slidesToShow: 1 });
         } else {
             this.setState({ slidesToShow: 4 });
         }
     }
-    handleViewListSpecialty = () => {
 
-        // console.log("view info: ", doctor);
-        // this.props.history.push(`/users/${doctor.id}`);
-        this.props.history.push(`/list-specialty`);
-    }
 
     render() {
         let setting = {
@@ -62,37 +56,38 @@ class Specialty extends Component {
         }
         return (
             <div className='cover'>
-                <div className='section-specialty' >
-                    <div className='specialty-container'>
-                        <div className='specialty-header'>
-                            <span className='title1'>Chuyên khoa</span>
-                            <button className='btn-xemthem' onClick={() => this.handleViewListSpecialty()}>Xem thêm</button>
+                <div className='section-HomeTest' >
+                    <div className='HomeTest-container'>
+                        <div className='HomeTest-header'>
+                            <span className='title1'>Xét nghiệm tại nhà</span>
+                            <button className='btn-xemthem'>Xem thêm</button>
                         </div>
-                        <div className='specialty-body'>
+                        <div className='HomeTest-body'>
                             <Slider {...setting}>
                                 <div className='img-custom'>
                                     <div className='bg-img1'></div>
-                                    <div className='text-center fs-4 fw-bold'>Cơ xương khớp</div>
+                                    <div className='text-center fs-5 fw-bold'>Gói xét nghiệm sàng lọc sốt xuất huyết cơ bản Medlatec tại nhà</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img2'></div>
-                                    <div className='text-center fs-4 fw-bold'>Thần kinh</div>
+                                    <div className='text-center fs-5 fw-bold'>Gói xét nghiệm tổng quát cơ bản tại nhà (MD-XN1TN)</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img3'></div>
-                                    <div className='text-center fs-4 fw-bold'>Tiêu hóa</div>
+                                    <div className='text-center fs-5 fw-bold'>Gói xét nghiệm cúm A  tại nhà (MDP79)</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img4'></div>
-                                    <div className='text-center fs-4 fw-bold'> Tim mạch</div>
+                                    <div className='text-center fs-5 fw-bold'>Gói xét nghiệm sức khỏe cơ bản 16 chỉ số tại nhà (NVM77) </div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img5'></div>
-                                    <div className='text-center fs-4 fw-bold'>Tai mũi họng</div>
+                                    <div className='text-center fs-5 fw-bold'>
+                                        Gói xét nghiệm sức khỏe và tầm soát ung thư cao cấp cho Nam tại nhà (NVM19M)</div>
                                 </div>
                                 <div className='img-custom'>
                                     <div className='bg-img6'></div>
-                                    <div className='text-center fs-4 fw-bold'>Cột sống</div>
+                                    <div className='text-center fs-5 fw-bold'>Bệnh viện u bướu Hưng Việt</div>
                                 </div>
                             </Slider>
                         </div>
@@ -117,4 +112,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Specialty));
+export default connect(mapStateToProps, mapDispatchToProps)(HomeTest);

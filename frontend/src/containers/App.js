@@ -17,6 +17,8 @@ import Doctor from '../routes/Doctor';
 import Cooperate from './HomePage/Other/Cooperate';
 import Appointment from './HomePage/Other/Appointment';
 import ScrollToTop from './ScrollToTop';
+import ListSpecialty from './HomePage/Specialty/ListSpecialty';
+import AtHome from './HomePage/Other/AtHome';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -53,6 +55,8 @@ class App extends Component {
                                 <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                 <Route path={path.COOPERATE} component={Cooperate} />
                                 <Route path={path.APPOINTMENT} component={Appointment} />
+                                <Route path={path.LIST_SPECIALTY} component={ListSpecialty} />
+                                <Route path={path.AT_HOME} component={AtHome} />
                             </Switch>
                             {/* </CustomScrollbars> */}
                         </div>

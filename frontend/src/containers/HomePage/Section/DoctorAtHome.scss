@@ -1,14 +1,13 @@
-.section-MedicalFacility {
+.section-DoctorAtHome {
     height: auto;
     background-color: white;
-    margin-bottom: 50px;
 
-    .MedicalFacility-container {
+    .DoctorAtHome-container {
         height: auto;
         margin: 0 100px;
         padding: 30px 0;
 
-        .MedicalFacility-header {
+        .DoctorAtHome-header {
             height: 60px;
             padding: 10px 10px 10px 30px;
 
@@ -39,7 +38,7 @@
 
         }
 
-        .MedicalFacility-body {
+        .DoctorAtHome-body {
 
             //reset slick slider
 
@@ -82,14 +81,18 @@
                 padding: 10px 10px 10px 10px;
                 margin-top: 40px;
                 border-radius: 20px;
-                border: 1px solid rgba(0, 0, 0, 0.1);
+                // border: 1px solid rgba(0, 0, 0, 0.1);
                 margin-right: 15px;
                 height: 250px;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding: 10px !important;
+                flex-direction: column;
 
                 .text-center {
                     font-size: 19px;
                     cursor: pointer;
-
                     display: -webkit-box;
                     /* Hiển thị dạng hộp linh hoạt */
                     -webkit-box-orient: vertical;
@@ -108,45 +111,42 @@
 
                 .bg-img1 {
                     height: 150px;
-                    width: 100%;
-                    background: url("../../../assets/MedicalFacility/lo-go-viet-duc.jpg");
+                    width: 150px;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2019/04/20/103043dieu-duong-tai-nha.jpg");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: 70%;
+                    background-size: cover;
                     margin-bottom: 10px;
-                    border-radius: 20px;
-
+                    border-radius: 50%;
                 }
 
                 .bg-img2 {
                     height: 150px;
-                    width: 100%;
-                    background: url("../../../assets/MedicalFacility/logo-bvcr-moi.jpg");
+                    width: 150px;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/05/29/093722-logo-drcare1.jpg");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: 60%;
-
+                    background-size: 100%;
                     margin-bottom: 10px;
-                    border-radius: 20px;
+                    border-radius: 50%;
 
                 }
 
                 .bg-img3 {
                     height: 150px;
-                    width: 100%;
-                    background: url("../../../assets/MedicalFacility/doctor-check.jpg");
+                    width: 150px;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/10/10/093006-thiet-ke-chua-co-ten.png");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: 38%;
-
+                    background-size: 150%;
                     margin-bottom: 10px;
-                    border-radius: 20px;
+                    border-radius: 50%;
                 }
 
                 .bg-img4 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/logo-y-duoc-1.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 100%;
@@ -158,7 +158,7 @@
                 .bg-img5 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/logobenhvien108.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 70%;
@@ -170,7 +170,7 @@
                 .bg-img6 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/logo-hung-viet.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -184,23 +184,14 @@
     }
 }
 
-
-
-.cover {
-    width: 100%;
-    max-width: 2600px;
-    height: auto;
-    margin: 80px auto 0 auto;
-}
-
 @media only screen and (max-width: 1000px) {
 
     //150%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {}
+    .section-DoctorAtHome {
+        .DoctorAtHome-container {
+            .DoctorAtHome-header {}
 
-            .MedicalFacility-body {
+            .DoctorAtHome-body {
                 width: 900px;
                 margin-left: -50px;
             }
@@ -211,11 +202,11 @@
 @media only screen and (max-width: 900px) {
 
     //175%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {}
+    .section-DoctorAtHome {
+        .DoctorAtHome-container {
+            .DoctorAtHome-header {}
 
-            .MedicalFacility-body {
+            .DoctorAtHome-body {
                 width: 760px;
                 margin-left: -50px;
 
@@ -240,11 +231,11 @@
 @media only screen and (max-width: 800px) {
 
     //200%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {}
+    .section-DoctorAtHome {
+        .DoctorAtHome-container {
+            .DoctorAtHome-header {}
 
-            .MedicalFacility-body {
+            .DoctorAtHome-body {
                 width: 660px;
                 margin-left: -50px;
 
@@ -262,9 +253,9 @@
 @media only screen and (max-width: 700px) {
 
     //250%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-DoctorAtHome {
+        .DoctorAtHome-container {
+            .DoctorAtHome-header {
                 .title1 {
                     margin-left: -70px;
                 }
@@ -274,7 +265,7 @@
                 }
             }
 
-            .MedicalFacility-body {
+            .DoctorAtHome-body {
                 width: 500px;
                 margin-left: -50px;
 
@@ -292,15 +283,15 @@
 @media only screen and (max-width: 500px) {
 
     //300%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-DoctorAtHome {
+        .DoctorAtHome-container {
+            .DoctorAtHome-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
             }
 
-            .MedicalFacility-body {
+            .DoctorAtHome-body {
                 width: 400px;
                 margin-left: -50px;
 
@@ -315,9 +306,9 @@
 @media only screen and (max-width: 400px) {
 
     //400%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-DoctorAtHome {
+        .DoctorAtHome-container {
+            .DoctorAtHome-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -334,7 +325,7 @@
                 }
             }
 
-            .MedicalFacility-body {
+            .DoctorAtHome-body {
                 width: 300px;
                 margin-left: -65px;
 
@@ -349,9 +340,9 @@
 @media only screen and (max-width: 300px) {
 
     //500%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-DoctorAtHome {
+        .DoctorAtHome-container {
+            .DoctorAtHome-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -370,7 +361,7 @@
                 }
             }
 
-            .MedicalFacility-body {
+            .DoctorAtHome-body {
                 width: 240px;
                 margin-left: -70px;
 

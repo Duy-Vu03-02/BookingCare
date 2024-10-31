@@ -15,7 +15,7 @@ import DoctorQnA from './Section/DoctorQnA';
 import Healthy from './Section/Healthy';
 import ForDoctor from './Section/ForDoctor';
 import Information from './Section/Information';
-
+import HomeTest from './Section/HomeTest';
 class HomePage extends Component {
 
     render() {
@@ -24,7 +24,7 @@ class HomePage extends Component {
             <div>
                 <HomeHeader isShowBanner={true} locations={"all"} />
                 {/* <ForYou /> */}
-                {/* <FullService /> */}
+                <FullService />
                 <Specialty />
                 <MedicalFacility />
                 <FamousDoctor />

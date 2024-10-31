@@ -47,7 +47,7 @@ class FullService extends Component {
                                 return (
                                     <div className='service' key={index}>
                                         {group.map(item => (
-                                            <div className='service-child'>
+                                            <div className='service-child' key={item.id}>
                                                 <div
                                                     className='child-img'
                                                     style={{

@@ -42,6 +42,9 @@ class HomeHeader extends Component {
     returnToHome = () => {
         this.props.history.push(`/home`);
     }
+    goToAtHomePage = () => {
+        this.props.history.push(`/at-home`);
+    }
 
     goToCooperate = () => {
         this.props.history.push(`/cooperate`);
@@ -141,7 +144,13 @@ class HomeHeader extends Component {
                                     onClick={() => this.returnToHome()}>
                                     <div className='sub-title' >Tất cả</div>
                                 </div>
-                                <div className='child-content1'>
+                                <div className='child-content1'
+                                    style={{
+                                        backgroundColor: this.props.locations === "at-home" ? "#ffc419" : "",
+                                        color: this.props.locations === "at-home" ? "white" : "black",
+                                        fontWeight: this.props.locations === "at-home" ? "bold" : "300",
+                                    }}
+                                    onClick={() => this.goToAtHomePage()}>
                                     <div className='sub-title'>Tại nhà</div>
                                 </div>
                                 <div className='child-content1'>
@@ -182,10 +191,17 @@ class HomeHeader extends Component {
                                 backgroundColor: this.props.locations === "all" ? "#ffc419" : "transparent",
                                 color: this.props.locations === "all" ? "white" : "black",
                                 fontWeight: this.props.locations === "all" ? "bold" : "300",
-                            }}>
+                            }}
+                                onClick={() => this.returnToHome()}>
                                 <div className='sub-title'>Tất cả</div>
                             </div>
-                            <div className='child-content2'>
+                            <div className='child-content2'
+                                style={{
+                                    backgroundColor: this.props.locations === "at-home" ? "#ffc419" : "",
+                                    color: this.props.locations === "at-home" ? "white" : "black",
+                                    fontWeight: this.props.locations === "at-home" ? "bold" : "300",
+                                }}
+                                onClick={() => this.goToAtHomePage()}>
                                 <div className='sub-title'>Tại nhà</div>
                             </div>
                         </div>
@@ -202,7 +218,7 @@ class HomeHeader extends Component {
                     {this.props.isShowBanner === true &&
                         <div className="banner">
                             <div className="text-center mb-4 check">
-                                <span className="h1">Nơi khởi nguồn sức khỏe</span>
+                                <span className="titles">Nơi khởi nguồn sức khỏe</span>
                             </div>
                             <div className='search-banner '>
                                 <div className='border-input'>

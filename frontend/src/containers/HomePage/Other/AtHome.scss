@@ -1,0 +1,19 @@
+.AtHome-container {
+    max-width: 2600px;
+    margin: 0 auto;
+    height: auto;
+
+    .AH-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // background-position: center center;
+        // background-size: contain;
+        // background-repeat: no-repeat;
+        img {
+            width: 90%;
+            border-radius: 50px;
+        }
+    }
+}

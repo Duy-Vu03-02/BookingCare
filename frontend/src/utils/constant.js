@@ -7,7 +7,9 @@ export const path = {
     INHOME: '/dich-vu/tai-nha',
     DETAIL_DOCTOR: '/detail-doctor/:id',
     COOPERATE: "/cooperate",
-    APPOINTMENT: "/appointment"
+    APPOINTMENT: "/appointment",
+    LIST_SPECIALTY: "/list-specialty",
+    AT_HOME: "/at-home"
 };
 
 export const LANGUAGES = {
