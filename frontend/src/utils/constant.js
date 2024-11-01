@@ -9,7 +9,9 @@ export const path = {
     COOPERATE: "/cooperate",
     APPOINTMENT: "/appointment",
     LIST_SPECIALTY: "/list-specialty",
-    AT_HOME: "/at-home"
+    AT_HOME: "/at-home",
+    AT_HOSPITAL: '/at-hospital',
+    HEALTHY_LIFE: '/healthy-life',
 };
 
 export const LANGUAGES = {

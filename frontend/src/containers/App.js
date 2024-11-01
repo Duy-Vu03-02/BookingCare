@@ -19,6 +19,8 @@ import Appointment from './HomePage/Other/Appointment';
 import ScrollToTop from './ScrollToTop';
 import ListSpecialty from './HomePage/Specialty/ListSpecialty';
 import AtHome from './HomePage/Other/AtHome';
+import AtHospital from './HomePage/Other/AtHospital';
+import HealthyLife from './HomePage/Other/HealthyLife';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -57,6 +59,8 @@ class App extends Component {
                                 <Route path={path.APPOINTMENT} component={Appointment} />
                                 <Route path={path.LIST_SPECIALTY} component={ListSpecialty} />
                                 <Route path={path.AT_HOME} component={AtHome} />
+                                <Route path={path.AT_HOSPITAL} component={AtHospital} />
+                                <Route path={path.HEALTHY_LIFE} component={HealthyLife} />
                             </Switch>
                             {/* </CustomScrollbars> */}
                         </div>

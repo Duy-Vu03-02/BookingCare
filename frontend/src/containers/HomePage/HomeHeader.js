@@ -45,6 +45,9 @@ class HomeHeader extends Component {
     goToAtHomePage = () => {
         this.props.history.push(`/at-home`);
     }
+    goToAtHospitalPage = () => {
+        this.props.history.push(`/at-hospital`);
+    }
 
     goToCooperate = () => {
         this.props.history.push(`/cooperate`);
@@ -87,6 +90,14 @@ class HomeHeader extends Component {
             document.body.classList.remove('no-scroll'); // Cho phép cuộn trang khi đóng menu
         });
     }
+
+    goToLoginPage = () => {
+        this.props.history.push(`/login`);
+    }
+
+    goToHeathyLifePage = () => {
+        this.props.history.push(`/healthy-life`);
+    }
     render() {
         let language = this.props.language;
         // console.log("check user inf", this, this.props.userInfo);
@@ -97,6 +108,7 @@ class HomeHeader extends Component {
 
                     <div className="home-menu" ref={this.menuRef}> {/* Attach ref here */}
                         <div className='menu-item' onClick={() => this.returnToHome()}>Trang chủ</div>
+                        <div className='menu-item' onClick={() => this.goToLoginPage()}>Đăng nhập</div>
                         <div className='menu-item' >Cẩm nang</div>
                         <div className='menu-item' onClick={this.goToCooperate}>Liên hệ hợp tác</div>
                         <div className='menu-item' >Sức khỏe doanh nghiệp</div>
@@ -153,16 +165,28 @@ class HomeHeader extends Component {
                                     onClick={() => this.goToAtHomePage()}>
                                     <div className='sub-title'>Tại nhà</div>
                                 </div>
-                                <div className='child-content1'>
+                                <div className='child-content1'
+                                    style={{
+                                        backgroundColor: this.props.locations === "at-hospital" ? "#ffc419" : "",
+                                        color: this.props.locations === "at-hospital" ? "white" : "black",
+                                        fontWeight: this.props.locations === "at-hospital" ? "bold" : "300",
+                                    }}
+                                    onClick={() => this.goToAtHospitalPage()}>
                                     <div className='sub-title'>Tại viện</div>
                                 </div>
-                                <div className='child-content1'>
+                                <div className='child-content1'
+                                    style={{
+                                        backgroundColor: this.props.locations === "healthy" ? "#ffc419" : "",
+                                        color: this.props.locations === "healthy" ? "white" : "black",
+                                        fontWeight: this.props.locations === "healthy" ? "bold" : "300",
+                                    }}
+                                    onClick={() => this.goToHeathyLifePage()}>
                                     <div className='sub-title'>Sống khỏe</div>
                                 </div>
                                 <div className='child-content'>
                                     <div className='search'>
                                         <i className='fas fa-search '></i>
-                                        <input type='text' placeholder='Tìm chuyên khoa'></input>
+                                        <input type='text' placeholder='Tìm chuyên khoa' disabled></input>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +230,13 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                         <div className='cover-child-content2'>
-                            <div className='child-content2'>
+                            <div className='child-content2'
+                                style={{
+                                    backgroundColor: this.props.locations === "at-hospital" ? "#ffc419" : "",
+                                    color: this.props.locations === "at-hospital" ? "white" : "black",
+                                    fontWeight: this.props.locations === "at-hospital" ? "bold" : "300",
+                                }}
+                                onClick={() => this.goToAtHospitalPage()}>
                                 <div className='sub-title'>Tại viện</div>
                             </div>
                             <div className='child-content2'>

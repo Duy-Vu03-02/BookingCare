@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
 
@@ -80,18 +81,20 @@ class Login extends Component {
         });
 
         try {
-            const response = await handleLoginApi(this.state.username, this.state.password);
+            // const response = await handleLoginApi(this.state.username, this.state.password);
 
-            if (response && response.errCode !== 0) {
-                this.setState({
-                    errMessage: response.data.message
-                });
-            }
+            // if (response && response.errCode !== 0) {
+            //     this.setState({
+            //         errMessage: response.data.message
+            //     });
+            // }
 
-            if (response && response.data.errCode === 0) {
-                this.props.userLoginSuccess(response.data.user)
-                console.log('Login successful');
-            }
+            // if (response && response.data.errCode === 0) {
+            //     this.props.userLoginSuccess(response.data.user)
+            //     console.log('Login successful');
+            // }
+
+            this.props.userLoginSuccess()
 
         } catch (error) {
             console.log('Error:', error);
@@ -124,18 +127,21 @@ class Login extends Component {
             this.handleLogin();
         }
     }
+    returnToHome = () => {
+        this.props.history.push(`/home`);
+    }
     render() {
         //JSX
         return (
             <div className='cover-login'>
-                <div className='logo'></div>
+                <div className='logo' onClick={() => this.returnToHome()} style={{ cursor: 'pointer' }}></div>
                 <div className='login-content'>
                     <div className='content1'>
                         Nền tảng đặt lịch khám trực tuyến hàng đầu Việt Nam
                     </div>
                 </div>
                 <div className='login-bg'>
-                    <div className='right-content-login'>
+                    <div className='right-content-login' >
                     </div>
                     <div className='login-container'>
                         <div className='login-content'>
@@ -195,4 +201,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

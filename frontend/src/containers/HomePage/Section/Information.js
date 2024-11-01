@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import './Information.scss'
 import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
@@ -13,7 +14,9 @@ class Information extends Component {
         this.props.changeLanguageAppRedux(language);
         //fire redux event: actions
     }
-
+    returnToHome = () => {
+        this.props.history.push(`/home`);
+    }
 
     render() {
         let setting = {
@@ -60,7 +63,7 @@ class Information extends Component {
                             </div>
                         </div>
                         <div className='inf2'>
-                            <div className='icon'></div>
+                            <div className='icon' onClick={() => this.returnToHome()} style={{ cursor: 'pointer' }}></div>
                             <div className='inf-content2'><span><a href='#'>Liên hệ hợp tác</a></span></div>
                             <div className='inf-content2'><span><a href='#'>Chính sách bảo mật</a></span></div>
                             <div className='inf-content2'><span><a href='#'>Quy chế hoạt động</a></span></div>
@@ -120,4 +123,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Information);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Information));
