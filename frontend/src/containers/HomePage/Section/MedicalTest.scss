@@ -1,16 +1,14 @@
-.section-MedicalFacility {
+.section-MedicalTest {
     height: auto;
     background-color: white;
     margin-bottom: 50px;
-    max-width: 2600px;
-    margin: 0 auto;
 
-    .MedicalFacility-container {
+    .MedicalTest-container {
         height: auto;
         margin: 0 100px;
         padding: 30px 0;
 
-        .MedicalFacility-header {
+        .MedicalTest-header {
             height: 60px;
             padding: 10px 10px 10px 30px;
 
@@ -41,7 +39,7 @@
 
         }
 
-        .MedicalFacility-body {
+        .MedicalTest-body {
 
             //reset slick slider
 
@@ -111,73 +109,72 @@
                 .bg-img1 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/lo-go-viet-duc.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/01/09/171903-nipt2.jpg");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: 70%;
+                    background-size: 100%;
                     margin-bottom: 10px;
-                    border-radius: 20px;
+
 
                 }
 
                 .bg-img2 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/logo-bvcr-moi.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/01/09/171903-nipt2.jpg");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: 60%;
-
+                    background-size: 100%;
                     margin-bottom: 10px;
-                    border-radius: 20px;
+
 
                 }
 
                 .bg-img3 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/doctor-check.jpg");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 38%;
-
-                    margin-bottom: 10px;
-                    border-radius: 20px;
-                }
-
-                .bg-img4 {
-                    height: 150px;
-                    width: 100%;
-                    background: url("../../../assets/MedicalFacility/logo-y-duoc-1.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2018/10/15/113204ung-thu-vu-1.jpg");
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 100%;
 
                     margin-bottom: 10px;
-                    border-radius: 20px;
+
+                }
+
+                .bg-img4 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2018/10/15/113204ung-thu-vu-1.jpg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+
+                    margin-bottom: 10px;
+
                 }
 
                 .bg-img5 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/logobenhvien108.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2017/12/26/174345kham-tre-em.jpg");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: 70%;
+                    background-size: 100%;
 
                     margin-bottom: 10px;
-                    border-radius: 20px;
+
                 }
 
                 .bg-img6 {
                     height: 150px;
                     width: 100%;
-                    background: url("../../../assets/MedicalFacility/logo-hung-viet.jpg");
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2022/09/28/141418-logo-lotus.jpg");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: cover;
+                    background-size: 100%;
                     margin-bottom: 10px;
-                    border-radius: 20px;
+
                 }
             }
         }
@@ -187,22 +184,14 @@
 }
 
 
-
-// .cover {
-//     width: 100%;
-//     max-width: 2600px;
-//     height: auto;
-//     margin: 80px auto 0 auto;
-// }
-
 @media only screen and (max-width: 1000px) {
 
     //150%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {}
+    .section-MedicalTest {
+        .MedicalTest-container {
+            .MedicalTest-header {}
 
-            .MedicalFacility-body {
+            .MedicalTest-body {
                 width: 900px;
                 margin-left: -50px;
             }
@@ -213,11 +202,11 @@
 @media only screen and (max-width: 900px) {
 
     //175%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {}
+    .section-MedicalTest {
+        .MedicalTest-container {
+            .MedicalTest-header {}
 
-            .MedicalFacility-body {
+            .MedicalTest-body {
                 width: 760px;
                 margin-left: -50px;
 
@@ -242,11 +231,11 @@
 @media only screen and (max-width: 800px) {
 
     //200%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {}
+    .section-MedicalTest {
+        .MedicalTest-container {
+            .MedicalTest-header {}
 
-            .MedicalFacility-body {
+            .MedicalTest-body {
                 width: 660px;
                 margin-left: -50px;
 
@@ -264,9 +253,9 @@
 @media only screen and (max-width: 700px) {
 
     //250%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-MedicalTest {
+        .MedicalTest-container {
+            .MedicalTest-header {
                 .title1 {
                     margin-left: -70px;
                 }
@@ -276,7 +265,7 @@
                 }
             }
 
-            .MedicalFacility-body {
+            .MedicalTest-body {
                 width: 500px;
                 margin-left: -50px;
 
@@ -294,15 +283,15 @@
 @media only screen and (max-width: 500px) {
 
     //300%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-MedicalTest {
+        .MedicalTest-container {
+            .MedicalTest-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
             }
 
-            .MedicalFacility-body {
+            .MedicalTest-body {
                 width: 400px;
                 margin-left: -50px;
 
@@ -317,9 +306,9 @@
 @media only screen and (max-width: 400px) {
 
     //400%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-MedicalTest {
+        .MedicalTest-container {
+            .MedicalTest-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -336,7 +325,7 @@
                 }
             }
 
-            .MedicalFacility-body {
+            .MedicalTest-body {
                 width: 300px;
                 margin-left: -65px;
 
@@ -351,9 +340,9 @@
 @media only screen and (max-width: 300px) {
 
     //500%
-    .section-MedicalFacility {
-        .MedicalFacility-container {
-            .MedicalFacility-header {
+    .section-MedicalTest {
+        .MedicalTest-container {
+            .MedicalTest-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -372,7 +361,7 @@
                 }
             }
 
-            .MedicalFacility-body {
+            .MedicalTest-body {
                 width: 240px;
                 margin-left: -70px;
 

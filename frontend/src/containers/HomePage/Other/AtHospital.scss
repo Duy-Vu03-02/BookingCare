@@ -57,3 +57,73 @@
         }
     }
 }
+
+@media only screen and (max-width: 1500px) {
+
+    //100%
+    .AtHospital-container {
+        .AH-banner {
+            .img-custom {
+
+                img {
+                    height: 500px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    //175%
+    .AtHospital-container {
+        .AH-banner {
+            .img-custom {
+
+                img {
+                    border-radius: 30px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    //300%
+    .AtHospital-container {
+        .AH-banner {
+            .img-custom {
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 300px) {
+
+    //500%
+    .AtHospital-container {
+        .AH-banner {
+            .img-custom {
+                // border: 1px solid red;
+                width: 100%;
+
+                img {
+                    width: 110%;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+}

@@ -2,6 +2,8 @@
     height: 380px;
     background-color: white;
     margin-bottom: 40px;
+    max-width: 2600px;
+    margin: 0 auto;
 
     .DoctorQnA-container {
         height: 100%;
@@ -113,12 +115,12 @@
     padding: 0 10px; // kc anh slider
 }
 
-.cover {
-    width: 100%;
-    max-width: 2600px;
-    height: auto;
-    margin: 80px auto 0 auto;
-}
+// .cover {
+//     width: 100%;
+//     max-width: 2600px;
+//     height: auto;
+//     margin: 80px auto 0 auto;
+// }
 
 
 @media only screen and (max-width: 1000px) {

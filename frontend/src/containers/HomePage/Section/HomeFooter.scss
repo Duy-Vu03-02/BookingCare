@@ -1,7 +1,7 @@
 .section-HomeFooter {
     height: 100%;
     background-color: #64b9e5;
-
+    max-width: 2600px;
     .HomeFooter-container {
         height: 100%;
 
@@ -50,12 +50,12 @@
     }
 }
 
-.cover {
-    width: 100%;
-    max-width: 2600px;
-    height: auto;
-    margin: 0px auto 10px auto;
-}
+// .cover {
+//     width: 100%;
+//     max-width: 2600px;
+//     height: auto;
+//     margin: 0px auto 10px auto;
+// }
 
 @media only screen and (max-width: 700px) {
 

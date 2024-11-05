@@ -33,6 +33,7 @@ class DetailDoctor extends Component {
             //     imageBase64 = new Buffer(user.image, 'base64').toString('binary');
             // }
         }
+        window.scrollTo(0, 0);
     }
     componentDidUpdate(prepProps, preState, snapshot) {
 

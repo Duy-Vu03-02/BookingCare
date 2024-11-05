@@ -4,10 +4,16 @@ import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './AtHospital.scss'
-import Healthy from '../Section/Healthy';
-import DoctorQnA from '../Section/DoctorQnA';
-import RemoteExamination from '../Section/RemoteExamination';
-import HomeTest from '../Section/HomeTest';
+import MedicalFacility from '../Section/MedicalFacility';
+import Specialty from '../Section/Specialty';
+import FamousDoctor from '../Section/FamousDoctor';
+import Package from '../Section/Package';
+import MedicalTest from '../Section/MedicalTest';
+import MetalHealth from '../Section/MetalHealth';
+import HandBook from '../Section/HandBook';
+import Xray from '../Section/Xray';
+import Endoscopy from '../Section/Endoscopy';
+import Surgery from '../Section/Surgery';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -63,11 +69,16 @@ class AtHospital extends Component {
                     </div>
 
                 </div>
-                {/* <HomeTest /> */}
-                <HomeTest />
-                <RemoteExamination />
-                <DoctorQnA />
-                <Healthy />
+                <MedicalFacility />
+                <Specialty />
+                <FamousDoctor />
+                <Package />
+                <MedicalTest />
+                <Xray />
+                <Endoscopy />
+                <Surgery />
+                <MetalHealth />
+                <HandBook />
                 <Information />
                 <HomeFooter />
             </>

@@ -1,7 +1,7 @@
 .section-ForYou {
     height: 450px;
     background-color: white;
-
+    max-width: 2600px;
     .ForYou-container {
         height: 100%;
         margin: 0 100px;
@@ -62,9 +62,9 @@
     }
 }
 
-.cover {
-    width: 100%;
-    max-width: 2600px;
-    height: auto;
-    margin: 80px auto 0 auto;
-}
+// .cover {
+//     width: 100%;
+//     max-width: 2600px;
+//     height: auto;
+//     margin: 80px auto 0 auto;
+// }

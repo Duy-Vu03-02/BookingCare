@@ -16,11 +16,11 @@ import DetailDoctor from './HomePage/Doctor/DetailDoctor';
 import Doctor from '../routes/Doctor';
 import Cooperate from './HomePage/Other/Cooperate';
 import Appointment from './HomePage/Other/Appointment';
-import ScrollToTop from './ScrollToTop';
 import ListSpecialty from './HomePage/Specialty/ListSpecialty';
 import AtHome from './HomePage/Other/AtHome';
 import AtHospital from './HomePage/Other/AtHospital';
 import HealthyLife from './HomePage/Other/HealthyLife';
+import ScrollToTop from './ScrollToTop';
 class App extends Component {
 
     handlePersistorState = () => {
