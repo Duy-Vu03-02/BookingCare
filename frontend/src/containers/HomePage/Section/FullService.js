@@ -28,7 +28,7 @@ class FullService extends Component {
 
 
     render() {
-        console.log("check service: ", this.state.fullservice);
+        // console.log("check service: ", this.state.fullservice);
         let arrService = this.state.fullservice;
         let groupedServices = [];
         for (let i = 0; i < arrService.length; i += 2) {

@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter as Router } from 'connected-react-router';
 import { history } from '../redux'
 import { ToastContainer } from 'react-toastify';
-import CustomScrollbars from '../components/CustomScrollbars';
+// import CustomScrollbars from '../components/CustomScrollbars';
 import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authentication';
 import { path } from '../utils'
 import Home from '../routes/Home';
@@ -13,14 +13,15 @@ import System from '../routes/System';
 import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from './HomePage/HomePage'
 import DetailDoctor from './HomePage/Doctor/DetailDoctor';
-import Doctor from '../routes/Doctor';
+// import Doctor from '../routes/Doctor';
 import Cooperate from './HomePage/Other/Cooperate';
 import Appointment from './HomePage/Other/Appointment';
 import ListSpecialty from './HomePage/Specialty/ListSpecialty';
 import AtHome from './HomePage/Other/AtHome';
 import AtHospital from './HomePage/Other/AtHospital';
 import HealthyLife from './HomePage/Other/HealthyLife';
-import ScrollToTop from './ScrollToTop';
+// import ScrollToTop from './ScrollToTop';
+import ScrollToTop from "react-scroll-to-top";
 class App extends Component {
 
     handlePersistorState = () => {

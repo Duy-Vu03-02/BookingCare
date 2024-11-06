@@ -33,24 +33,24 @@ class Information extends Component {
                         <div className='inf1'>
                             <label>Công ty Cổ phần Công nghệ BookingCare</label>
                             <div className='inf-content'>
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i className="fas fa-map-marker-alt"></i>
                                 <span>Lô B4/D21, Khu đô thị mới Cầu Giấy, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam</span>
                             </div>
                             <div className='inf-content'>
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i className="fas fa-map-marker-alt"></i>
                                 <span>ĐKKD số. 0106790291. Sở KHĐT Hà Nội cấp ngày 16/03/2015</span>
                             </div>
                             <div className='inf-content'>
-                                <i class="fas fa-phone"></i>
+                                <i className="fas fa-phone"></i>
                                 <span><a href='#'>024-7301-2468</a> (7h - 18h)</span>
                             </div>
                             <div className='inf-content'>
-                                <i class="fas fa-envelope"></i>
+                                <i className="fas fa-envelope"></i>
                                 <span>support@bookingcare.vn (7h - 18h)</span>
                             </div>
                             <label>Văn phòng tại TP Hồ Chí Minh</label>
                             <div className='inf-content'>
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i className="fas fa-map-marker-alt"></i>
                                 <span>Tòa nhà H3, 384 Hoàng Diệu, Phường 6, Quận 4, TP.HCM</span>
                             </div>
                             <div className='check'>

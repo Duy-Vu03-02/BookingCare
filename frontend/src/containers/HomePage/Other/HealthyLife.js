@@ -4,10 +4,8 @@ import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './HealthyLife.scss'
-import Healthy from '../Section/Healthy';
-import DoctorQnA from '../Section/DoctorQnA';
-import RemoteExamination from '../Section/RemoteExamination';
-import HomeTest from '../Section/HomeTest';
+import LatestNews from '../Section/LatestNews';
+import FamousNews from '../Section/FamousNews';
 class HealthyLife extends Component {
     constructor(props) {
         super(props);
@@ -37,10 +35,8 @@ class HealthyLife extends Component {
 
                 </div>
                 {/* <HomeTest /> */}
-                <HomeTest />
-                <RemoteExamination />
-                <DoctorQnA />
-                <Healthy />
+                <LatestNews />
+                <FamousNews />
                 <Information />
                 <HomeFooter />
             </>

@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
-import ForYou from './Section/ForYou';
+import FullService from './Section/FullService';
 import Specialty from './Section/Specialty';
 import MedicalFacility from './Section/MedicalFacility';
 import FamousDoctor from './Section/FamousDoctor';
-import HandBook from './Section/HandBook';
-import About from './Section/About';
-import HomeFooter from './Section/HomeFooter';
-import FullService from './Section/FullService';
 import RemoteExamination from './Section/RemoteExamination';
 import MetalHealth from './Section/MetalHealth';
 import DoctorQnA from './Section/DoctorQnA';
+import HandBook from './Section/HandBook';
 import Healthy from './Section/Healthy';
+import About from './Section/About';
 import ForDoctor from './Section/ForDoctor';
 import Information from './Section/Information';
-import HomeTest from './Section/HomeTest';
+import HomeFooter from './Section/HomeFooter';
+
 class HomePage extends Component {
+    constructor(props) {
+        super(props);
+        // Khởi tạo state cho vị trí cuộn
+        this.state = {
+            scrollX: 0,
+            scrollY: 0
+        };
+    }
 
     render() {
-
+        const { scrollX, scrollY } = this.state;
         return (
             <div>
                 <HomeHeader isShowBanner={true} locations={"all"} />
-                {/* <ForYou /> */}
                 <FullService />
                 <Specialty />
                 <MedicalFacility />
@@ -40,7 +46,6 @@ class HomePage extends Component {
             </div>
         );
     }
-
 }
 
 const mapStateToProps = state => {
@@ -50,8 +55,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
-    };
+    return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

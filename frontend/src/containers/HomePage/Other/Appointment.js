@@ -32,7 +32,7 @@ class Appointment extends Component {
                 <HomeHeader />
                 <div className='appointment-container'>
                     <div className='appoinment-address'>
-                        <span><i class="fas fa-home" onClick={() => this.returnToHome()}></i> / Lịch hẹn đã đặt</span>
+                        <span><i className="fas fa-home" onClick={() => this.returnToHome()}></i> / Lịch hẹn đã đặt</span>
                     </div>
                     <div className='appoinment'>
                         <span>Lịch hẹn đã đặt</span>

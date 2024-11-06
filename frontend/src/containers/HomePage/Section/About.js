@@ -21,7 +21,7 @@ class About extends Component {
                         </div>
                         <div className='About-body'>
                             <div className='content-left'>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/FyDQljKtWnI?si=3Sj1mqBO7dHsUKnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/FyDQljKtWnI?si=3Sj1mqBO7dHsUKnk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             </div>
                             <div className='content-right'>
                                 <div className='child-content'>

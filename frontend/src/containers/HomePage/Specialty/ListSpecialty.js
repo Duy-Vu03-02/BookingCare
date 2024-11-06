@@ -30,7 +30,7 @@ class ListSpecialty extends Component {
                 <HomeHeader />
                 <div className='ListSpecialty-container'>
                     <div className='LS-address'>
-                        <span><i class="fas fa-home" onClick={() => this.returnToHome()}></i> / <span style={{ color: "black" }}>Chuyên khoa khám</span></span>
+                        <span><i className="fas fa-home" onClick={() => this.returnToHome()}></i> / <span style={{ color: "black" }}>Chuyên khoa khám</span></span>
                     </div>
                     <div className='LS-title'>Chuyên khoa khám</div>
                     <div className='LS-specialty'>

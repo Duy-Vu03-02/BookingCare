@@ -1,4 +1,4 @@
-import exp from 'constants';
+// import exp from 'constants';
 import EventEmitter from 'events';
 
 const _emitter = new EventEmitter();

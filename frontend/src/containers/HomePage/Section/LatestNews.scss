@@ -1,17 +1,19 @@
-.section-HomeTest {
+.section-LatestNews {
     height: auto;
     background-color: white;
+    margin-bottom: 90px;
     max-width: 2600px;
     margin: 0 auto;
 
-    .HomeTest-container {
-        height: auto;
+    .LatestNews-container {
+        height: 100%;
         margin: 0 100px;
         padding: 30px 0;
 
-        .HomeTest-header {
+        .LatestNews-header {
             height: 60px;
             padding: 10px 10px 10px 30px;
+            margin-bottom: 30px;
 
             .title1 {
                 font-size: 32px;
@@ -40,7 +42,8 @@
 
         }
 
-        .HomeTest-body {
+        .LatestNews-body {
+            padding-bottom: 40px;
 
             //reset slick slider
 
@@ -51,6 +54,7 @@
                 width: 44px !important;
                 background-color: rgba(255, 255, 255, 0.8) !important;
                 left: -20px !important;
+                margin-top: -30px;
 
                 &:hover {
                     background: #eaeaea !important;
@@ -72,6 +76,7 @@
                 width: 46px !important;
                 background-color: rgba(255, 255, 255, 0.8) !important;
                 right: -20px !important;
+                margin-top: -30px;
 
                 &:hover {
                     background: #eaeaea !important;
@@ -79,13 +84,65 @@
             }
 
             .img-custom {
-                display: flex;
+                display: flex !important;
+                flex-direction: column;
                 padding: 10px 10px 10px 10px;
-                margin-top: 40px;
-                border-radius: 20px;
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                margin-right: 15px;
-                height: 250px;
+                gap: 10px;
+
+                .bg-img1 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/04/08/204045-tiem-filler-moi-la-gi.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img2 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/04/08/210917-tiem-filler-cam-la-gi.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img3 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/03/27/101510-tiembotoxgonhamnhungdieucanbiet.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img4 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/09/05/083305-dieu-tri-benh-tang-huyet-ap.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
+
+                .bg-img5 {
+                    height: 150px;
+                    width: 100%;
+                    background: url("https://cdn.bookingcare.vn/fo/w640/2024/09/05/083305-dieu-tri-benh-tang-huyet-ap.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                }
 
                 .text-center {
                     font-size: 19px;
@@ -105,77 +162,9 @@
                     /* Đặt chiều cao dòng (line-height) */
                     max-height: 3em;
 
-                }
-
-                .bg-img1 {
-                    height: 150px;
-                    width: 100%;
-                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 70%;
-                    margin-bottom: 10px;
-                    border-radius: 20px;
-
-                }
-
-                .bg-img2 {
-                    height: 150px;
-                    width: 100%;
-                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 60%;
-                    margin-bottom: 10px;
-                    border-radius: 20px;
-
-                }
-
-                .bg-img3 {
-                    height: 150px;
-                    width: 100%;
-                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 38%;
-
-                    margin-bottom: 10px;
-                    border-radius: 20px;
-                }
-
-                .bg-img4 {
-                    height: 150px;
-                    width: 100%;
-                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 100%;
-
-                    margin-bottom: 10px;
-                    border-radius: 20px;
-                }
-
-                .bg-img5 {
-                    height: 150px;
-                    width: 100%;
-                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 70%;
-
-                    margin-bottom: 10px;
-                    border-radius: 20px;
-                }
-
-                .bg-img6 {
-                    height: 150px;
-                    width: 100%;
-                    background: url("https://cdn.bookingcare.vn/fo/w1080/2022/11/29/162306-medlatec.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    margin-bottom: 10px;
-                    border-radius: 20px;
+                    &:hover {
+                        color: rgb(35, 204, 147);
+                    }
                 }
             }
         }
@@ -184,78 +173,115 @@
     }
 }
 
+.slick-disabled {
+    display: none !important;
+}
+
+// .cover {
+//     width: 100%;
+//     max-width: 2600px;
+//     height: auto;
+//     margin: 80px auto 0 auto;
+// }
+
+
 @media only screen and (max-width: 1000px) {
 
     //150%
-    .section-HomeTest {
-        .HomeTest-container {
-            .HomeTest-header {}
+    .section-LatestNews {
+        .LatestNews-container {
+            .LatestNews-header {}
 
-            .HomeTest-body {
+            .LatestNews-body {
                 width: 900px;
                 margin-left: -50px;
+
+                .slick-next {
+                    margin-top: -20px;
+                }
+
+                .slick-prev {
+                    margin-top: -20px;
+                }
             }
         }
     }
+
+
 }
 
 @media only screen and (max-width: 900px) {
 
     //175%
-    .section-HomeTest {
-        .HomeTest-container {
-            .HomeTest-header {}
+    .section-LatestNews {
 
-            .HomeTest-body {
+        .LatestNews-container {
+            .LatestNews-header {}
+
+            .LatestNews-body {
                 width: 760px;
                 margin-left: -50px;
 
-                .slick-next {
-                    margin-top: 20px;
-                }
-
-                .slick-prev {
-                    margin-top: 20px;
-                }
-
                 .img-custom {
-                    height: 300px;
+                    height: 250px;
                 }
             }
         }
     }
 
+    .slick-next {
+        margin-top: 20px;
+    }
 
+    .slick-prev {
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
 
     //200%
-    .section-HomeTest {
-        .HomeTest-container {
-            .HomeTest-header {}
+    .section-LatestNews {
+        .LatestNews-container {
+            .LatestNews-header {}
 
-            .HomeTest-body {
+            .LatestNews-body {
                 width: 660px;
                 margin-left: -50px;
 
                 .img-custom {
-                    height: 250px;
+                    height: auto;
 
-
+                    .text-center {
+                        margin-top: 0px;
+                    }
                 }
             }
         }
     }
 
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
 }
 
 @media only screen and (max-width: 700px) {
 
     //250%
-    .section-HomeTest {
-        .HomeTest-container {
-            .HomeTest-header {
+    .section-LatestNews {
+        .LatestNews-container {
+            height: auto;
+
+            .LatestNews-header {
+
                 .title1 {
                     margin-left: -70px;
                 }
@@ -265,50 +291,80 @@
                 }
             }
 
-            .HomeTest-body {
+            .LatestNews-body {
                 width: 500px;
+
                 margin-left: -50px;
 
                 .img-custom {
                     height: 250px;
 
-
+                    .text-center {
+                        margin-top: -10px;
+                    }
                 }
             }
         }
     }
 
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
 }
 
 @media only screen and (max-width: 500px) {
 
     //300%
-    .section-HomeTest {
-        .HomeTest-container {
-            .HomeTest-header {
+    .section-LatestNews {
+        height: auto;
+
+        .LatestNews-container {
+            .LatestNews-header {
                 display: flex;
                 height: auto;
-                gap: 10px;
+                gap: 5px;
             }
 
-            .HomeTest-body {
+            .LatestNews-body {
                 width: 400px;
                 margin-left: -50px;
 
                 .img-custom {
-                    height: 270px;
+                    height: 250px;
                 }
             }
         }
+    }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
     }
 }
 
 @media only screen and (max-width: 400px) {
 
     //400%
-    .section-HomeTest {
-        .HomeTest-container {
-            .HomeTest-header {
+    .section-LatestNews {
+        height: auto;
+
+        .LatestNews-container {
+            .LatestNews-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -316,7 +372,7 @@
 
                 .title1 {
                     white-space: nowrap;
-                    margin-left: -80px;
+                    margin-left: -90px;
                 }
 
                 .btn-xemthem {
@@ -325,7 +381,7 @@
                 }
             }
 
-            .HomeTest-body {
+            .LatestNews-body {
                 width: 300px;
                 margin-left: -65px;
 
@@ -335,14 +391,26 @@
             }
         }
     }
+
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
 }
 
 @media only screen and (max-width: 300px) {
 
     //500%
-    .section-HomeTest {
-        .HomeTest-container {
-            .HomeTest-header {
+    .section-LatestNews {
+        .LatestNews-container {
+            .LatestNews-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -361,7 +429,7 @@
                 }
             }
 
-            .HomeTest-body {
+            .LatestNews-body {
                 width: 240px;
                 margin-left: -70px;
 
@@ -372,4 +440,15 @@
         }
     }
 
+    .slick-next {
+        margin-top: 20px;
+    }
+
+    .slick-prev {
+        margin-top: 20px;
+    }
+
+    .slick-slide {
+        padding: 0 3px; // kc anh slider
+    }
 }

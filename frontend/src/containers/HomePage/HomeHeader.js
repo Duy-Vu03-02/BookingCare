@@ -101,7 +101,7 @@ class HomeHeader extends Component {
     render() {
         let language = this.props.language;
         // console.log("check user inf", this, this.props.userInfo);
-        console.log("check: ", this.props.locations)
+        // console.log("check: ", this.props.locations)
         return (
             <React.Fragment>
                 {this.state.isOpenMenu && (
@@ -190,20 +190,20 @@ class HomeHeader extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <dvi className="right-content">
+                            <div className="right-content">
                                 <div className='child-content-right' onClick={() => this.goToCooperate()}>
-                                    <div><i class="fas fa-handshake"></i></div>
+                                    <div><i className="fas fa-handshake"></i></div>
                                     <div className='sub-titles' >Hợp tác</div>
                                 </div>
                                 <div className='child-content-right' onClick={() => this.goToAppointment()}>
-                                    <div><i class="fas fa-history"></i></div>
+                                    <div><i className="fas fa-history"></i></div>
                                     <div className='sub-titles' >Lịch hẹn</div>
                                 </div>
                                 <div className='child-content-right-s'>
                                     <div><i className='fas fa-search '></i></div>
                                     <div className='sub-titles'>Tìm kiếm</div>
                                 </div>
-                            </dvi>
+                            </div>
 
                         </div>
 
@@ -303,7 +303,7 @@ class HomeHeader extends Component {
                                 </div>
 
                                 <div className='content'>
-                                    <div className='i3'><i class="fas fa-file"></i></div>
+                                    <div className='i3'><i className="fas fa-file"></i></div>
                                     <div className='content-span'><span>Hắt hơi, sổ mũi là dâu hiện của bệnh gì?</span></div>
                                 </div>
                             </div>

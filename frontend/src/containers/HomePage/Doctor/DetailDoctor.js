@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { Component, Ref } from 'react';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './DetailDoctor.scss'
 import { getDetalDoctor } from '../../../services/userService';
-import { LANGUAGES } from '../../../utils';
-import ScrollToTop from '../../ScrollToTop';
+import ScrollToTop from "react-scroll-to-top";
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
+        this.myRef = React.createRef()
         this.state = {
-            detailDoctor: {}
+            detailDoctor: {},
         }
 
     }
@@ -33,25 +32,21 @@ class DetailDoctor extends Component {
             //     imageBase64 = new Buffer(user.image, 'base64').toString('binary');
             // }
         }
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0)
+        this.myRef.current.scrollTo(0, 0);
+        this._div.scrollTop = 0;
     }
     componentDidUpdate(prepProps, preState, snapshot) {
 
     }
     render() {
         // console.log(this.props.match.params.id)
-        console.log(this.state);
+        // console.log(this.state);
         let detail = this.state.detailDoctor;
-        let namevi = '', nameen = '';
-        let { language } = this.props;
-        if (detail && detail.positionData) {
-            namevi = `${detail.positionData.valueVi}, ${detail.fullname}`
-            nameen = `${detail.positionData.valueEn}, ${detail.fullname}`
-        }
         return (
             <>
                 <HomeHeader isShowBanner={false} />
-                <div className='doctor-detail-container'>
+                <div className='doctor-detail-container' ref={(ref) => this._div = ref}>
                     <div className='info-doctor'>
                         <div className='content-left' style={{ backgroundImage: `url(${detail && detail.image ? detail.image : ""})` }}>
 
@@ -65,9 +60,9 @@ class DetailDoctor extends Component {
                                     Bác sĩ từng công tác tại Khoa Chi dưới, Bệnh viện Chấn thương chỉnh hình TP. HCM<br></br>
                                     Bác sĩ nhận khám từ 16 tuổi trở lên<br></br>
                                 </span>
-                                <i class="fas fa-map-marker-alt"></i> <span>Thành Phố Hồ Chí Minh</span><br></br>
+                                <i className="fas fa-map-marker-alt"></i> <span>Thành Phố Hồ Chí Minh</span><br></br>
                                 <div className='like-btn'>
-                                    <button className='like'><i class="fas fa-thumbs-up"></i> Thích 0</button>
+                                    <button className='like'><i className="fas fa-thumbs-up"></i> Thích 0</button>
                                     <button className='share'>Chia sẻ</button>
                                 </div>
                             </div>
@@ -89,7 +84,7 @@ class DetailDoctor extends Component {
                                 </select>
                             </div>
                             <div className='calendar'>
-                                <span><i class="fas fa-calendar"></i>LỊCH KHÁM</span>
+                                <span><i className="fas fa-calendar"></i>LỊCH KHÁM</span>
                             </div>
                             <div className='time'>
                                 <button> 15:00 - 15:30 </button>
@@ -104,7 +99,7 @@ class DetailDoctor extends Component {
                                 <button> 15:00 - 15:30 </button>
                             </div>
                             <div className='choose'>
-                                <span>Chọn </span> <i class="fas fa-hand-pointer"></i> <span>và đặt (Phí đặt lịch 0đ)</span>
+                                <span>Chọn </span> <i className="fas fa-hand-pointer"></i> <span>và đặt (Phí đặt lịch 0đ)</span>
                             </div>
                         </div>
                         <div className='doctor-clinic'>
@@ -114,10 +109,10 @@ class DetailDoctor extends Component {
                                 <span className='address3'>391/8 Sư Vạn Hạnh, Phường 12, Quận 10, Thành phố Hồ Chí Minh</span>
                             </div>
                             <div className='cost'>
-                                <label>GIÁ KHÁM: </label> <span>180.000đ</span> <a href=''>Xem chi tiết</a>
+                                <label>GIÁ KHÁM: </label> <span>180.000đ</span> <a href='#'>Xem chi tiết</a>
                             </div>
                             <div className='insurance'>
-                                <label>LOẠI BẢO HIỂM ÁP DỤNG.  </label><a href=''>Xem chi tiết</a>
+                                <label>LOẠI BẢO HIỂM ÁP DỤNG.  </label><a href='#'>Xem chi tiết</a>
                             </div>
                         </div>
                     </div>
@@ -167,42 +162,42 @@ class DetailDoctor extends Component {
                     <div className='commnent-doctor'>
                         <h2>Phản hồi của bệnh nhân sau khi đi khám</h2>
                         <div className='comment'>
-                            <label>Trần Gia Hân</label><span><i class="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
+                            <label>Trần Gia Hân</label><span><i className="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
                             <p>
                                 Đi khám thấy thoải mái, đúng quy trình, được phòng khám liên hệ trước hẹn thời gian đi khám. Tuy nhiên, vẫn phải kê khai lại thông tin mặc dù đã đặt lịch trước.
                             </p>
                         </div>
 
                         <div className='comment'>
-                            <label>Nguyễn Thị Ái Khuê</label><span><i class="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
+                            <label>Nguyễn Thị Ái Khuê</label><span><i className="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
                             <p>
                                 Tình trạng của tôi đã ổn. Cảm nhận bác sĩ tư vấn nhiệt tình, nhân viên hỗ trợ nhiệt tình. Được liên hệ trước xác nhận lịch và hướng dẫn quy trình.  Được khám đúng giờ và không phải chờ đợi
                             </p>
                         </div>
 
                         <div className='comment'>
-                            <label>Đỗ Thị Minh Ngọc</label><span><i class="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
+                            <label>Đỗ Thị Minh Ngọc</label><span><i className="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
                             <p>
                                 Ok
                             </p>
                         </div>
 
                         <div className='comment'>
-                            <label>Nguyễn Song Vân Thùy</label><span><i class="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
+                            <label>Nguyễn Song Vân Thùy</label><span><i className="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
                             <p>
                                 không có  ý kiến gì
                             </p>
                         </div>
 
                         <div className='comment'>
-                            <label>Diệp Phi Hùng </label><span><i class="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
+                            <label>Diệp Phi Hùng </label><span><i className="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
                             <p>
                                 Vậy là tốt rồi, kg cần cải thiện. Cám ơn rất nhiều!
                             </p>
                         </div>
 
                         <div className='comment'>
-                            <label>Lý Sủi Nằng</label><span><i class="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
+                            <label>Lý Sủi Nằng</label><span><i className="fas fa-check-circle"></i> đã khám ngày 20/07/2024</span>
                             <p>
                                 Được cấp thêm thiết bị hiện đại thì quá tốt luôn
                             </p>
