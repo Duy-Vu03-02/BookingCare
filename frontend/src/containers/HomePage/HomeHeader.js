@@ -7,6 +7,7 @@ import { changeLanguageApp } from '../../store/actions/appActions';
 import Select from 'react-select';
 import { useHistory, withRouter, Redirect } from 'react-router-dom';
 import CustomScrollbars from '../../components/CustomScrollbars';
+import Banner from './Banner';
 const options = [
     { value: '1', label: 'Thuờng xuyên bị bóng đè cần khắc phục thế nào?' },
     { value: '2', label: 'Cách điều trị mụn ẩn, mụn cám tuổi dậy thì hiệu quả' },
@@ -16,18 +17,25 @@ const options = [
 class HomeHeader extends Component {
     constructor(props) {
         super(props);
+        this.menuRef = createRef();
         this.state = {
             selectedDoctor: '',
-            isOpenMenu: false,
+            isOpenMenu: null,
         }
         this.menuRef = createRef(); // Create a ref for the menu
     }
     componentDidMount() {
-        document.addEventListener("mousedown", this.handleOutsideClick); // Listen for clicks
+        // document.addEventListener("mousedown", this.handleOutsideClick); // Listen for clicks
+        this.setState({
+            isOpenMenu: null,
+        })
     }
 
     componentWillUnmount() {
         document.removeEventListener("mousedown", this.handleOutsideClick); // Clean up event listener
+        this.setState({
+            isOpenMenu: null,
+        })
     }
 
     changeLanguage = (language) => {
@@ -67,7 +75,7 @@ class HomeHeader extends Component {
     // // };
     handleOutsideClick = (event) => {
         if (this.menuRef.current && !this.menuRef.current.contains(event.target)) {
-            this.setState({ isOpenMenu: false }); // Close menu if clicked outside
+            this.setState({ isOpenMenu: false });
         }
     };
     toggleMenu = () => {
@@ -104,38 +112,33 @@ class HomeHeader extends Component {
         // console.log("check: ", this.props.locations)
         return (
             <React.Fragment>
-                {this.state.isOpenMenu && (
-
-                    <div className="home-menu" ref={this.menuRef}> {/* Attach ref here */}
-                        <div className='menu-item' onClick={() => this.returnToHome()}>Trang chủ</div>
-                        <div className='menu-item' onClick={() => this.goToLoginPage()}>Đăng nhập</div>
-                        <div className='menu-item' >Cẩm nang</div>
-                        <div className='menu-item' onClick={this.goToCooperate}>Liên hệ hợp tác</div>
-                        <div className='menu-item' >Sức khỏe doanh nghiệp</div>
-                        <div className='menu-item' >Chuyển đổi số Phòng khám</div>
-                        <div className='menu-item' >Tuyển dụng</div>
-                        <div className='menu-label'>VỀ BOOKINGCARE</div>
-                        <div className='menu-item' >Dành cho bệnh nhân</div>
-                        <div className='menu-item' >Dành cho bác sĩ</div>
-                        <div className='menu-item' >Vai trò của BookingCare</div>
-                        <div className='menu-item' >Liên hệ</div>
-                        <div className='menu-item' >Câu hỏi thường gặp</div>
-                        <div className='menu-item' >Điều khoản sử dụng</div>
-                        <div className='menu-item' >Quy trình hỗ trợ giải quyết khiếu nại</div>
-                        <div className='menu-item' >Quy chế hoạt động</div>
-                        <div className='menu-footer'>
-                            <div className='fb'>
-                                <i className="fab fa-facebook-f"></i>
-                            </div>
-                            <div className='ytb'>
-                                <i className="fab fa-youtube"></i>
-                            </div>
+                <div className={`home-menu ${this.state.isOpenMenu === true ? 'active' : this.state.isOpenMenu === false ? 'unactive' : ''}`} ref={this.menuRef}>
+                    <div className='menu-item' onClick={() => this.returnToHome()}>Trang chủ</div>
+                    <div className='menu-item' onClick={() => this.goToLoginPage()}>Đăng nhập</div>
+                    <div className='menu-item' >Cẩm nang</div>
+                    <div className='menu-item' onClick={this.goToCooperate}>Liên hệ hợp tác</div>
+                    <div className='menu-item' >Sức khỏe doanh nghiệp</div>
+                    <div className='menu-item' >Chuyển đổi số Phòng khám</div>
+                    <div className='menu-item' >Tuyển dụng</div>
+                    <div className='menu-label'>VỀ BOOKINGCARE</div>
+                    <div className='menu-item' >Dành cho bệnh nhân</div>
+                    <div className='menu-item' >Dành cho bác sĩ</div>
+                    <div className='menu-item' >Vai trò của BookingCare</div>
+                    <div className='menu-item' >Liên hệ</div>
+                    <div className='menu-item' >Câu hỏi thường gặp</div>
+                    <div className='menu-item' >Điều khoản sử dụng</div>
+                    <div className='menu-item' >Quy trình hỗ trợ giải quyết khiếu nại</div>
+                    <div className='menu-item' >Quy chế hoạt động</div>
+                    <div className='menu-footer'>
+                        <div className='fb'>
+                            <i className="fab fa-facebook-f"></i>
                         </div>
-                        {/* Add more items here */}
+                        <div className='ytb'>
+                            <i className="fab fa-youtube"></i>
+                        </div>
                     </div>
-
-                )
-                }
+                    {/* Add more items here */}
+                </div>
                 <div className={`overlay ${this.state.isOpenMenu ? 'active' : ''}`} onClick={this.closeMenu}></div>
 
                 <div className='cover'>
@@ -244,71 +247,7 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                     </div>
-
-                    {this.props.isShowBanner === true &&
-                        <div className="banner">
-                            <div className="text-center mb-4 check">
-                                <span className="titles">Nơi khởi nguồn sức khỏe</span>
-                            </div>
-                            <div className='search-banner '>
-                                <div className='border-input'>
-                                    <div className="row justify-content-center">
-                                        <div className="col-12">
-                                            <div className='input'>
-                                                <Select
-                                                    value={this.state.selectedDoctor}
-                                                    onChange={this.handleChange}
-                                                    options={options}
-                                                    className='select1 col-12'
-                                                    placeholder="Đặt câu hỏi với trợ lý AI"
-                                                    noOptionsMessage={() => null}
-                                                    styles={{
-                                                        option: (provided, state) => ({
-                                                            ...provided,
-                                                            backgroundColor: state.isSelected ? 'white' : state.isFocused ? '#f0f0f0' : null,
-                                                            color: state.isSelected ? 'black' : 'black',
-                                                            padding: 20,
-                                                            transition: 'all 0.2s ease',
-                                                            borderRadius: 'none'
-                                                        }),
-                                                    }}
-                                                />
-                                                <div><i className="fas fa-paper-plane"></i></div>
-                                            </div>
-                                            <input
-                                                type='file'
-                                                ref={this.fileInputRef}
-                                                style={{ display: 'none' }}
-                                            // onChange={this.handleFileChange}
-                                            />
-                                            <div className='upfile' onClick={this.handleDivClick}>
-                                                <div><i className="fas fa-file"></i></div>
-                                                <div>
-                                                    <input type="text" className="" placeholder="Đọc đơn thuốc/ xét nghiệm" disabled />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bonus-content">
-                                <div className='content'>
-                                    <div className='i1'><i className="fas fa-tv"></i></div>
-                                    <div className='content-span'><span>Bị thủy đậu nên làm gì để tránh lây bệnh</span></div>
-                                </div>
-
-                                <div className='content'>
-                                    <div className='i2'><i className="fas fa-stethoscope"></i></div>
-                                    <div className='content-span'><span>Mệt mỏi, khó thở nguyên nhân do đâu?</span></div>
-                                </div>
-
-                                <div className='content'>
-                                    <div className='i3'><i className="fas fa-file"></i></div>
-                                    <div className='content-span'><span>Hắt hơi, sổ mũi là dâu hiện của bệnh gì?</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    }
+                    <Banner />
                 </div>
             </React.Fragment >
         );

@@ -6,6 +6,9 @@ import Information from '../../HomePage/Section/Information'
 import './HealthyLife.scss'
 import LatestNews from '../Section/LatestNews';
 import FamousNews from '../Section/FamousNews';
+import Community from '../Section/Community';
+import HealthyCategory from '../Section/HealthyCategory';
+import ContentAuthor from '../Section/ContentAuthor';
 class HealthyLife extends Component {
     constructor(props) {
         super(props);
@@ -37,6 +40,9 @@ class HealthyLife extends Component {
                 {/* <HomeTest /> */}
                 <LatestNews />
                 <FamousNews />
+                <Community />
+                <HealthyCategory />
+                <ContentAuthor />
                 <Information />
                 <HomeFooter />
             </>

@@ -14,7 +14,7 @@ import About from './Section/About';
 import ForDoctor from './Section/ForDoctor';
 import Information from './Section/Information';
 import HomeFooter from './Section/HomeFooter';
-
+import Banner from './Banner';
 class HomePage extends Component {
     constructor(props) {
         super(props);

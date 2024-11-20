@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './FamousDoctor.scss'
+import './ContentAuthor.scss'
 import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 import { useHistory, withRouter, Redirect } from 'react-router-dom';
@@ -9,7 +9,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { getFeatureDoctor } from '../../../services/userService';
 
-class FamousDoctor extends Component {
+class ContentAuthor extends Component {
 
     constructor(props) {
         super(props);
@@ -74,13 +74,13 @@ class FamousDoctor extends Component {
         // console.log('check arrdoctor: ', this.state.idDoctor)
         return (
             <div className='cover'>
-                <div className='section-FamousDoctor' >
-                    <div className='FamousDoctor-container'>
-                        <div className='FamousDoctor-header'>
-                            <span className='title1'>Bác sĩ nổi bật</span>
+                <div className='section-ContentAuthor' >
+                    <div className='ContentAuthor-container'>
+                        <div className='ContentAuthor-header'>
+                            <span className='title1'>Tác giả nội dung</span>
                             <button className='btn-xemthem'>Xem thêm</button>
                         </div>
-                        <div className='FamousDoctor-body'>
+                        <div className='ContentAuthor-body'>
                             <Slider {...setting}>
                                 {arrDoctor && arrDoctor.length > 0 && arrDoctor.map((item, index) => {
                                     return (
@@ -89,7 +89,6 @@ class FamousDoctor extends Component {
                                                 <div className='bg-img1'></div>
                                                 <div className='position text-center '>
                                                     <div className='ten-hocvi'>{item.rank}, {item.name}</div>
-                                                    <div className='chuyenkhoa'>{item.specialty}</div>
                                                 </div >
                                             </div>
                                         </div>
@@ -118,4 +117,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FamousDoctor));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ContentAuthor));

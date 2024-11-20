@@ -1,16 +1,16 @@
-.section-FamousDoctor {
+.section-ContentAuthor {
     height: auto;
     background-color: white;
     background-image: url(../../../assets/Fullservice/fs-bg.png);
     max-width: 2600px;
     margin: 0 auto;
 
-    .FamousDoctor-container {
+    .ContentAuthor-container {
         height: 100%;
         margin: 0 100px;
         padding: 30px 0;
 
-        .FamousDoctor-header {
+        .ContentAuthor-header {
             height: 60px;
             padding: 10px 10px 10px 30px;
 
@@ -41,7 +41,7 @@
 
         }
 
-        .FamousDoctor-body {
+        .ContentAuthor-body {
             //reset slick slider
 
             .slick-prev {
@@ -92,13 +92,13 @@
                     flex-direction: column;
 
                     .bg-img1 {
-                        height: 150px;
-                        width: 150px;
+                        height: 300px;
+                        width: 300px;
                         background: url("../../../assets/doctor/ts-le-duc-to.jpg");
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
-                        margin-bottom: 10px;
+                        margin-bottom: 20px;
                         border-radius: 50%;
 
                     }
@@ -144,10 +144,6 @@
                         text-align: center;
                     }
 
-                    .chuyenkhoa {
-                        font-size: 25px;
-                    }
-
                 }
 
 
@@ -171,11 +167,11 @@
 @media only screen and (max-width: 1000px) {
 
     //150%
-    .section-FamousDoctor {
-        .FamousDoctor-container {
-            .FamousDoctor-header {}
+    .section-ContentAuthor {
+        .ContentAuthor-container {
+            .ContentAuthor-header {}
 
-            .FamousDoctor-body {
+            .ContentAuthor-body {
                 width: 900px;
                 margin-left: -50px;
             }
@@ -194,12 +190,12 @@
 @media only screen and (max-width: 900px) {
 
     //175%
-    .section-FamousDoctor {
+    .section-ContentAuthor {
 
-        .FamousDoctor-container {
-            .FamousDoctor-header {}
+        .ContentAuthor-container {
+            .ContentAuthor-header {}
 
-            .FamousDoctor-body {
+            .ContentAuthor-body {
                 width: 760px;
                 margin-left: -50px;
 
@@ -222,11 +218,11 @@
 @media only screen and (max-width: 800px) {
 
     //200%
-    .section-FamousDoctor {
-        .FamousDoctor-container {
-            .FamousDoctor-header {}
+    .section-ContentAuthor {
+        .ContentAuthor-container {
+            .ContentAuthor-header {}
 
-            .FamousDoctor-body {
+            .ContentAuthor-body {
                 width: 660px;
                 margin-left: -50px;
 
@@ -257,11 +253,11 @@
 @media only screen and (max-width: 700px) {
 
     //250%
-    .section-FamousDoctor {
-        .FamousDoctor-container {
+    .section-ContentAuthor {
+        .ContentAuthor-container {
             height: auto;
 
-            .FamousDoctor-header {
+            .ContentAuthor-header {
 
                 .title1 {
                     margin-left: -70px;
@@ -272,7 +268,7 @@
                 }
             }
 
-            .FamousDoctor-body {
+            .ContentAuthor-body {
                 width: 500px;
 
                 margin-left: -50px;
@@ -304,15 +300,15 @@
 @media only screen and (max-width: 500px) {
 
     //300%
-    .section-FamousDoctor {
-        .FamousDoctor-container {
-            .FamousDoctor-header {
+    .section-ContentAuthor {
+        .ContentAuthor-container {
+            .ContentAuthor-header {
                 display: flex;
                 height: auto;
                 gap: 50px;
             }
 
-            .FamousDoctor-body {
+            .ContentAuthor-body {
                 width: 400px;
                 margin-left: -50px;
 
@@ -339,11 +335,11 @@
 @media only screen and (max-width: 400px) {
 
     //400%
-    .section-FamousDoctor {
+    .section-ContentAuthor {
         height: auto;
 
-        .FamousDoctor-container {
-            .FamousDoctor-header {
+        .ContentAuthor-container {
+            .ContentAuthor-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -360,7 +356,7 @@
                 }
             }
 
-            .FamousDoctor-body {
+            .ContentAuthor-body {
                 width: 300px;
                 margin-left: -65px;
 
@@ -387,9 +383,9 @@
 @media only screen and (max-width: 300px) {
 
     //500%
-    .section-FamousDoctor {
-        .FamousDoctor-container {
-            .FamousDoctor-header {
+    .section-ContentAuthor {
+        .ContentAuthor-container {
+            .ContentAuthor-header {
                 display: flex;
                 height: auto;
                 gap: 10px;
@@ -408,7 +404,7 @@
                 }
             }
 
-            .FamousDoctor-body {
+            .ContentAuthor-body {
                 width: 240px;
                 margin-left: -70px;
 

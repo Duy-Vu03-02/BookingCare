@@ -12,6 +12,7 @@ export const path = {
     AT_HOME: "/at-home",
     AT_HOSPITAL: '/at-hospital',
     HEALTHY_LIFE: '/healthy-life',
+    DETAIL_SERVICE: '/detail-service/:id',
 };
 
 export const LANGUAGES = {

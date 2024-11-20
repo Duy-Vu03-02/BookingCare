@@ -18,6 +18,35 @@ body {
     font-weight: lighter !important;
     cursor: pointer;
     max-width: 2600px;
+    transform: translateX(-100%);
+
+    &.active {
+        animation: slideRight 0.5s ease forwards;
+    }
+
+    &.unactive {
+        animation: slideLeft 0.5s ease forwards;
+    }
+
+    @keyframes slideRight {
+        from {
+            transform: translateX(-300px);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideLeft {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-300px);
+        }
+    }
 
     .menu-item {
         height: 60px;
@@ -34,6 +63,8 @@ body {
         padding-left: 10px;
     }
 }
+
+
 
 .menu-footer {
     display: flex;
@@ -89,6 +120,7 @@ body {
     visibility: visible;
     /* Cho phép tương tác */
 }
+
 
 
 
@@ -302,164 +334,6 @@ body {
                 color: #4bc5d3;
                 font-size: 30px;
 
-            }
-        }
-    }
-
-}
-
-.banner {
-    padding: 40px 0px;
-    background-color: rgb(146, 215, 238);
-    height: auto;
-    max-width: 2600px;
-    margin: 0 auto;
-
-    .titles {
-        color: rgba(0, 0, 0, 1.00);
-        text-align: center;
-        font-size: 57px;
-        font-weight: 500;
-    }
-
-    .search-banner {
-        padding: 0 150px;
-        height: auto;
-
-
-        .border-input {
-            margin: 0 auto;
-            padding: 0 10px;
-
-
-            .col-12 {
-                background-color: white;
-                border-radius: 10px;
-                height: 170px;
-                padding-top: 20px;
-
-
-                .input {
-                    display: flex;
-                    height: 50px;
-                    width: 100%;
-                    position: relative;
-                    padding-top: 10px;
-                    padding-left: 20px;
-
-
-                    i {
-                        position: absolute;
-                        font-size: 32px;
-                        right: 15px;
-                        top: 25px;
-                        opacity: 0.3;
-
-
-                    }
-
-                    .select1 {
-                        border: none;
-                        outline: none;
-                        width: 1000px;
-                        height: 60px;
-                        font-size: 22px;
-                        background-color: transparent;
-
-                    }
-                }
-
-                .upfile {
-                    display: flex;
-                    margin-top: 30px;
-
-
-                    i {
-                        font-size: 22px;
-                        cursor: pointer;
-                        opacity: 0.5;
-                        margin-left: 20px;
-                        margin-top: 5px;
-
-                    }
-
-                    input {
-                        border: none;
-                        outline: none;
-                        font-size: 22px;
-                        width: 500px;
-                        background-color: transparent;
-                        margin-bottom: 100px;
-                        padding-left: 10px;
-
-                    }
-                }
-            }
-        }
-
-
-    }
-
-    .bonus-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 40px;
-        height: auto;
-
-        .content {
-            background-color: white;
-            width: 360px;
-            height: 50px;
-            font-size: 18px;
-            overflow: hidden;
-            display: flex;
-            padding: 10px 10px;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.5);
-            white-space: nowrap;
-
-
-            .content-span {
-                overflow: hidden;
-                white-space: nowrap;
-
-                span {
-                    width: 330px;
-                    display: inline-block;
-                    animation: marquee 40s linear infinite;
-
-                }
-            }
-
-            i {
-                width: 30px;
-
-            }
-
-            .i1 {
-                color: #ffc10e;
-
-            }
-
-            .i2 {
-                color: #4bbde2;
-
-            }
-
-            .i3 {
-                color: #1f873c;
-
-            }
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-
-            100% {
-                transform: translateX(-100%);
             }
         }
     }

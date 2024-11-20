@@ -6,19 +6,28 @@ import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { getAllHospital } from '../../../services/userService';
 class MedicalFacility extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             slidesToShow: 4,
+            listHospital: []
         };
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
+
+        let res = await getAllHospital();
+        // console.log("check res", res)
+        if (res && res.data && res.data.error_code === 0) {
+            this.setState({
+                listHospital: res.data.data
+            })
+        }
     }
 
     componentWillUnmount() {
@@ -54,6 +63,8 @@ class MedicalFacility extends Component {
             slidesToShow: this.state.slidesToShow,
             slidesToScroll: 1,
         }
+        let { listHospital } = this.state
+        // console.log("list hos", listHospital)
         return (
             <div className='cover'>
                 <div className='section-MedicalFacility' >
@@ -64,10 +75,15 @@ class MedicalFacility extends Component {
                         </div>
                         <div className='MedicalFacility-body'>
                             <Slider {...setting}>
-                                <div className='img-custom'>
-                                    <div className='bg-img1'></div>
-                                    <div className='text-center fs-5 fw-bold'>Bệnh viễn hữu nghị Việt Đức</div>
-                                </div>
+                                {listHospital && listHospital.length > 0 && listHospital.map((item, index) => {
+                                    return (
+                                        <div className='img-custom'>
+                                            <div className='bg-img1' style={{ backgroundImage: `url(${item.img})` }}></div>
+                                            <div className='text-center fs-5 fw-bold'>{item.name}</div>
+                                        </div>
+                                    )
+                                })}
+
                                 <div className='img-custom'>
                                     <div className='bg-img2'></div>
                                     <div className='text-center fs-5 fw-bold'>Bệnh viện chợ rẫy</div>

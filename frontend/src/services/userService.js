@@ -46,12 +46,25 @@ const saveInfoDoctor = (data) => {
 }
 
 const getDetalDoctor = (id) => {
-    return axios.get(`/api/get-detal-doctor-by-id?id=${id}`)
+    return axios.get(`/doctor/detail-doctor/?id=${id}`)
 }
 
 const getService = () => {
     return axios.get('/medical-service/get-all-medical-service')
 }
+
+const getFeatureDoctor = () => {
+    return axios.get('/doctor/feature-doctor')
+}
+
+const getAllHospital = () => {
+    return axios.get('/hospital/get-all-hospital')
+}
+
+const getDetailService = (id) => {
+    return axios.get(`/medical-service/get-detail-medical-service?id=${id}`)
+}
+
 export {
     handleLoginApi,
     handleGetAllUser,
@@ -64,4 +77,7 @@ export {
     saveInfoDoctor,
     getDetalDoctor,
     getService,
+    getFeatureDoctor,
+    getAllHospital,
+    getDetailService
 }

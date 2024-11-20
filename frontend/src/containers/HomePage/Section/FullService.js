@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './FullService.scss'
 import { FormattedMessage } from 'react-intl';
 import { getService } from '../../../services/userService';
+import { useHistory, withRouter, Redirect } from 'react-router-dom';
 class FullService extends Component {
     constructor(props) {
         super(props);
@@ -26,7 +27,9 @@ class FullService extends Component {
         }
     }
 
-
+    viewDetailService = (id, name) => {
+        this.props.history.push(`/detail-service/${id}?name=${name}`);
+    }
     render() {
         // console.log("check service: ", this.state.fullservice);
         let arrService = this.state.fullservice;
@@ -47,7 +50,7 @@ class FullService extends Component {
                                 return (
                                     <div className='service' key={index}>
                                         {group.map(item => (
-                                            <div className='service-child' key={item.id}>
+                                            <div className='service-child' key={item.id} onClick={() => this.viewDetailService(item.id, item.name)}>
                                                 <div
                                                     className='child-img'
                                                     style={{
@@ -83,4 +86,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FullService);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FullService));

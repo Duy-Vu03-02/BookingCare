@@ -8,23 +8,31 @@ import './ListSpecialty.scss'
 import { getDetalDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import ScrollToTop from '../../ScrollToTop';
+import { getDetailService } from '../../../services/userService';
 class ListSpecialty extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            ListSpecialty: {}
+            ListSpecialty: [],
         }
 
     }
 
     async componentDidMount() {
-
+        let id = "671c94e6a213a0b6d2bc5ad6"
+        let res = await getDetailService(id);
+        console.log(res)
+        if (res && res.data.error_code === 0) {
+            this.setState({
+                ListSpecialty: res.data.data,
+            });
+        }
     }
     componentDidUpdate(prepProps, preState, snapshot) {
 
     }
     render() {
-
+        let { ListSpecialty } = this.state
         return (
             <>
                 <HomeHeader />
@@ -33,66 +41,14 @@ class ListSpecialty extends Component {
                         <span><i className="fas fa-home" onClick={() => this.returnToHome()}></i> / <span style={{ color: "black" }}>Chuyên khoa khám</span></span>
                     </div>
                     <div className='LS-title'>Chuyên khoa khám</div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
-                    <div className='LS-specialty'>
-                        <div className='LS-image' style={{ backgroundImage: `url(https://cdn.bookingcare.vn/fo/w384/2023/12/26/101627-co-xuong-khop.png)` }}></div>
-                        <div className='LS-name'>Cơ Xương Khớp</div>
-                    </div>
+                    {ListSpecialty && ListSpecialty.length > 0 && ListSpecialty.map((item, index) => {
+                        return (
+                            <div className='LS-specialty'>
+                                <div className='LS-image' style={{ backgroundImage: `url(${item.img})` }}></div>
+                                <div className='LS-name'>{item.name}</div>
+                            </div>
+                        );
+                    })}
                 </div>
                 <Information />
                 <HomeFooter />

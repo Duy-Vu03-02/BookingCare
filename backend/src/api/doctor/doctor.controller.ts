@@ -40,8 +40,11 @@ export class DoctorController {
     };
 
     public static getDetialDoctor = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+
+
+
         try {
-            const doctor = await DoctorService.getDetialDoctor(req.body as IIdDoctor);
+            const doctor = await DoctorService.getDetialDoctor({ id: req.query.id } as IIdDoctor);
 
             if (doctor) {
                 res.sendJson({

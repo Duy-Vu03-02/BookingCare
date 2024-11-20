@@ -7,9 +7,9 @@ import express, { NextFunction, Request, Response } from 'express';
 
 export class HospitalController {
     public static createHospital = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+
         try {
             const hospital = await HospitalService.createHospital(req.body as IHospital);
-
             if (hospital) {
                 res.sendJson({
                     data: hospital,

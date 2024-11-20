@@ -20,6 +20,7 @@ import ListSpecialty from './HomePage/Specialty/ListSpecialty';
 import AtHome from './HomePage/Other/AtHome';
 import AtHospital from './HomePage/Other/AtHospital';
 import HealthyLife from './HomePage/Other/HealthyLife';
+import DetailService from './HomePage/Service/DetailService';
 // import ScrollToTop from './ScrollToTop';
 import ScrollToTop from "react-scroll-to-top";
 class App extends Component {
@@ -41,7 +42,14 @@ class App extends Component {
     componentDidMount() {
         this.handlePersistorState();
     }
-
+    componentDidUpdate(prepProps) {
+        // console.log("check location: ", this.props.location.pathname);
+        if (this.props.location && prepProps.location) {
+            if (this.props.location.pathname !== prepProps.location.pathname) {
+                window.scrollTo(0, 0);
+            }
+        }
+    }
     render() {
         return (
             <Fragment>
@@ -62,6 +70,7 @@ class App extends Component {
                                 <Route path={path.AT_HOME} component={AtHome} />
                                 <Route path={path.AT_HOSPITAL} component={AtHospital} />
                                 <Route path={path.HEALTHY_LIFE} component={HealthyLife} />
+                                <Route path={path.DETAIL_SERVICE} component={DetailService} />
                             </Switch>
                             {/* </CustomScrollbars> */}
                         </div>
