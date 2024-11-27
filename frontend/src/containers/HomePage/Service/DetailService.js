@@ -1,12 +1,11 @@
-import React, { Component, Ref } from 'react';
+import React, { Component } from 'react';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './DetailService.scss'
-import { getDetailService, getDetalDoctor } from '../../../services/userService';
-import ScrollToTop from "react-scroll-to-top";
-import { NumericFormat } from 'react-number-format';
+import { getDetailService } from '../../../services/userService';
+import { Helmet } from 'react-helmet'
 class DetailService extends Component {
     constructor(props) {
         super(props);
@@ -43,13 +42,15 @@ class DetailService extends Component {
         // console.log(this.props.match.params.id)
         console.log(this.state);
         let { detailService } = this.state
-        let { isShowPrice, isShowIns } = this.state;
         let groupedServices = [];
         for (let i = 0; i < detailService.length; i += 2) {
             groupedServices.push(detailService.slice(i, i + 2));
         }
         return (
             <>
+                <Helmet>
+                    <title>{this.state.serviceName}</title>
+                </Helmet>
                 <HomeHeader isShowBanner={false} />
                 <div className='detail-service-container'>
                     <div className='detail-service-address'>
@@ -59,7 +60,7 @@ class DetailService extends Component {
                         {detailService && detailService.length > 0 && detailService.map((item, index) => {
                             return (
                                 <div className='child-service'>
-                                    <img src={item.img} />
+                                    <img src={item.img} alt="" />
                                     <div className='service-name'>
                                         <span>{item.name}</span>
                                     </div>

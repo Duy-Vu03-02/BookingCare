@@ -1,19 +1,8 @@
 import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss'
-import { FormattedMessage } from 'react-intl';
-import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions/appActions';
-import Select from 'react-select';
-import { useHistory, withRouter, Redirect } from 'react-router-dom';
-import CustomScrollbars from '../../components/CustomScrollbars';
-import Banner from './Banner';
-const options = [
-    { value: '1', label: 'Thuờng xuyên bị bóng đè cần khắc phục thế nào?' },
-    { value: '2', label: 'Cách điều trị mụn ẩn, mụn cám tuổi dậy thì hiệu quả' },
-    { value: '3', label: 'Rối loạn tiền đình uống thuốc không hiệu quả phải làm sao' },
-];
-
+import { withRouter } from 'react-router-dom';
 class HomeHeader extends Component {
     constructor(props) {
         super(props);
@@ -107,7 +96,6 @@ class HomeHeader extends Component {
         this.props.history.push(`/healthy-life`);
     }
     render() {
-        let language = this.props.language;
         // console.log("check user inf", this, this.props.userInfo);
         // console.log("check: ", this.props.locations)
         return (
@@ -141,88 +129,24 @@ class HomeHeader extends Component {
                 </div>
                 <div className={`overlay ${this.state.isOpenMenu ? 'active' : ''}`} onClick={this.closeMenu}></div>
 
-                <div className='cover'>
-                    <div className='homeheader-container'>
-                        <div className='homeheader-content'>
-                            <div className='left-content'>
-                                <i className="fas fa-bars" onClick={this.toggleMenu}></i>
-                                <div className='header-logo' onClick={() => this.returnToHome()}>
-                                </div>
+                <div className='homeheader-container'>
+                    <div className='homeheader-content'>
+                        <div className='left-content'>
+                            <i className="fas fa-bars" onClick={this.toggleMenu}></i>
+                            <div className='header-logo' onClick={() => this.returnToHome()}>
                             </div>
-                            <div className='center-content'>
-                                <div className='child-content1'
-                                    style={{
-                                        backgroundColor: this.props.locations === "all" ? "#ffc419" : "",
-                                        color: this.props.locations === "all" ? "white" : "black",
-                                        fontWeight: this.props.locations === "all" ? "bold" : "300",
-                                    }}
-                                    onClick={() => this.returnToHome()}>
-                                    <div className='sub-title' >Tất cả</div>
-                                </div>
-                                <div className='child-content1'
-                                    style={{
-                                        backgroundColor: this.props.locations === "at-home" ? "#ffc419" : "",
-                                        color: this.props.locations === "at-home" ? "white" : "black",
-                                        fontWeight: this.props.locations === "at-home" ? "bold" : "300",
-                                    }}
-                                    onClick={() => this.goToAtHomePage()}>
-                                    <div className='sub-title'>Tại nhà</div>
-                                </div>
-                                <div className='child-content1'
-                                    style={{
-                                        backgroundColor: this.props.locations === "at-hospital" ? "#ffc419" : "",
-                                        color: this.props.locations === "at-hospital" ? "white" : "black",
-                                        fontWeight: this.props.locations === "at-hospital" ? "bold" : "300",
-                                    }}
-                                    onClick={() => this.goToAtHospitalPage()}>
-                                    <div className='sub-title'>Tại viện</div>
-                                </div>
-                                <div className='child-content1'
-                                    style={{
-                                        backgroundColor: this.props.locations === "healthy" ? "#ffc419" : "",
-                                        color: this.props.locations === "healthy" ? "white" : "black",
-                                        fontWeight: this.props.locations === "healthy" ? "bold" : "300",
-                                    }}
-                                    onClick={() => this.goToHeathyLifePage()}>
-                                    <div className='sub-title'>Sống khỏe</div>
-                                </div>
-                                <div className='child-content'>
-                                    <div className='search'>
-                                        <i className='fas fa-search '></i>
-                                        <input type='text' placeholder='Tìm chuyên khoa' disabled></input>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="right-content">
-                                <div className='child-content-right' onClick={() => this.goToCooperate()}>
-                                    <div><i className="fas fa-handshake"></i></div>
-                                    <div className='sub-titles' >Hợp tác</div>
-                                </div>
-                                <div className='child-content-right' onClick={() => this.goToAppointment()}>
-                                    <div><i className="fas fa-history"></i></div>
-                                    <div className='sub-titles' >Lịch hẹn</div>
-                                </div>
-                                <div className='child-content-right-s'>
-                                    <div><i className='fas fa-search '></i></div>
-                                    <div className='sub-titles'>Tìm kiếm</div>
-                                </div>
-                            </div>
-
                         </div>
-
-                    </div>
-
-                    <div className='center-content2'>
-                        <div className='cover-child-content2'>
-                            <div className='child-content2' style={{
-                                backgroundColor: this.props.locations === "all" ? "#ffc419" : "transparent",
-                                color: this.props.locations === "all" ? "white" : "black",
-                                fontWeight: this.props.locations === "all" ? "bold" : "300",
-                            }}
+                        <div className='center-content'>
+                            <div className='child-content1'
+                                style={{
+                                    backgroundColor: this.props.locations === "all" ? "#ffc419" : "",
+                                    color: this.props.locations === "all" ? "white" : "black",
+                                    fontWeight: this.props.locations === "all" ? "bold" : "300",
+                                }}
                                 onClick={() => this.returnToHome()}>
-                                <div className='sub-title'>Tất cả</div>
+                                <div className='sub-title' >Tất cả</div>
                             </div>
-                            <div className='child-content2'
+                            <div className='child-content1'
                                 style={{
                                     backgroundColor: this.props.locations === "at-home" ? "#ffc419" : "",
                                     color: this.props.locations === "at-home" ? "white" : "black",
@@ -231,9 +155,7 @@ class HomeHeader extends Component {
                                 onClick={() => this.goToAtHomePage()}>
                                 <div className='sub-title'>Tại nhà</div>
                             </div>
-                        </div>
-                        <div className='cover-child-content2'>
-                            <div className='child-content2'
+                            <div className='child-content1'
                                 style={{
                                     backgroundColor: this.props.locations === "at-hospital" ? "#ffc419" : "",
                                     color: this.props.locations === "at-hospital" ? "white" : "black",
@@ -242,12 +164,75 @@ class HomeHeader extends Component {
                                 onClick={() => this.goToAtHospitalPage()}>
                                 <div className='sub-title'>Tại viện</div>
                             </div>
-                            <div className='child-content2'>
+                            <div className='child-content1'
+                                style={{
+                                    backgroundColor: this.props.locations === "healthy" ? "#ffc419" : "",
+                                    color: this.props.locations === "healthy" ? "white" : "black",
+                                    fontWeight: this.props.locations === "healthy" ? "bold" : "300",
+                                }}
+                                onClick={() => this.goToHeathyLifePage()}>
                                 <div className='sub-title'>Sống khỏe</div>
                             </div>
+                            <div className='child-content'>
+                                <div className='search'>
+                                    <i className='fas fa-search '></i>
+                                    <input type='text' placeholder='Tìm chuyên khoa' disabled></input>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="right-content">
+                            <div className='child-content-right' onClick={() => this.goToCooperate()}>
+                                <div><i className="fas fa-handshake"></i></div>
+                                <div className='sub-titles' >Hợp tác</div>
+                            </div>
+                            <div className='child-content-right' onClick={() => this.goToAppointment()}>
+                                <div><i className="fas fa-history"></i></div>
+                                <div className='sub-titles' >Lịch hẹn</div>
+                            </div>
+                            <div className='child-content-right-s'>
+                                <div><i className='fas fa-search '></i></div>
+                                <div className='sub-titles'>Tìm kiếm</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className='center-content2'>
+                    <div className='cover-child-content2'>
+                        <div className='child-content2' style={{
+                            backgroundColor: this.props.locations === "all" ? "#ffc419" : "transparent",
+                            color: this.props.locations === "all" ? "white" : "black",
+                            fontWeight: this.props.locations === "all" ? "bold" : "300",
+                        }}
+                            onClick={() => this.returnToHome()}>
+                            <div className='sub-title'>Tất cả</div>
+                        </div>
+                        <div className='child-content2'
+                            style={{
+                                backgroundColor: this.props.locations === "at-home" ? "#ffc419" : "",
+                                color: this.props.locations === "at-home" ? "white" : "black",
+                                fontWeight: this.props.locations === "at-home" ? "bold" : "300",
+                            }}
+                            onClick={() => this.goToAtHomePage()}>
+                            <div className='sub-title'>Tại nhà</div>
                         </div>
                     </div>
-                    <Banner />
+                    <div className='cover-child-content2'>
+                        <div className='child-content2'
+                            style={{
+                                backgroundColor: this.props.locations === "at-hospital" ? "#ffc419" : "",
+                                color: this.props.locations === "at-hospital" ? "white" : "black",
+                                fontWeight: this.props.locations === "at-hospital" ? "bold" : "300",
+                            }}
+                            onClick={() => this.goToAtHospitalPage()}>
+                            <div className='sub-title'>Tại viện</div>
+                        </div>
+                        <div className='child-content2'>
+                            <div className='sub-title'>Sống khỏe</div>
+                        </div>
+                    </div>
                 </div>
             </React.Fragment >
         );

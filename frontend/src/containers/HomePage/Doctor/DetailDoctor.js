@@ -1,14 +1,13 @@
-import React, { Component, Ref } from 'react';
+import React, { Component } from 'react';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './DetailDoctor.scss'
 import { getDetalDoctor } from '../../../services/userService';
-import ScrollToTop from "react-scroll-to-top";
-import { NumericFormat } from 'react-number-format';
 import ScheduleDoctor from './ScheduleDoctor';
 import DoctorClinic from './DoctorClinic';
+import { Helmet } from 'react-helmet'
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
@@ -54,9 +53,11 @@ class DetailDoctor extends Component {
         // console.log(this.state);
         let { detailDoctor } = this.state
         // console.log("check detail: ", detailDoctor)
-        let { isShowPrice, isShowIns } = this.state;
         return (
             <>
+                <Helmet>
+                    <title>{detailDoctor && detailDoctor.rank ? detailDoctor.rank : ""} {detailDoctor && detailDoctor.name ? detailDoctor.name : ""}</title>
+                </Helmet>
                 <HomeHeader isShowBanner={false} />
                 <div className='doctor-detail-container'>
                     <div className='info-doctor'>

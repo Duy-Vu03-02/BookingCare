@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Xray.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,41 +54,40 @@ class Xray extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
-                <div className='section-Xray' >
-                    <div className='Xray-container'>
-                        <div className='Xray-header'>
-                            <span className='title1'>Chụp chiếu</span>
-                            <button className='btn-xemthem'>Xem thêm</button>
-                        </div>
-                        <div className='Xray-body'>
-                            <Slider {...setting}>
-                                <div className='img-custom'>
-                                    <div className='bg-img1'></div>
-                                    <div className='text-center fs-4 fw-bold'>Bài test sức khỏe</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img2'></div>
-                                    <div className='text-center fs-4 fw-bold'>Sức khỏe tâm thần</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img3'></div>
-                                    <div className='text-center fs-4 fw-bold'>Tư vấn trị liệu tâm lý từ xa</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img4'></div>
-                                    <div className='text-center fs-4 fw-bold'>Sức khỏe tâm thần từ xa</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img5'></div>
-                                    <div className='text-center fs-4 fw-bold'>Tư vấn trị liệu tâm lý</div>
-                                </div>
-                            </Slider>
-                        </div>
-
+            <div className='section-Xray' >
+                <div className='Xray-container'>
+                    <div className='Xray-header'>
+                        <span className='title1'>Chụp chiếu</span>
+                        <button className='btn-xemthem'>Xem thêm</button>
                     </div>
+                    <div className='Xray-body'>
+                        <Slider {...setting}>
+                            <div className='img-custom'>
+                                <div className='bg-img1'></div>
+                                <div className='text-center fs-4 fw-bold'>Bài test sức khỏe</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img2'></div>
+                                <div className='text-center fs-4 fw-bold'>Sức khỏe tâm thần</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img3'></div>
+                                <div className='text-center fs-4 fw-bold'>Tư vấn trị liệu tâm lý từ xa</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img4'></div>
+                                <div className='text-center fs-4 fw-bold'>Sức khỏe tâm thần từ xa</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img5'></div>
+                                <div className='text-center fs-4 fw-bold'>Tư vấn trị liệu tâm lý</div>
+                            </div>
+                        </Slider>
+                    </div>
+
                 </div>
             </div>
+
         );
     }
 

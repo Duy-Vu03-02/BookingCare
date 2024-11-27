@@ -7,7 +7,7 @@ import express, { NextFunction, Request, Response } from 'express';
 
 export class HospitalController {
     public static createHospital = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-
+        console.log("check req controller", req.body)
         try {
             const hospital = await HospitalService.createHospital(req.body as IHospital);
             if (hospital) {
@@ -72,4 +72,28 @@ export class HospitalController {
             next(err);
         }
     };
+    public static deleteHospital = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { id } = req.params;
+            const result = await HospitalService.deleteHospital(id); // Gọi service để xóa bệnh viện
+            if (result) {
+                res.sendJson({
+                    message: 'Bệnh viện đã được xóa thành công',
+                    data: result,
+                });
+                return;
+            }
+
+            next(
+                new APIError({
+                    message: 'Không tìm thấy bệnh viện để xóa',
+                    status: statusCode.REQUEST_NOT_FOUND,
+                    errorCode: statusCode.REQUEST_NOT_FOUND,
+                }),
+            );
+        } catch (err) {
+            next(err);
+        }
+    };
+
 }

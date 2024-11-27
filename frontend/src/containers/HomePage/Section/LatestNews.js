@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './LatestNews.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,7 +54,7 @@ class LatestNews extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
+
                 <div className='section-LatestNews' >
                     <div className='LatestNews-container'>
                         <div className='LatestNews-header'>
@@ -89,7 +88,7 @@ class LatestNews extends Component {
 
                     </div>
                 </div>
-            </div>
+
         );
     }
 

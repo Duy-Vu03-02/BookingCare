@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './MedicalFacility.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { getAllHospital } from '../../../services/userService';
+import { withRouter } from 'react-router-dom';
 class MedicalFacility extends Component {
 
     constructor(props) {
@@ -54,7 +54,9 @@ class MedicalFacility extends Component {
         }
     }
 
-
+    handleViewDetailHospital = (id) => {
+        this.props.history.push(`/detail-hospital/${id}`);
+    }
     render() {
         let setting = {
             dots: false,
@@ -66,7 +68,7 @@ class MedicalFacility extends Component {
         let { listHospital } = this.state
         // console.log("list hos", listHospital)
         return (
-            <div className='cover'>
+
                 <div className='section-MedicalFacility' >
                     <div className='MedicalFacility-container'>
                         <div className='MedicalFacility-header'>
@@ -77,7 +79,7 @@ class MedicalFacility extends Component {
                             <Slider {...setting}>
                                 {listHospital && listHospital.length > 0 && listHospital.map((item, index) => {
                                     return (
-                                        <div className='img-custom'>
+                                        <div className='img-custom' onClick={() => this.handleViewDetailHospital(item.id)}>
                                             <div className='bg-img1' style={{ backgroundImage: `url(${item.img})` }}></div>
                                             <div className='text-center fs-5 fw-bold'>{item.name}</div>
                                         </div>
@@ -109,7 +111,7 @@ class MedicalFacility extends Component {
 
                     </div>
                 </div>
-            </div>
+
         );
     }
 
@@ -127,4 +129,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacility);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MedicalFacility));

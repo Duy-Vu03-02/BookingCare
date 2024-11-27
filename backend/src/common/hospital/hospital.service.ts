@@ -5,6 +5,7 @@ import { statusCode } from '@config/errors';
 
 export class HospitalService {
     public static createHospital = async (req: IHospital): Promise<IResponseHospital> => {
+        console.log("check req services", req)
         try {
             const hospital = await HospitalModel.create(req);
 
@@ -49,6 +50,17 @@ export class HospitalService {
                 status: statusCode.REQUEST_NOT_FOUND,
                 errorCode: statusCode.REQUEST_NOT_FOUND,
             });
+        } catch (err) {
+            throw err;
+        }
+    };
+    public static deleteHospital = async (id: string): Promise<boolean> => {
+        try {
+            const hospital = await HospitalModel.findByIdAndDelete(id);
+            if (hospital) {
+                return true; // Trả về true nếu xóa thành công
+            }
+            return false; // Nếu không tìm thấy bệnh viện
         } catch (err) {
             throw err;
         }

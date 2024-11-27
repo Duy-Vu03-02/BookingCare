@@ -13,7 +13,7 @@ class ForYou extends Component {
     render() {
 
         return (
-            <div className='cover'>
+
                 <div className='section-ForYou'>
                     <div className='ForYou-container'>
                         <div className='ForYou-header'>
@@ -30,7 +30,7 @@ class ForYou extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+
         );
     }
 

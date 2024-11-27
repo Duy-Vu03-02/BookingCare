@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './ForDoctor.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,7 +54,7 @@ class ForDoctor extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
+
                 <div className='section-ForDoctor' >
                     <div className='ForDoctor-container'>
                         <div className='ForDoctor-header'>
@@ -89,7 +88,7 @@ class ForDoctor extends Component {
 
                     </div>
                 </div>
-            </div>
+
         );
     }
 

@@ -1,12 +1,9 @@
 import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import './Banner.scss'
-import { FormattedMessage } from 'react-intl';
-import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions/appActions';
 import Select from 'react-select';
-import { useHistory, withRouter, Redirect } from 'react-router-dom';
-import CustomScrollbars from '../../components/CustomScrollbars';
+import {  withRouter } from 'react-router-dom';
 const options = [
     { value: '1', label: 'Thuờng xuyên bị bóng đè cần khắc phục thế nào?' },
     { value: '2', label: 'Cách điều trị mụn ẩn, mụn cám tuổi dậy thì hiệu quả' },
@@ -106,7 +103,6 @@ class Banner extends Component {
         this.props.history.push(`/healthy-life`);
     }
     render() {
-        let language = this.props.language;
         // console.log("check user inf", this, this.props.userInfo);
         // console.log("check: ", this.props.locations)
         return (

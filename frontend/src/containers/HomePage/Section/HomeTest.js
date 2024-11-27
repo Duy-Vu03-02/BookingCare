@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeTest.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,7 +54,6 @@ class HomeTest extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
                 <div className='section-HomeTest' >
                     <div className='HomeTest-container'>
                         <div className='HomeTest-header'>
@@ -94,7 +92,7 @@ class HomeTest extends Component {
 
                     </div>
                 </div>
-            </div>
+
         );
     }
 

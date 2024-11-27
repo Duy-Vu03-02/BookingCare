@@ -9,6 +9,7 @@ import DoctorQnA from '../Section/DoctorQnA';
 import RemoteExamination from '../Section/RemoteExamination';
 import HomeTest from '../Section/HomeTest';
 import DoctorAtHome from '../Section/DoctorAtHome';
+import { Helmet } from 'react-helmet'
 class AtHome extends Component {
     constructor(props) {
         super(props);
@@ -30,10 +31,13 @@ class AtHome extends Component {
 
         return (
             <>
+                <Helmet>
+                    <title>Tại nhà</title>
+                </Helmet>
                 <HomeHeader locations={"at-home"} />
                 <div className='AtHome-container'>
                     <div className='AH-banner'>
-                        <img src="https://bookingcare.vn/_next/image?url=https%3A%2F%2Fcdn.bookingcare.vn%2Ffo%2F2023%2F11%2F02%2F113503-dich-vu-cham-soc-suc-khoe-tai-nha.png&w=1920&q=75" />
+                        <img alt="" src="https://bookingcare.vn/_next/image?url=https%3A%2F%2Fcdn.bookingcare.vn%2Ffo%2F2023%2F11%2F02%2F113503-dich-vu-cham-soc-suc-khoe-tai-nha.png&w=1920&q=75" />
                     </div>
 
                 </div>

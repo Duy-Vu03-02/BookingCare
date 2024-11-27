@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './MetalHealth.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,7 +54,7 @@ class MetalHealth extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
+
                 <div className='section-MetalHealth' >
                     <div className='MetalHealth-container'>
                         <div className='MetalHealth-header'>
@@ -89,7 +88,7 @@ class MetalHealth extends Component {
 
                     </div>
                 </div>
-            </div>
+
         );
     }
 

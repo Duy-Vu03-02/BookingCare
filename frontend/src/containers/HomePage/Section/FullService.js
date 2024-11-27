@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './FullService.scss'
-import { FormattedMessage } from 'react-intl';
 import { getService } from '../../../services/userService';
-import { useHistory, withRouter, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 class FullService extends Component {
     constructor(props) {
         super(props);
@@ -39,7 +38,6 @@ class FullService extends Component {
         }
         // console.log(groupedServices);
         return (
-            <div className='cover'>
                 <div className='section-FullService'>
                     <div className='FullService-container'>
                         <div className='FullService-header'>
@@ -68,7 +66,7 @@ class FullService extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+
         );
     }
 

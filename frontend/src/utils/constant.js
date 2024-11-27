@@ -13,6 +13,7 @@ export const path = {
     AT_HOSPITAL: '/at-hospital',
     HEALTHY_LIFE: '/healthy-life',
     DETAIL_SERVICE: '/detail-service/:id',
+    DETAIL_HOSPITAL: '/detail-hospital/:id',
 };
 
 export const LANGUAGES = {

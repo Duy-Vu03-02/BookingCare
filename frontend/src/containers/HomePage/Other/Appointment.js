@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { useHistory } from 'react-router-dom';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './Appointment.scss'
-import { getDetalDoctor } from '../../../services/userService';
-import { LANGUAGES } from '../../../utils';
-import ScrollToTop from '../../ScrollToTop';
+import { Helmet } from 'react-helmet'
 class Appointment extends Component {
     constructor(props) {
         super(props);
@@ -29,6 +26,9 @@ class Appointment extends Component {
 
         return (
             <>
+                <Helmet>
+                    <title>Lịch hẹn</title>
+                </Helmet>
                 <HomeHeader />
                 <div className='appointment-container'>
                     <div className='appoinment-address'>

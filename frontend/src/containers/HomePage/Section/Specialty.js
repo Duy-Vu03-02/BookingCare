@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Specialty.scss'
-import { FormattedMessage } from 'react-intl';
-import { useHistory, withRouter, Redirect } from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -61,7 +60,7 @@ class Specialty extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
+
                 <div className='section-specialty' >
                     <div className='specialty-container'>
                         <div className='specialty-header'>
@@ -99,7 +98,7 @@ class Specialty extends Component {
 
                     </div>
                 </div>
-            </div>
+
         );
     }
 

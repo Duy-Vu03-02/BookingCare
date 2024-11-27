@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { useHistory } from 'react-router-dom';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './Cooperate.scss'
-import { getDetalDoctor } from '../../../services/userService';
-import { LANGUAGES } from '../../../utils';
-import ScrollToTop from '../../ScrollToTop';
+import { Helmet } from 'react-helmet'
 class Cooperate extends Component {
     constructor(props) {
         super(props);
@@ -26,6 +23,9 @@ class Cooperate extends Component {
 
         return (
             <>
+                <Helmet>
+                    <title>Hợp tác với BookingCare</title>
+                </Helmet>
                 <HomeHeader />
                 <div className='coop-container'>
                     <div className='coop-banner'>
@@ -63,7 +63,7 @@ class Cooperate extends Component {
                     <div className='coop-stats'>
                         <div className='coop-stats-content'>
                             <div className='stats-img'>
-                                <img src="https://cdn.bookingcare.vn/fo/w1920/2024/08/27/101137-tang-bn-1.png" ></img>
+                                <img alt="" src="https://cdn.bookingcare.vn/fo/w1920/2024/08/27/101137-tang-bn-1.png" ></img>
                             </div>
                             <div className='stats-label'>
                                 <div>Tăng số lượng bệnh nhân</div>
@@ -71,13 +71,13 @@ class Cooperate extends Component {
                         </div>
                         <div className='coop-stats-content'>
                             <div className='stats-img'>
-                                <img src="https://cdn.bookingcare.vn/fo/w1920/2024/08/27/101113-.png" ></img>
+                                <img alt="" src="https://cdn.bookingcare.vn/fo/w1920/2024/08/27/101113-.png" ></img>
                             </div>
                             <div className='stats-label'> <div>Xây dựng thương hiệu</div></div>
                         </div>
                         <div className='coop-stats-content'>
                             <div className='stats-img'>
-                                <img src="https://cdn.bookingcare.vn/fo/w640/2024/08/27/101155-trai-nghiem-1.png" ></img>
+                                <img alt="" src="https://cdn.bookingcare.vn/fo/w640/2024/08/27/101155-trai-nghiem-1.png" ></img>
                             </div>
                             <div className='stats-label'><div>Nâng cao trải nghiệm khách hàng</div></div>
                         </div>

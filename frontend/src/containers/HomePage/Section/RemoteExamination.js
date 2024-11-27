@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './RemoteExamination.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,7 +54,7 @@ class RemoteExamination extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
+
                 <div className='section-RemoteExamination' >
                     <div className='RemoteExamination-container'>
                         <div className='RemoteExamination-header'>
@@ -93,7 +92,7 @@ class RemoteExamination extends Component {
 
                     </div>
                 </div>
-            </div>
+
         );
     }
 

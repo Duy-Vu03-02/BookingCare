@@ -1,11 +1,6 @@
-import React, { Component, Ref } from 'react';
+import React, { Component} from 'react';
 import { connect } from "react-redux";
-import HomeHeader from '../../HomePage/HomeHeader';
-import HomeFooter from '../../HomePage/Section/HomeFooter'
-import Information from '../../HomePage/Section/Information'
 import './DoctorClinic.scss'
-import { getDetalDoctor } from '../../../services/userService';
-import ScrollToTop from "react-scroll-to-top";
 import { NumericFormat } from 'react-number-format';
 class DetailDoctor extends Component {
     constructor(props) {

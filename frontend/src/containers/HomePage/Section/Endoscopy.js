@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Endoscopy.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,43 +54,41 @@ class Endoscopy extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
-                <div className='section-Endoscopy' >
-                    <div className='Endoscopy-container'>
-                        <div className='Endoscopy-header'>
-                            <span className='title1'>Nội soi</span>
-                            <button className='btn-xemthem'>Xem thêm</button>
-                        </div>
-                        <div className='Endoscopy-body'>
-                            <Slider {...setting}>
-                                <div className='img-custom'>
-                                    <div className='bg-img1'></div>
-                                    <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img2'></div>
-                                    <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img3'></div>
-                                    <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img4'></div>
-                                    <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img5'></div>
-                                    <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
-                                </div>
-                                <div className='img-custom'>
-                                    <div className='bg-img6'></div>
-                                    <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
-                                </div>
-                            </Slider>
-                        </div>
-
+            <div className='section-Endoscopy' >
+                <div className='Endoscopy-container'>
+                    <div className='Endoscopy-header'>
+                        <span className='title1'>Nội soi</span>
+                        <button className='btn-xemthem'>Xem thêm</button>
                     </div>
+                    <div className='Endoscopy-body'>
+                        <Slider {...setting}>
+                            <div className='img-custom'>
+                                <div className='bg-img1'></div>
+                                <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img2'></div>
+                                <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img3'></div>
+                                <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img4'></div>
+                                <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img5'></div>
+                                <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
+                            </div>
+                            <div className='img-custom'>
+                                <div className='bg-img6'></div>
+                                <div className='text-center fs-5 fw-bold'>Gói tầm soát ung thư chon nam trên 60 tuổi</div>
+                            </div>
+                        </Slider>
+                    </div>
+
                 </div>
             </div>
         );

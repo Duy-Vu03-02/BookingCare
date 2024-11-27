@@ -1,14 +1,82 @@
+.detail-hospital-container {
+    max-width: 2600px;
+    margin: 0 auto;
+
+    .hospital-banner {
+        background-image: url("https://cdn.bookingcare.vn/fo/w1920/2020/06/03/114348-bv-viet-duc.jpg");
+        width: 100%;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        .group-banner {
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+            .info-hospital {
+                width: 1200px;
+                background-color: rgba(255, 255, 255, 0.8);
+                display: flex;
+                align-items: flex-end;
+                gap: 30px;
+                padding: 30px 30px 5px 40px;
+
+                h1 {
+                    font-weight: bold;
+                }
+
+                .hospital-img {
+                    background-image: url(https://cdn.bookingcare.vn/fo/w1920/2018/06/18/083122lo-go-viet-duc.jpg);
+                    width: 150px;
+                    height: 150px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-color: white;
+                    background-position: center center;
+
+                    img {}
+                }
+
+                .detail-hospital {}
+            }
+
+            .menu-hospital {
+                width: 1200px;
+                background-color: rgba(255, 255, 255, 1);
+                display: flex;
+                justify-content: space-around;
+                font-size: 17px;
+                font-weight: 500;
+                padding: 5px 80px;
+                position: sticky;
+                top: 0;
+                /* Đặt khoảng cách từ menu tới đầu viewport */
+                z-index: 1000;
+                /* Đảm bảo menu nằm phía trên các phần tử khác */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+
+}
+
 .banner {
     padding: 40px 0px;
     background-color: rgb(146, 215, 238);
-    height: auto;
+    // height: auto;
     max-width: 2600px;
     margin: 0 auto;
+    background-image: none !important;
 
     .titles {
         color: rgba(0, 0, 0, 1.00);
         text-align: center;
-        font-size: 57px;
+        font-size: 35px;
         font-weight: 500;
     }
 
@@ -156,37 +224,46 @@
 
 }
 
-@media only screen and (max-width: 1500px) {
+.hospital-greet {
+    height: 1000px;
+    padding: 0 20px;
 
-    //100%
+    .greet-1 {
+        height: auto;
+        background-color: #ffecb2;
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 10px 50px;
+    }
 
-    .homeheader-container {
+    .greet-2 {
+        height: auto;
+        background-color: #d4effc;
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 20px 50px 10px 50px;
 
-        .homeheader-content {
-            gap: 0px;
-
-            .left-content {
-                .header-logo {}
-            }
-
-            .center-content {
-
-                .search {
-                    width: 250px;
-                }
-            }
-
-            .right-content {
-
-                .child-content-right {
-                    width: 100px;
-                }
-            }
-
+        li {
+            padding: 5px 0;
         }
     }
 
+}
 
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1500px) {
+
+    //100%
     .banner {
         .search-banner {
             padding: 0 80px;
@@ -197,34 +274,6 @@
 @media only screen and (max-width: 1400px) {
 
     //110%
-    .homeheader-container {
-        padding: 0 0;
-
-        .homeheader-content {
-            gap: 0px;
-
-            .left-content {
-                .header-logo {}
-            }
-
-            .center-content {
-
-                .search {
-                    width: 250px;
-                }
-            }
-
-            .right-content {
-                gap: 10px;
-
-                .child-content-right {
-                    width: 1500px;
-                }
-            }
-
-        }
-    }
-
     .banner {
         .search-banner {
             padding: 0 30px;
@@ -235,27 +284,6 @@
 @media only screen and (max-width: 1200px) {
 
     //125%
-    .homeheader-container {
-        .homeheader-content {
-            gap: 0px;
-
-            .left-content {
-                .header-logo {}
-            }
-
-            .center-content {
-
-                .search {
-                    width: 185px;
-
-                    i {
-                        margin-left: 40px;
-                    }
-                }
-            }
-
-        }
-    }
 
     .banner {
 
@@ -282,46 +310,7 @@
 
 @media only screen and (max-width: 1000px) {
 
-    //150%
-    .homeheader-container {
-
-        .homeheader-content {
-            gap: 0px;
-
-            .left-content {
-                .header-logo {}
-
-            }
-
-            .center-content {
-                margin-left: 30px;
-
-
-                .child-content1 {
-                    display: none;
-                }
-
-                .search {
-                    width: 440px;
-                }
-            }
-
-            .right-content {
-                display: flex;
-
-                .child-content-right {
-                    width: 140px;
-                }
-
-            }
-
-        }
-    }
-
-    .center-content2 {
-        display: flex;
-    }
-
+    //150
     .banner {
         height: auto;
 
@@ -385,44 +374,6 @@
 @media only screen and (max-width: 900px) {
 
     //175%
-    .homeheader-container {
-        .homeheader-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 0px;
-
-
-            .left-content {
-                .header-logo {}
-            }
-
-            .center-content {
-                margin-left: 30px;
-
-                .child-content1 {
-                    display: none;
-                }
-
-                .search {
-                    width: 300px;
-                }
-            }
-
-            .right-content {
-                display: flex;
-
-                .child-content-right {
-                    width: 140px;
-                }
-            }
-
-        }
-    }
-
-    .center-content2 {
-        display: flex;
-    }
-
     .banner {
         height: auto;
 
@@ -478,49 +429,6 @@
 @media only screen and (max-width: 800px) {
 
     // 200%
-    .homeheader-container {
-
-        .homeheader-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 0px;
-
-
-            .left-content {
-                .header-logo {}
-            }
-
-            .center-content {
-                display: none;
-            }
-
-            .right-content {
-                width: 400px;
-                display: flex;
-                margin-top: 20px;
-
-                .child-content-right {
-                    width: 200px;
-                }
-
-                .child-content-right-s {
-                    display: flex;
-                    width: 200px;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
-
-        }
-    }
-
-    .center-content2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-
-    }
 
     .banner {
         height: auto;
@@ -585,53 +493,6 @@
 @media only screen and (max-width: 700px) {
 
     //250%
-    .homeheader-container {
-        .homeheader-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 0px;
-
-
-            .left-content {
-                margin-left: -20px;
-
-                .header-logo {}
-            }
-
-            .center-content {
-                display: none;
-            }
-
-            .right-content {
-                width: 300px;
-                display: flex;
-                margin-top: 20px;
-                margin-left: 0px;
-                gap: 0px;
-
-                .child-content-right {
-                    width: 200px;
-                }
-
-                .child-content-right-s {
-                    display: flex;
-                    width: 200px;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
-
-        }
-    }
-
-    .center-content2 {
-        gap: 10px;
-
-        .cover-child-content2 {
-            gap: 10px;
-        }
-    }
-
     .banner {
         height: auto;
 
@@ -700,31 +561,6 @@
 @media only screen and (max-width: 500px) {
 
     // 300%
-    .homeheader-container {
-        height: 160px;
-
-        .homeheader-content {
-            flex-direction: column;
-            justify-content: center;
-
-            .left-content {
-                padding-left: 50px;
-            }
-
-            .right-content {
-                margin-top: 0;
-            }
-
-        }
-    }
-
-    .center-content2 {
-        gap: 0px;
-
-        .cover-child-content2 {
-            gap: 0px;
-        }
-    }
 
     .banner {
         height: auto;
@@ -793,23 +629,6 @@
 @media only screen and (max-width: 400px) {
 
     // 400%
-    .homeheader-container {
-        .homeheader-content {
-            .left-content {
-                padding-left: 50px;
-            }
-        }
-    }
-
-    .center-content2 {
-        gap: 0px;
-        padding: 0 0;
-
-        .child-content2 {
-            white-space: nowrap;
-        }
-    }
-
     .banner {
         height: auto;
 
@@ -876,15 +695,6 @@
 
 @media only screen and (max-width: 300px) {
 
-    // 500%
-    .homeheader-container {
-        .homeheader-content {
-            .left-content {
-                padding-left: 50px;
-            }
-        }
-    }
-
     .banner {
         height: auto;
 
@@ -947,17 +757,6 @@
                     margin-right: 10px;
                 }
             }
-        }
-    }
-
-    .center-content2 {
-        padding-top: 20px;
-        gap: 10px;
-        height: 110px;
-
-        .cover-child-content2 {
-            flex-direction: column;
-            gap: 10px;
         }
     }
 }

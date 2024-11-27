@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import { useHistory } from 'react-router-dom';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import HomeFooter from '../../HomePage/Section/HomeFooter'
 import Information from '../../HomePage/Section/Information'
 import './ListSpecialty.scss'
-import { getDetalDoctor } from '../../../services/userService';
-import { LANGUAGES } from '../../../utils';
-import ScrollToTop from '../../ScrollToTop';
 import { getDetailService } from '../../../services/userService';
+import { Helmet } from 'react-helmet'
 class ListSpecialty extends Component {
     constructor(props) {
         super(props);
@@ -35,6 +32,9 @@ class ListSpecialty extends Component {
         let { ListSpecialty } = this.state
         return (
             <>
+                <Helmet>
+                    <title>Chuyên khoa khám</title>
+                </Helmet>
                 <HomeHeader />
                 <div className='ListSpecialty-container'>
                     <div className='LS-address'>

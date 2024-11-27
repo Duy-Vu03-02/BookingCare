@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeFooter.scss'
-import { FormattedMessage } from 'react-intl';
 class HomeFooter extends Component {
 
     changeLanguage = (language) => {
@@ -13,7 +12,7 @@ class HomeFooter extends Component {
     render() {
 
         return (
-            <div className='cover'>
+
                 <div className='section-HomeFooter' >
                     <div className='HomeFooter-container'>
                         <div className='HomeFooter-header'>
@@ -31,7 +30,7 @@ class HomeFooter extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+
         );
     }
 

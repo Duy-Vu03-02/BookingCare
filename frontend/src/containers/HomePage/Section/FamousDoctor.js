@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './FamousDoctor.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
-import { useHistory, withRouter, Redirect } from 'react-router-dom';
+import { withRouter,} from 'react-router-dom';
 //import css file 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -73,7 +72,7 @@ class FamousDoctor extends Component {
         let arrDoctor = this.state.listDoctor;
         // console.log('check arrdoctor: ', this.state.idDoctor)
         return (
-            <div className='cover'>
+
                 <div className='section-FamousDoctor' >
                     <div className='FamousDoctor-container'>
                         <div className='FamousDoctor-header'>
@@ -100,7 +99,7 @@ class FamousDoctor extends Component {
 
                     </div>
                 </div>
-            </div>
+         
         );
     }
 

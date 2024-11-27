@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Community.scss'
-import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
@@ -55,7 +54,6 @@ class Community extends Component {
             slidesToScroll: 1,
         }
         return (
-            <div className='cover'>
                 <div className='section-Community' >
                     <div className='Community-container'>
                         <div className='Community-header'>
@@ -81,7 +79,6 @@ class Community extends Component {
 
                     </div>
                 </div>
-            </div>
         );
     }
 

@@ -21,8 +21,11 @@ import AtHome from './HomePage/Other/AtHome';
 import AtHospital from './HomePage/Other/AtHospital';
 import HealthyLife from './HomePage/Other/HealthyLife';
 import DetailService from './HomePage/Service/DetailService';
+import DetailHospital from './HomePage/Hospital/DetailHospital';
 // import ScrollToTop from './ScrollToTop';
 import ScrollToTop from "react-scroll-to-top";
+import { Helmet } from 'react-helmet'
+
 class App extends Component {
 
     handlePersistorState = () => {
@@ -53,6 +56,9 @@ class App extends Component {
     render() {
         return (
             <Fragment>
+                <Helmet>
+                    <title>BookingCare - Nền tảng y tế sức khỏe toàn diện</title>
+                </Helmet>
                 <Router history={history}>
                     <ScrollToTop />
                     <div className="main-container">
@@ -71,6 +77,7 @@ class App extends Component {
                                 <Route path={path.AT_HOSPITAL} component={AtHospital} />
                                 <Route path={path.HEALTHY_LIFE} component={HealthyLife} />
                                 <Route path={path.DETAIL_SERVICE} component={DetailService} />
+                                <Route path={path.DETAIL_HOSPITAL} component={DetailHospital} />
                             </Switch>
                             {/* </CustomScrollbars> */}
                         </div>

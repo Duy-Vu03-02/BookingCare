@@ -1,14 +1,7 @@
-import React, { Component, Ref } from 'react';
+import React, { Component } from 'react';
 import { connect } from "react-redux";
-import HomeHeader from '../../HomePage/HomeHeader';
-import HomeFooter from '../../HomePage/Section/HomeFooter'
-import Information from '../../HomePage/Section/Information'
 import './ScheduleDoctor.scss'
-import { getDetalDoctor } from '../../../services/userService';
-import ScrollToTop from "react-scroll-to-top";
-import { NumericFormat } from 'react-number-format';
 import moment from 'moment';
-import localization from 'moment/locale/vi'
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
@@ -28,7 +21,7 @@ class DetailDoctor extends Component {
         let arrDate = []
         for (let i = 0; i < 7; i++) {
             let object = {}
-            if (i == 0) {
+            if (i === 0) {
                 let label = moment(new Date()).add(i, 'days').format('DD/MM');
                 let toDay = `Hôm nay - ${label}`;
                 object.label = toDay;
@@ -62,8 +55,7 @@ class DetailDoctor extends Component {
     render() {
         // console.log(this.props.match.params.id)
         // console.log(this.state);
-        let { detailDoctor, allDay } = this.state
-        let { isShowPrice, isShowIns } = this.state;
+        let { allDay } = this.state
         // console.log("check detail: ", detailDoctor)
         return (
             <div className='schedule'>

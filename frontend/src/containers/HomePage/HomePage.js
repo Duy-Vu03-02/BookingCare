@@ -15,6 +15,7 @@ import ForDoctor from './Section/ForDoctor';
 import Information from './Section/Information';
 import HomeFooter from './Section/HomeFooter';
 import Banner from './Banner';
+import { Helmet } from 'react-helmet'
 class HomePage extends Component {
     constructor(props) {
         super(props);
@@ -26,10 +27,13 @@ class HomePage extends Component {
     }
 
     render() {
-        const { scrollX, scrollY } = this.state;
         return (
             <div>
+                <Helmet>
+                    <title>BookingCare - Nền tảng y tế sức khỏe toàn diện</title>
+                </Helmet>
                 <HomeHeader isShowBanner={true} locations={"all"} />
+                <Banner />
                 <FullService />
                 <Specialty />
                 <MedicalFacility />

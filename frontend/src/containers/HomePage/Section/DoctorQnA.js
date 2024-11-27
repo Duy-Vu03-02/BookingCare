@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './DoctorQnA.scss'
-import { FormattedMessage } from 'react-intl';
-import Slider from 'react-slick';
 //import css file 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -16,15 +14,7 @@ class DoctorQnA extends Component {
 
 
     render() {
-        let setting = {
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-        }
         return (
-            <div className='cover'>
                 <div className='section-DoctorQnA' >
                     <div className='DoctorQnA-container'>
                         <div className='DoctorQnA-header'>
@@ -43,7 +33,6 @@ class DoctorQnA extends Component {
 
                     </div>
                 </div>
-            </div>
         );
     }
 

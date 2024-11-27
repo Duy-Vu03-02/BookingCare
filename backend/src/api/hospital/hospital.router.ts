@@ -11,4 +11,6 @@ router.get('/get-all-hospital', HospitalController.getAllHosptital);
 
 router.get('/detail-hospital', validate(getHospital, { context: true }), HospitalController.getDetailHospital);
 
+router.delete('/delete-hospital/:id', HospitalController.deleteHospital);
+
 export default router;
