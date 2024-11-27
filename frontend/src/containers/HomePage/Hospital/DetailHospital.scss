@@ -1,6 +1,7 @@
 .detail-hospital-container {
     max-width: 2600px;
     margin: 0 auto;
+    padding-bottom: 50px;
 
     .hospital-banner {
         background-image: url("https://cdn.bookingcare.vn/fo/w1920/2020/06/03/114348-bv-viet-duc.jpg");
@@ -54,10 +55,12 @@
                 padding: 5px 80px;
                 position: sticky;
                 top: 0;
-                /* Đặt khoảng cách từ menu tới đầu viewport */
                 z-index: 1000;
-                /* Đảm bảo menu nằm phía trên các phần tử khác */
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                div {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -65,7 +68,7 @@
 
 }
 
-.banner {
+.banner-hospital {
     padding: 40px 0px;
     background-color: rgb(146, 215, 238);
     // height: auto;
@@ -225,8 +228,8 @@
 }
 
 .hospital-greet {
-    height: 1000px;
-    padding: 0 20px;
+    height: auto;
+    padding: 0px 20px;
 
     .greet-1 {
         height: auto;
@@ -250,7 +253,44 @@
 
 }
 
+.introduce,
+.professional,
+.equipment,
+.location,
+.process {
+    padding: 30px 20px 0px 20px;
+    font-size: 22px;
 
+    span {
+        color: #337ab7;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    ul {
+        margin-top: 10px;
+
+        li {
+            margin: 8px 0;
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0px;
+
+        img {
+            width: 600px;
+        }
+    }
+}
 
 
 

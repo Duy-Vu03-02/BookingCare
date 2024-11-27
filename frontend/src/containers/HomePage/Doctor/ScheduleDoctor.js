@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import './ScheduleDoctor.scss'
 import moment from 'moment';
+import 'moment/locale/vi';
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
